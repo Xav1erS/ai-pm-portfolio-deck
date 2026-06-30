@@ -1238,15 +1238,16 @@
   .slide.dark .cell-item p{color:rgba(255,255,255,.72)}
   .slide.dark .cell-top{color:rgba(255,255,255,.55)}
   .deck-duo{margin-top:2.2vh;min-height:0}
-  .knowledge-slide .deck-main{display:grid;grid-template-columns:minmax(360px,4.65fr) minmax(0,7.35fr);grid-template-rows:minmax(0,1fr);gap:0 3vw;align-items:center}
-  .knowledge-slide .kb-text{display:flex;flex-direction:column;min-width:0;height:100%;border-top:2px solid var(--accent);padding-top:1.9vh}
+  .knowledge-slide .deck-main{display:grid;grid-template-columns:minmax(330px,4.15fr) minmax(0,7.85fr);grid-template-rows:minmax(0,1fr);gap:0 3vw;align-items:center;border-top:2px solid var(--accent);padding-top:1.9vh}
+  .knowledge-slide .kb-text{display:flex;flex-direction:column;min-width:0;height:auto;align-self:stretch}
   .knowledge-slide .kb-head{display:flex;flex-direction:column;gap:1.15vh;min-width:0}
   .knowledge-slide .kb-title{font-size:min(3.05vw,5.4vh);line-height:1.06;letter-spacing:-.02em}
-  .knowledge-slide .kb-lead{font-size:max(18px,.96vw);font-weight:400;line-height:1.48;color:var(--text-primary);opacity:.86;margin:2vh 0 0;max-width:43ch}
-  .knowledge-slide .kb-list{list-style:none;display:flex;flex-direction:column;gap:0;margin:2.7vh 0 0;padding:0;border-top:1px solid var(--border-subtle)}
-  .knowledge-slide .kb-list li{display:grid;grid-template-columns:9.4em 1fr;gap:1.1vw;align-items:baseline;padding:1.36vh 0;border-bottom:1px solid var(--border-subtle);font-size:max(16px,.88vw);font-weight:400;line-height:1.42;color:var(--text-secondary)}
-  .knowledge-slide .kb-list li b{font-weight:600;color:var(--text-primary);white-space:nowrap}
-  .knowledge-slide .kb-list li span{min-width:0}
+  .knowledge-slide .kb-lead{font-size:max(18px,.96vw);font-weight:400;line-height:1.48;color:var(--text-primary);opacity:.86;margin:2.4vh 0 0;max-width:43ch}
+  .knowledge-slide .kb-flow{display:flex;flex-direction:column;flex:0 0 auto;min-height:0;margin-top:3.4vh}
+  .knowledge-slide .kb-flow>.t-cat{margin-bottom:1.8vh}
+  .knowledge-slide .kb-flow .step-list{flex:0 0 auto;border-top:1px solid var(--border-subtle)}
+  .knowledge-slide .kb-flow .step-row{align-items:center;grid-template-columns:1.9em 8.8em 1fr;gap:.9vw;padding:2.35vh 0}
+  .knowledge-slide .kb-flow .step-d{font-size:max(16px,.9vw);line-height:1.4}
   .knowledge-slide .kb-strip{width:100%;max-width:none;box-sizing:border-box;font-size:max(16px,.86vw);line-height:1.42;padding:.8vh 1vw;margin-top:3vh;margin-bottom:0}
   .knowledge-slide .kb-figure{margin:0;display:flex;flex-direction:column;gap:1.1vh;min-width:0;align-self:center}
   .knowledge-slide .kb-figure .frame-img{width:100%;background:var(--paper);overflow:hidden}
@@ -1310,10 +1311,14 @@
   .rag-trace-slide .deck-title{font-size:min(4.18vw,7.35vh);line-height:.98}
   .rag-trace-slide .deck-lead{font-size:max(16px,.9vw);line-height:1.45;max-width:46ch}
   .rag-trace-slide .deck-content{gap:1vh}
-  .rag-trace-slide .timeline-h .th-node .label{width:18.5vw;gap:.7vh}
-  .rag-trace-slide .timeline-h .th-node .name{font-size:max(18px,1.2vw);margin-top:.2vh}
-  .rag-trace-slide .timeline-h .th-node .desc{font-size:max(14px,.82vw);line-height:1.42}
-  .rag-trace-slide .decision-strip{max-width:min(104ch,88vw);font-size:max(14px,.78vw);line-height:1.35;padding:.55vh .9vw}
+  .rag-trace-slide .stacked-ledger{margin-top:0}
+  .rag-trace-slide .ledger-row{grid-template-columns:minmax(7.1vw,10.2vw) minmax(0,1fr) 2.2vw;gap:1.25vw;align-items:start;padding:.62vh 0}
+  .rag-trace-slide .ledger-num{font-size:min(5.45vw,7.8vh)}
+  .rag-trace-slide .ledger-label{gap:.16vh}
+  .rag-trace-slide .ledger-label .k{font-size:max(14px,.72vw);letter-spacing:.12em}
+  .rag-trace-slide .ledger-label h3{font-size:max(18px,1.18vw);line-height:1.08}
+  .rag-trace-slide .ledger-label p{font-size:max(14px,.78vw);line-height:1.24;max-width:88ch}
+  .rag-trace-slide .ledger-icon{width:1.75vw;height:1.75vw;margin-top:.4vh}
   .rag-tags{display:flex;flex-wrap:wrap;gap:.28vh .32vw;margin-top:.28vh}
   .rag-chip{font-family:var(--mono);font-size:max(13px,.66vw);font-weight:600;letter-spacing:.04em;color:var(--accent);border:1px solid rgba(0,47,167,.28);padding:.22em .42em;background:rgba(0,47,167,.035)}
   .rag-note{font-family:var(--mono);font-size:max(11px,.62vw);font-weight:600;letter-spacing:.04em;color:var(--text-helper);margin-top:.22vh}
@@ -1749,14 +1754,14 @@
   .dataflow-slide .deck-main>.decision-strip{max-width:min(82ch,74vw);font-size:max(15px,.84vw);padding:.58vh .9vw;margin-bottom:calc(var(--nav-safe-bottom) * .55)}
   .dataflow{display:grid;grid-template-columns:minmax(260px,2.85fr) minmax(0,9.15fr);gap:2vw;flex:1;min-height:0;align-items:stretch}
   .df-col{display:flex;flex-direction:column;min-height:0}
-  .df-sec-title{font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--text-helper);border-bottom:1px solid var(--grey-2);padding-bottom:.55vh;margin-bottom:.85vh}
+  .df-sec-title{font-family:var(--mono);font-size:14px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--text-helper);border-bottom:1px solid var(--grey-2);padding-bottom:.55vh;margin-bottom:.85vh}
   .df-input{gap:1vh}
   .df-input .cv-frame{aspect-ratio:3/2;border:1px solid var(--grey-2);border-top:2px solid var(--accent);background:var(--paper);max-height:30vh}
   .df-input .cv-frame>img{object-fit:contain}
   .df-kv-list{display:grid;gap:1px;background:var(--grey-2)}
   .df-kv-list>div{background:var(--paper);padding:.85vh .75vw;display:grid;grid-template-columns:5.5em 1fr;gap:.7vw;align-items:baseline}
-  .df-kv-list span{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.08em;color:var(--text-helper);white-space:nowrap}
-  .df-kv-list strong{font-size:max(14px,.82vw);font-weight:500;line-height:1.35;color:var(--text-primary)}
+  .df-kv-list span{font-family:var(--mono);font-size:14px;font-weight:600;letter-spacing:.08em;color:var(--text-helper);white-space:nowrap}
+  .df-kv-list strong{font-size:max(16px,.9vw);font-weight:500;line-height:1.35;color:var(--text-primary)}
   .df-map{min-width:0}
   .df-map-list{display:grid;grid-template-rows:minmax(0,1fr) minmax(0,.88fr) minmax(0,.88fr) minmax(0,1.18fr);gap:1px;background:var(--grey-2);min-height:0;flex:1}
   .df-map-row{background:var(--paper);display:grid;grid-template-columns:minmax(255px,2.45fr) minmax(42px,.28fr) minmax(0,4.55fr);align-items:stretch;min-height:0}
@@ -1777,9 +1782,6 @@
   .df-field-sample{font-size:max(13.5px,.8vw);line-height:1.38;color:var(--text-secondary);white-space:normal}
   .df-source-tags{display:flex;flex-wrap:wrap;gap:.35vw;margin-top:.7vh}
   .df-source-tag{border:1px solid var(--border-subtle);padding:.22em .48em;font-family:var(--mono);font-size:max(11px,.62vw);font-weight:600;color:var(--text-helper);white-space:nowrap}
-  .df-field-pairs{display:grid;grid-template-columns:1fr 1.35fr;gap:.9vw;align-items:start}
-  .df-field-pair b{display:block;font-family:var(--mono);font-size:max(11px,.64vw);font-weight:700;letter-spacing:.02em;color:var(--accent);margin-bottom:.25vh}
-  .df-field-pair span{display:block;font-size:max(13px,.76vw);line-height:1.34;color:var(--text-secondary)}
 
   /* 工作台页：按 S22 单张核心截图处理，截图优先，流程退为辅助 */
   .workbench-slide{--deck-title-vw:4.35vw;--deck-title-vh:7.7vh;--deck-title-basis:46%}
@@ -1958,13 +1960,13 @@
 
 <div id="deck">
 
-<!-- ====================== 01 / 18 · 封面 ====================== -->
+<!-- ====================== 01 / 20 · 封面 ====================== -->
 <section class="slide accent" data-layout="SWISS-COVER-ASCII" data-animate="hero" id="slide-1">
   <div class="canvas-card">
     <canvas class="ascii-bg" aria-hidden="true"></canvas>
     <header class="chrome-min tight">
       <div class="l">低空感知 AI 处置中枢</div>
-      <div class="r">AI PRODUCT MANAGER PORTFOLIO · 01 / 19</div>
+      <div class="r">AI PRODUCT MANAGER PORTFOLIO · 01 / 20</div>
     </header>
     <main style="flex:1;display:grid;grid-template-columns:8fr 4fr;gap:5vw;align-items:end;min-height:0">
       <div data-anim="title" style="display:flex;flex-direction:column;gap:2.2vh;align-self:center">
@@ -1982,10 +1984,10 @@
   </div>
 </section>
 
-<!-- ====================== 02 / 18 · 平台长什么样 ====================== -->
+<!-- ====================== 02 / 20 · 平台长什么样 ====================== -->
 <section class="slide light" data-layout="S16" data-animate="grid-reveal" id="slide-2">
   <div class="canvas-card">
-    <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">背景与缺口 · 02 / 19</div></header>
+    <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">背景与缺口 · 02 / 20</div></header>
     <main class="deck-main">
       <div class="deck-head" data-anim="line">
         <div class="deck-head-title"><div class="t-cat accent">PLATFORM · 已运行</div><h2 class="deck-title">44 套自动机场，<br>支撑崂山日常飞行作业</h2></div>
@@ -2001,10 +2003,10 @@
   </div>
 </section>
 
-<!-- ====================== 03 / 18 · 发现什么，给不出什么 ====================== -->
+<!-- ====================== 03 / 20 · 发现什么，给不出什么 ====================== -->
 <section class="slide dark has-strip" data-layout="S08" data-animate="grid-reveal" id="slide-3">
   <div class="canvas-card">
-    <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">背景与缺口 · 03 / 19</div></header>
+    <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">背景与缺口 · 03 / 20</div></header>
     <main class="deck-main">
       <div class="deck-head" data-anim="line">
         <div class="deck-head-title"><div class="t-cat accent">THE GAP · 现状</div><h2 class="deck-title">CV 看得见，<br>却分不清合规</h2></div>
@@ -2012,7 +2014,7 @@
       </div>
       <div class="deck-content">
         <div class="split2 c57" data-anim="up">
-          <div class="col-img"><div class="frame-img r-3x2 swiss-lined cv-frame"><img src="assets/images/Before_CV_脱敏_建筑垃圾.png" data-image-slot="s08-evidence-3x2" alt="CV 告警原图 · 疑似建筑垃圾"><span class="cv-tag">疑似建筑垃圾 · 置信度 0.82</span></div><div class="img-note">CV 只输出“疑似建筑垃圾 0.82”一个标签。违规乱倒，还是工地备案物料？它判不了。</div></div>
+          <div class="col-img"><div class="frame-img r-3x2 swiss-lined cv-frame"><img src="assets/images/Before_CV_脱敏_建筑垃圾.png" data-image-slot="s08-evidence-3x2" alt="CV 告警原图 · 疑似建筑垃圾"><span class="cv-tag">疑似建筑垃圾 · 置信度 0.82</span></div></div>
           <div style="display:flex;flex-direction:column;gap:1.5vh;min-height:0">
             <div>
               <div class="t-cat accent" style="margin-bottom:.7vh">痛点① · 误报率高（行业通病）</div>
@@ -2020,26 +2022,25 @@
               <div style="display:flex;flex-wrap:wrap;gap:.4vw .7vw;margin-top:.9vh;font-size:max(14px,.85vw);color:rgba(255,255,255,.68)"><span>工地物料 / 乱倒渣土</span><span style="opacity:.35">·</span><span>备案早餐摊 / 占道经营</span><span style="opacity:.35">·</span><span>秋季落叶 / 河道垃圾</span><span style="opacity:.35">·</span><span>炊烟扬尘 / 真实火情</span></div>
             </div>
             <div style="border-top:1px solid rgba(255,255,255,.18);padding-top:1.2vh">
-              <div class="t-cat accent" style="margin-bottom:.7vh">痛点② · 处置慢（每条四步人工 · 约 15 分钟）</div>
+              <div class="t-cat accent" style="margin-bottom:.7vh">痛点② · 处置慢（每条三步人工 · 约 15 分钟）</div>
               <div class="step-list">
                 <div class="step-row"><span class="step-n">01</span><span class="step-t">真假判断</span><span class="step-d">误报也得逐条看图核实</span></div>
-                <div class="step-row"><span class="step-n">02</span><span class="step-t">判归属</span><span class="step-d">归哪个部门靠经验</span></div>
-                <div class="step-row"><span class="step-n">03</span><span class="step-t">查重复 / 依据</span><span class="step-d">同点位报过没、引哪条法规，自己翻</span></div>
-                <div class="step-row"><span class="step-n">04</span><span class="step-t">写报告</span><span class="step-d">事件描述与字段手工整理</span></div>
+                <div class="step-row"><span class="step-n">02</span><span class="step-t">查重复 / 依据</span><span class="step-d">同点位报过没、引哪条法规，自己翻</span></div>
+                <div class="step-row"><span class="step-n">03</span><span class="step-t">写报告</span><span class="step-d">事件描述与字段手工整理</span></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="decision-strip" data-anim="foot">缺的不是“看见”，是看见之后的判断与加工：日均约 110 条、每条人工 15 分钟，处置慢、无法规模化。</div>
+      <div class="decision-strip" data-anim="foot">CV 已经能发现目标；系统还需要补齐合规判断、依据 / 台账 / 历史核验和报告字段。日均约 110 条、每条人工 15 分钟，处置慢、无法规模化。</div>
     </main>
   </div>
 </section>
 
-<!-- ====================== 04 / 18 · 四层系统协作 ====================== -->
+<!-- ====================== 04 / 20 · 四层系统协作 ====================== -->
 <section class="slide light" data-layout="S19" data-animate="grid-reveal" id="slide-4">
   <div class="canvas-card">
-    <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">产品方案 · 05 / 19</div></header>
+    <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">产品方案 · 04 / 20</div></header>
     <main class="deck-main">
       <div class="deck-head" data-anim="line">
         <div class="deck-head-title"><div class="t-cat accent">SYSTEM CHAIN · 四层协作</div><h2 class="deck-title">四层系统协作，<br>AI 只补中间一层</h2></div>
@@ -2056,13 +2057,13 @@
     </main>
   </div>
 </section>
-<!-- ====================== 04 / 22 · 转场：产品方案 ====================== -->
+<!-- ====================== 05 / 20 · 转场：产品方案 ====================== -->
 <section class="slide split" data-layout="S03" data-animate="split-statement" id="slide-break-solution">
   <div class="canvas-card" style="padding:0">
     <div class="split-half break-split">
       <div class="half b-accent break-claim">
         <canvas class="ascii-bg" aria-hidden="true"></canvas>
-        <header class="chrome-min" style="position:relative;z-index:1"><div class="l">低空感知 AI 处置中枢</div><div class="r">产品方案 · 04 / 19</div></header>
+        <header class="chrome-min" style="position:relative;z-index:1"><div class="l">低空感知 AI 处置中枢</div><div class="r">产品方案 · 05 / 20</div></header>
         <div class="break-claim-main" data-anim="left" style="position:relative;z-index:1">
           <div class="t-meta" style="color:rgba(255,255,255,.72)">SECTION 02</div>
           <h2>产品<br>方案</h2>
@@ -2070,11 +2071,11 @@
         <p class="break-claim-note" data-anim="left" style="position:relative;z-index:1">在感知和处置之间补一层 AI 分析：不接管处置，只把告警加工成可复核报告。</p>
       </div>
       <div class="half break-detail">
-        <header class="chrome-min"><div class="l">THIS PART</div><div class="r">05 / 19 - 08 / 19</div></header>
+        <header class="chrome-min"><div class="l">THIS PART</div><div class="r">06 / 20 - 10 / 20</div></header>
         <div class="break-detail-main" data-anim="right">
           <h3>编排、模型、知识和场景</h3>
           <div class="break-rows" style="grid-template-rows:repeat(4,1fr)">
-            <div class="break-row"><span class="nb">01</span><strong>编排架构</strong><span>三路并行调度，受控编排不是顺序流水线。</span></div>
+            <div class="break-row"><span class="nb">01</span><strong>编排架构</strong><span>三路并行调度，按控制点收敛结果。</span></div>
             <div class="break-row"><span class="nb">02</span><strong>模型选型</strong><span>每步用不同模型，路由、温度和成本逐段设计。</span></div>
             <div class="break-row"><span class="nb">03</span><strong>知识库</strong><span>法规、SOP 稳定；台账、点位、红线查最新版本。</span></div>
             <div class="break-row"><span class="nb">04</span><strong>场景覆盖</strong><span>先做能判得准、误报高的 8 类，边界不清的暂不纳入。</span></div>
@@ -2087,13 +2088,13 @@
 </section>
 
 
-<!-- ====================== 05 / 18 · 受控编排架构 ====================== -->
+<!-- ====================== 06 / 20 · 受控编排架构 ====================== -->
 <section class="slide dark orchestration-slide" data-layout="S17" data-animate="grid-reveal" id="slide-5">
   <div class="canvas-card">
-    <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">产品方案 · 06 / 19</div></header>
+    <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">产品方案 · 06 / 20</div></header>
     <main class="deck-main">
       <div class="deck-head" data-anim="line">
-        <div class="deck-head-title"><div class="t-cat accent">CONTROLLED ORCHESTRATION</div><h2 class="deck-title">AI 处置层：不是流水线<br>而是受控编排</h2></div>
+        <div class="deck-head-title"><div class="t-cat accent">CONTROLLED ORCHESTRATION</div><h2 class="deck-title">AI 处置层<br>采用受控编排</h2></div>
         <p class="deck-lead">事件发现后，编排层统一调度理解、检索和查询；结果再汇总生成，失败即转人工。</p>
       </div>
       <div class="deck-content">
@@ -2135,7 +2136,7 @@
     <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">产品方案 · 07 / 20</div></header>
     <main class="deck-main">
       <div class="deck-head" data-anim="line">
-        <div class="deck-head-title"><div class="t-cat accent">MODEL PLAN · 多步处理</div><h2 class="deck-title">一条告警，<br>不是一次 API 调用</h2></div>
+        <div class="deck-head-title"><div class="t-cat accent">MODEL PLAN · 多步处理</div><h2 class="deck-title">一条告警，<br>需要多步处理</h2></div>
         <p class="deck-lead">每一步用不同的模型和参数，因为每一步要解决的精度、延迟和成本问题不一样。</p>
       </div>
       <div class="deck-content">
@@ -2170,11 +2171,11 @@
             <div class="ledger-num">03</div>
             <div class="ledger-label">
               <div class="k">RAG + 工具查询</div>
-              <h3>召回优先，关键词校准语义近邻</h3>
+              <h3>证据召回，台账查询兜底</h3>
               <div class="model-meta-grid">
-                <div class="model-chip"><span>Model</span><strong>文本 Embedding + BM25 关键词</strong></div>
+                <div class="model-chip"><span>Retrieval / Tool</span><strong>向量召回 + BM25 + 结构化查询</strong></div>
                 <div class="temp-chip"><span>Temp</span><strong>—</strong></div>
-                <p class="model-reason">混合检索用来兜住召回；法规术语向量太近，不加关键词分不开。</p>
+                <p class="model-reason">先找语义近邻，再用关键词约束法规术语、点位名和台账字段。</p>
               </div>
             </div>
             <i data-lucide="search" class="ledger-icon"></i>
@@ -2187,7 +2188,7 @@
               <div class="model-meta-grid">
                 <div class="model-chip"><span>Model</span><strong>DeepSeek 级别文本模型</strong></div>
                 <div class="temp-chip"><span>Temp</span><strong>0.1</strong></div>
-                <p class="model-reason">这一步的产出是直接推给下游的字段，不能有随机性。</p>
+                <p class="model-reason">汇总生成直接产出推给下游的字段，不能有随机性。</p>
               </div>
             </div>
             <i data-lucide="file-check" class="ledger-icon"></i>
@@ -2199,7 +2200,7 @@
   <div class="snotes" aria-hidden="true">
     <h4>SPEAKER NOTES · 单条成本</h4>
     <p><b>单条约 ¥0.01–0.03，</b>成本主要压在多模态那一步。</p>
-    <p><b>最有效的杠杆不是换更便宜的模型，</b>而是在事件发现层先用规则拦掉明显误报——省掉一次多模态调用，单条成本就能降一半。先做减法，再谈选型。</p>
+    <p><b>事件发现层先拦掉明显误报，</b>比更换便宜模型更能降低单条成本：省掉一次多模态调用，单条成本就能降一半。先做减法，再谈选型。</p>
     <p style="color:#888;font-size:13px">按 N 关闭备注。</p>
   </div>
 </section>
@@ -2214,12 +2215,15 @@
           <div class="t-cat accent">KNOWLEDGE BASE · RAG</div>
           <h2 class="deck-title kb-title">法规稳定，台账在变：<br>报告必须带版本</h2>
         </div>
-        <p class="kb-lead" data-anim="up">RAG 不只是查法规，更是拿到当下有效的点位、红线、白名单和活动备案。生命周期短、更新不在本系统控制内的数据，必须查最新版本。</p>
-        <ul class="kb-list" data-anim="up">
-          <li><b>法规 / 裁量基准</b><span>相对稳定，按条款切分，标注有效期与适用范围</span></li>
-          <li><b>处置 SOP</b><span>相对稳定，按条件分支切分，精确到流程节点</span></li>
-          <li><b>台账 / 点位</b><span>动态变化，工地红线、便民白名单、活动备案必须取最新快照</span></li>
-        </ul>
+        <p class="kb-lead" data-anim="up">RAG 查询法规，并获取当下有效的点位、红线、白名单和活动备案。生命周期短、更新不在本系统控制内的数据，必须查最新版本。</p>
+        <div class="kb-flow" data-anim="up">
+          <div class="t-cat">三类知识，维护节奏不同</div>
+          <div class="step-list">
+            <div class="step-row"><span class="step-n">01</span><span class="step-t">法规 / 裁量基准</span><span class="step-d">相对稳定，按条款切分，标注有效期与适用范围</span></div>
+            <div class="step-row"><span class="step-n">02</span><span class="step-t">处置 SOP</span><span class="step-d">相对稳定，按条件分支切分，精确到流程节点</span></div>
+            <div class="step-row"><span class="step-n">03</span><span class="step-t">台账 / 点位</span><span class="step-d">动态变化，工地红线、便民白名单、活动备案必须取最新快照</span></div>
+          </div>
+        </div>
         </div>
       <figure class="kb-figure" data-anim="up">
         <div class="frame-img r-16x9 swiss-lined"><img src="assets/images/系统截图_知识库管理.png" data-image-slot="s08-evidence-16x9" alt="系统界面 · 知识库管理"></div>
@@ -2229,42 +2233,76 @@
   </div>
 </section>
 
-<!-- ====================== 08 / 19 · RAG 检索实例 ====================== -->
+<!-- ====================== 09 / 20 · RAG 检索实例 ====================== -->
 <section class="slide light rag-trace-slide" data-layout="S20" data-animate="stacked-ledger" id="slide-rag-trace">
   <div class="canvas-card">
-    <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">产品方案 · 08 / 19</div></header>
+    <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">产品方案 · 09 / 20</div></header>
     <main class="deck-main">
       <div class="deck-head" data-anim="line">
-        <div class="deck-head-title"><div class="t-cat accent">RAG TRACE · 检索实例</div><h2 class="deck-title">检索到的东西，<br>不等于能用的东西</h2></div>
+        <div class="deck-head-title"><div class="t-cat accent">RAG TRACE · 检索实例</div><h2 class="deck-title">召回结果<br>必须经过筛选</h2></div>
         <p class="deck-lead">一条建筑垃圾告警的 RAG 查询：法规召回优先，动态台账查最新；精准判断留到汇总生成时由编排层用完整上下文完成。</p>
       </div>
       <div class="deck-content" style="gap:2vh">
-        <div class="timeline-h" data-anim="up">
-          <div class="tl-row" style="grid-template-columns:repeat(4,1fr)">
-            <div class="th-node down"><span class="dot"></span><div class="label"><span class="yr">01</span><span class="name">构造查询</span><span class="desc">编排层并行下发；关键词 +「崂山区」辖区过滤</span></div></div>
-            <div class="th-node up"><span class="dot"></span><div class="label"><span class="yr">02</span><span class="name">混合检索</span><span class="desc">向量 + BM25，K 放大召回 → 8 条候选</span></div></div>
-            <div class="th-node down"><span class="dot"></span><div class="label"><span class="yr">03</span><span class="name">汇总时交叉验证</span><span class="desc">三路结果一起筛，8 条 → 2 条引用</span></div></div>
-            <div class="th-node up accent"><span class="dot"></span><div class="label"><span class="yr">04</span><span class="name">最终输出</span><span class="desc">带原文 / 条款 / 适用性 → 市容 §29 · 建废 §20</span></div></div>
+        <div class="stacked-ledger" data-anim="ledger">
+          <div class="ledger-row">
+            <div class="ledger-num">01</div>
+            <div class="ledger-label">
+              <div class="k">构造查询</div>
+              <h3>编排层并行下发 RAG</h3>
+              <p>多模态还在并行跑；场景配置展开关键词，并用「崂山区」过滤辖区，只查建废场景挂载的数据源。</p>
+              <div class="rag-tags"><span class="rag-chip">建筑垃圾</span><span class="rag-chip">违规倾倒</span><span class="rag-chip">渣土堆放</span><span class="rag-chip">公共场地</span><span class="rag-chip">围挡外堆体</span></div>
+            </div>
+            <i data-lucide="search" class="ledger-icon"></i>
+          </div>
+          <div class="ledger-row">
+            <div class="ledger-num">02</div>
+            <div class="ledger-label">
+              <div class="k">混合检索</div>
+              <h3>向量检索 + BM25 交叉验证</h3>
+              <p>召回优先，K 值设大，返回 8 条候选法规条款，同时拉取当前工地红线和点位台账快照。</p>
+              <div class="rag-note">汇总生成负责精准判断；动态数据先取最新</div>
+            </div>
+            <i data-lucide="filter" class="ledger-icon"></i>
+          </div>
+          <div class="ledger-row">
+            <div class="ledger-num">03</div>
+            <div class="ledger-label">
+              <div class="k">汇总时交叉验证</div>
+              <h3>三路结果一起筛</h3>
+              <p>编排层拿到多模态、RAG、历史查询和台账快照后，逐条筛掉主体不匹配、已废止、上下文不适用或点位状态不命中的结果。</p>
+              <div class="rag-note"><strong>8 条候选</strong> → <strong>2 条引用</strong>；台账记录当前版本</div>
+            </div>
+            <i data-lucide="git-branch" class="ledger-icon"></i>
+          </div>
+          <div class="ledger-row">
+            <div class="ledger-num">04</div>
+            <div class="ledger-label">
+              <div class="k">最终输出</div>
+              <h3>引用可回查、可解释</h3>
+              <p>引用带原文片段、法规名称、条款编号和适用性标注。</p>
+              <div class="rag-note">围挡外 + 混杂堆体 + 不在当前工地红线内 → 市容条例 §29 / 建废管理办法 §20</div>
+            </div>
+            <i data-lucide="badge-check" class="ledger-icon"></i>
           </div>
         </div>
-        </div>
+      </div>
     </main>
   </div>
   <div class="snotes" aria-hidden="true">
     <h4>SPEAKER NOTES · RAG 检索实例</h4>
     <p><b>01 · 构造查询：</b>编排层下发 RAG 检索时，多模态还在并行跑，不需要等视觉结果。「建筑垃圾识别」标签已路由到建废场景，场景配置展开检索关键词：建筑垃圾、违规倾倒、渣土堆放、公共场地、围挡外堆体。加位置「崂山区」过滤管辖范围。检索范围限定建废场景已挂载的条款子集，同时指定工地红线、点位台账、备案白名单取当前快照。</p>
-    <p><b>02 · 混合检索：</b>向量检索 + 关键词 BM25 交叉验证。召回优先，K 值放大，宁可多给候选，也别漏掉可能适用的条款。最终返回 8 条候选法规条款，同时拉取当前工地红线和点位台账快照。精准判断不发生在这一步，留给汇总生成。</p>
+    <p><b>02 · 混合检索：</b>向量检索 + 关键词 BM25 交叉验证。召回优先，K 值放大，宁可多给候选，也别漏掉可能适用的条款。最终返回 8 条候选法规条款，同时拉取当前工地红线和点位台账快照。汇总生成负责精准判断。</p>
     <p><b>03 · 汇总时交叉验证：</b>编排层拿到三路结果后做交叉验证：多模态说「围挡外公共空地混杂堆体」，RAG 捞回 8 条，Agent 返回 2 条历史记录和当前台账状态。LLM 逐条筛：讲弃置场管理的条款和当前事件主体不匹配，排除；讲处置单位义务的条款同理，排除；点位如果命中当前工地红线，则不按违规倾倒直接推送。最终引用市容条例 §29（公共场地堆放）和建废管理办法 §20（违规倾倒）。筛掉的 6 条里，有 1 条是已废止条款，入库时漏标了 valid_until。</p>
     <p><b>04 · 最终输出：</b>引用带原文片段、法规名称、条款编号、适用性标注，也记录台账来源、版本和更新时间。标注逻辑：「围挡外 + 混杂堆体 + 不在当前工地红线内」→ 适用上述两条。条款元数据结构见 P07 知识库管理界面。</p>
-    <p><b>底部决策条：</b>RAG 这一步先保召回。报告能不能用，关键看最新台账 / 点位状态能不能查到；精准判断留到汇总生成时，由编排层结合完整上下文完成。</p>
+    <p><b>底部决策条：</b>RAG 先保召回。报告是否可用，关键看最新台账 / 点位状态是否可查；编排层在汇总生成时结合完整上下文完成精准判断。</p>
     <p style="color:#888;font-size:13px">按 N 关闭备注。</p>
   </div>
 </section>
 
-<!-- ====================== 08 / 19 · 场景取舍与覆盖 ====================== -->
+<!-- ====================== 10 / 20 · 场景取舍与覆盖 ====================== -->
 <section class="slide dark" data-layout="S15" data-animate="matrix-fill" id="slide-scope">
   <div class="canvas-card">
-    <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">产品方案 · 08 / 19</div></header>
+    <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">产品方案 · 10 / 20</div></header>
     <main class="deck-main">
       <div class="deck-head" data-anim="line">
         <div class="deck-head-title"><div class="t-cat accent">SCOPE · SCENE COVERAGE</div><h2 class="deck-title">先做能判得准、<br>误报高的 8 类场景</h2></div>
@@ -2289,13 +2327,13 @@
   </div>
 </section>
 
-<!-- ====================== 09 / 18 · 转场：落地与容错 ====================== -->
+<!-- ====================== 11 / 20 · 转场：落地与容错 ====================== -->
 <section class="slide split" data-layout="S03" data-animate="split-statement" id="slide-break-cases">
   <div class="canvas-card" style="padding:0">
     <div class="split-half break-split">
       <div class="half b-accent break-claim">
         <canvas class="ascii-bg" aria-hidden="true"></canvas>
-        <header class="chrome-min" style="position:relative;z-index:1"><div class="l">低空感知 AI 处置中枢</div><div class="r">落地与容错 · 09 / 18</div></header>
+        <header class="chrome-min" style="position:relative;z-index:1"><div class="l">低空感知 AI 处置中枢</div><div class="r">落地与容错 · 11 / 20</div></header>
         <div class="break-claim-main" data-anim="left" style="position:relative;z-index:1">
           <div class="t-meta" style="color:rgba(255,255,255,.72)">SECTION 03</div>
           <h2>从设计<br>到落地</h2>
@@ -2303,7 +2341,7 @@
         <p class="break-claim-note" data-anim="left" style="position:relative;z-index:1">一条告警走完完整链路。同一套引擎，换风险等级就换策略。判不准时，兜底接住。</p>
       </div>
       <div class="half break-detail">
-        <header class="chrome-min"><div class="l">THIS PART</div><div class="r">10 / 18 - 13 / 18</div></header>
+        <header class="chrome-min"><div class="l">THIS PART</div><div class="r">12 / 20 - 15 / 20</div></header>
         <div class="break-detail-main" data-anim="right">
           <h3>从案例到兜底</h3>
           <div class="break-rows" style="grid-template-rows:repeat(3,1fr)">
@@ -2318,10 +2356,10 @@
   </div>
 </section>
 
-<!-- ====================== 09 / 18 · 建筑垃圾工作原理 ====================== -->
+<!-- ====================== 12 / 20 · 建筑垃圾工作原理 ====================== -->
 <section class="slide light dataflow-slide" data-layout="S08" data-animate="grid-reveal" id="slide-9">
   <div class="canvas-card">
-    <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">落地与容错 · 10 / 18</div></header>
+    <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">落地与容错 · 12 / 20</div></header>
     <main class="deck-main">
       <div class="deck-head" data-anim="line">
         <div class="deck-head-title"><div class="t-cat accent">CASE 01 · 建筑垃圾</div><h2 class="deck-title">从告警<br>到报文</h2></div>
@@ -2331,74 +2369,64 @@
         <div class="dataflow" data-anim="up">
           <aside class="df-col df-input">
             <div class="df-sec-title">01 · CV 告警进来</div>
-            <div class="frame-img cv-frame fit-contain"><img src="assets/images/Before_CV_脱敏_建筑垃圾.png" alt="CV 告警原图"><span class="cv-tag" style="font-size:10px">CV · 0.82</span></div>
+            <div class="frame-img cv-frame fit-contain"><img src="assets/images/Before_CV_脱敏_建筑垃圾.png" alt="CV 告警原图"><span class="cv-tag">CV · 0.82</span></div>
             <div class="df-kv-list">
               <div><span>算法标签</span><strong>疑似建筑垃圾</strong></div>
-              <div><span>点位时间</span><strong>中韩街道 · 03-12 10:24</strong></div>
+              <div><span>点位时间</span><strong>董家埠村东侧空地 · 03-09 10:30</strong></div>
               <div><span>原始输入</span><strong>图片、位置、航次、置信度</strong></div>
             </div>
           </aside>
           <div class="df-col df-map">
-            <div class="df-sec-title">02 · 来源对应到推送字段</div>
-            <div class="df-map-list">
-              <article class="df-map-row">
-                <div class="df-map-source">
-                  <div class="df-map-src">SYSTEM · 直接带入</div>
-                  <h3>系统已有字段</h3>
-                  <p>告警进入时就已经确定；事件类型由算法标签映射和系统路由确定，不交给 AI 改写。</p>
+            <div class="df-sec-title">02 · 五个字段对应 P03 三个痛点</div>
+            <div style="display:grid;grid-template-rows:repeat(5,minmax(0,1fr));gap:1px;background:var(--grey-2);min-height:0;flex:1">
+              <article style="background:var(--paper);display:grid;grid-template-columns:minmax(280px,4.2fr) minmax(0,6.8fr);align-items:stretch;min-height:0">
+                <div style="padding:.5vh .8vw;display:flex;flex-direction:column;justify-content:center;gap:.22vh;min-width:0">
+                  <div style="display:flex;align-items:center;gap:.45vw;flex-wrap:wrap"><span style="font-family:var(--mono);font-size:max(15px,.82vw);font-weight:700;letter-spacing:.08em;color:var(--accent)">① 真假判断</span><span style="font-family:var(--mono);font-size:max(14px,.76vw);font-weight:700;color:var(--text-primary);border:1px solid var(--grey-2);padding:.12em .38em;background:var(--paper)">visual_summary</span></div>
+                  <p style="font-size:max(16px,.86vw);font-weight:500;line-height:1.24;color:var(--text-secondary);margin:0">看图判断框选区域内有什么、周边环境是什么</p>
+                  <div style="font-family:var(--mono);font-size:max(14px,.7vw);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-helper)">VLM 多模态理解</div>
                 </div>
-                <div class="df-map-bridge"><span>→</span></div>
-                <div class="df-map-fields">
-                  <div class="df-map-fields-title">进入报文</div>
-                  <div class="df-field-chips"><span class="df-field-chip">event_id</span><span class="df-field-chip">location</span><span class="df-field-chip">alarm_time</span><span class="df-field-chip">event_type</span><span class="df-field-chip">dispatch_target</span><span class="df-field-chip">review_post</span></div>
-                  <div class="df-field-sample">事件号、点位、时间、事件类型、派发岗位、复核岗位。</div>
+                <div style="border-left:2px solid var(--accent);padding:.5vh .9vw;display:flex;align-items:center;min-width:0;overflow:hidden">
+                  <p style="display:block;width:100%;font-size:max(16px,.9vw);font-weight:500;line-height:1.3;color:var(--text-primary);margin:0;max-width:100%;white-space:normal;overflow-wrap:anywhere;word-break:break-word">“围挡外空地存在混杂堆体，含砖块、混凝土碎块及少量编织袋。综合判断符合建筑垃圾特征。”</p>
                 </div>
               </article>
-              <article class="df-map-row ai">
-                <div class="df-map-source">
-                  <div class="df-map-src">VISION · 多模态理解</div>
-                  <h3>看图判断现场</h3>
-                  <p>从框选区域和周边环境判断现场情况，只生成视觉摘要。</p>
+              <article style="background:var(--paper);display:grid;grid-template-columns:minmax(280px,4.2fr) minmax(0,6.8fr);align-items:stretch;min-height:0;border-top:2px solid var(--grey-2)">
+                <div style="padding:.5vh .8vw;display:flex;flex-direction:column;justify-content:center;gap:.22vh;min-width:0">
+                  <div style="display:flex;align-items:center;gap:.45vw;flex-wrap:wrap"><span style="font-family:var(--mono);font-size:max(15px,.82vw);font-weight:700;letter-spacing:.08em;color:var(--accent)">② 查依据</span><span style="font-family:var(--mono);font-size:max(14px,.76vw);font-weight:700;color:var(--text-primary);border:1px solid var(--grey-2);padding:.12em .38em;background:var(--paper)">regulation_refs</span></div>
+                  <p style="font-size:max(16px,.86vw);font-weight:500;line-height:1.24;color:var(--text-secondary);margin:0">引用适用的法规条款及裁量基准</p>
+                  <div style="font-family:var(--mono);font-size:max(14px,.7vw);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-helper)">RAG · 法规/裁量基准</div>
                 </div>
-                <div class="df-map-bridge"><span>→</span></div>
-                <div class="df-map-fields">
-                  <div class="df-map-fields-title">进入报文</div>
-                  <div class="df-field-chips"><span class="df-field-chip">visual_summary</span></div>
-                  <div class="df-field-sample">围挡外公共空地存在混杂堆体。</div>
+                <div style="border-left:2px solid var(--accent);padding:.5vh .9vw;display:flex;align-items:center;min-width:0;overflow:hidden">
+                  <p style="display:block;width:100%;font-size:max(16px,.9vw);font-weight:500;line-height:1.3;color:var(--text-primary);margin:0;max-width:100%;white-space:normal;overflow-wrap:anywhere;word-break:break-word">“市容条例 §29（公共场地堆放）· 建废管理办法 §20（违规倾倒）”</p>
                 </div>
               </article>
-              <article class="df-map-row ai">
-                <div class="df-map-source">
-                  <div class="df-map-src">RAG · 知识库 / 台账检索</div>
-                  <h3>查法规，也查当前台账</h3>
-                  <p>法规 / SOP 给依据；工地红线、备案点位和白名单决定这条告警当下能不能用。</p>
+              <article style="background:var(--paper);display:grid;grid-template-columns:minmax(280px,4.2fr) minmax(0,6.8fr);align-items:stretch;min-height:0">
+                <div style="padding:.5vh .8vw;display:flex;flex-direction:column;justify-content:center;gap:.22vh;min-width:0">
+                  <div style="display:flex;align-items:center;gap:.45vw;flex-wrap:wrap"><span style="font-family:var(--mono);font-size:max(15px,.82vw);font-weight:700;letter-spacing:.08em;color:var(--accent)">② 台账核验</span><span style="font-family:var(--mono);font-size:max(14px,.76vw);font-weight:700;color:var(--text-primary);border:1px solid var(--grey-2);padding:.12em .38em;background:var(--paper)">ledger_match</span></div>
+                  <p style="font-size:max(16px,.86vw);font-weight:500;line-height:1.24;color:var(--text-secondary);margin:0">查询工地红线，判断是否位于在建工程用地范围内</p>
+                  <div style="font-family:var(--mono);font-size:max(14px,.7vw);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-helper)">RAG · 台账/点位</div>
                 </div>
-                <div class="df-map-bridge"><span>→</span></div>
-                <div class="df-map-fields">
-                  <div class="df-map-fields-title">进入报文</div>
-                  <div class="df-field-chips"><span class="df-field-chip">regulation_refs</span><span class="df-field-chip">closure_requirements</span></div>
-                  <div class="df-field-sample">市容条例 §29；工地红线未命中；限期清运、复拍、复核销号。</div>
+                <div style="border-left:2px solid var(--accent);padding:.5vh .9vw;display:flex;align-items:center;min-width:0;overflow:hidden">
+                  <p style="display:block;width:100%;font-size:max(16px,.9vw);font-weight:500;line-height:1.3;color:var(--text-primary);margin:0;max-width:100%;white-space:normal;overflow-wrap:anywhere;word-break:break-word">“在建工地红线：未命中。该点位不在任何在建工程用地范围内。”</p>
                 </div>
               </article>
-              <article class="df-map-row ai mix">
-                <div class="df-map-source">
-                  <div class="df-map-src">编排层 · 汇总生成</div>
-                  <h3>查复发，出建议</h3>
-                  <p>多模态、RAG、历史查询都由编排层调度，不是独立组件。</p>
-                  <div class="df-source-tags">
-                    <span class="df-source-tag">固定四步链路</span>
-                    <span class="df-source-tag">最多三轮工具</span>
-                    <span class="df-source-tag">异常转人工</span>
-                  </div>
+              <article style="background:var(--paper);display:grid;grid-template-columns:minmax(280px,4.2fr) minmax(0,6.8fr);align-items:stretch;min-height:0">
+                <div style="padding:.5vh .8vw;display:flex;flex-direction:column;justify-content:center;gap:.22vh;min-width:0">
+                  <div style="display:flex;align-items:center;gap:.45vw;flex-wrap:wrap"><span style="font-family:var(--mono);font-size:max(15px,.82vw);font-weight:700;letter-spacing:.08em;color:var(--accent)">② 查历史</span><span style="font-family:var(--mono);font-size:max(14px,.76vw);font-weight:700;color:var(--text-primary);border:1px solid var(--grey-2);padding:.12em .38em;background:var(--paper)">history_check</span></div>
+                  <p style="font-size:max(16px,.86vw);font-weight:500;line-height:1.24;color:var(--text-secondary);margin:0">查询同点位历史事件，判断是否复发</p>
+                  <div style="font-family:var(--mono);font-size:max(14px,.7vw);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-helper)">工具查询 · 历史事件</div>
                 </div>
-                <div class="df-map-bridge"><span>→</span></div>
-                <div class="df-map-fields">
-                  <div class="df-map-fields-title">进入报文</div>
-                  <div class="df-field-chips"><span class="df-field-chip">history_check</span><span class="df-field-chip">suggested_action</span></div>
-                  <div class="df-field-pairs">
-                    <div class="df-field-pair"><b>history_check</b><span>近 6 个月同点位 2 条历史</span></div>
-                    <div class="df-field-pair"><b>suggested_action</b><span>汇总视觉、法规、历史后按场景模板生成</span></div>
-                  </div>
+                <div style="border-left:2px solid var(--accent);padding:.5vh .9vw;display:flex;align-items:center;min-width:0;overflow:hidden">
+                  <p style="display:block;width:100%;font-size:max(16px,.9vw);font-weight:500;line-height:1.3;color:var(--text-primary);margin:0;max-width:100%;white-space:normal;overflow-wrap:anywhere;word-break:break-word">“近 6 个月同点位 2 条：03-09 建筑垃圾/已处置 · 01-14 渣土/已处置。当前为第 3 次同类事件。”</p>
+                </div>
+              </article>
+              <article style="background:var(--paper);display:grid;grid-template-columns:minmax(280px,4.2fr) minmax(0,6.8fr);align-items:stretch;min-height:0;border-top:2px solid var(--grey-2)">
+                <div style="padding:.5vh .8vw;display:flex;flex-direction:column;justify-content:center;gap:.22vh;min-width:0">
+                  <div style="display:flex;align-items:center;gap:.45vw;flex-wrap:wrap"><span style="font-family:var(--mono);font-size:max(15px,.82vw);font-weight:700;letter-spacing:.08em;color:var(--accent)">③ 处置建议</span><span style="font-family:var(--mono);font-size:max(14px,.76vw);font-weight:700;color:var(--text-primary);border:1px solid var(--grey-2);padding:.12em .38em;background:var(--paper)">suggested_action</span></div>
+                  <p style="font-size:max(16px,.86vw);font-weight:500;line-height:1.24;color:var(--text-secondary);margin:0">根据视觉判断、法规引用、台账状态和历史记录，综合生成处置建议</p>
+                  <div style="font-family:var(--mono);font-size:max(14px,.7vw);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-helper)">编排层 · 汇总生成</div>
+                </div>
+                <div style="border-left:2px solid var(--accent);padding:.5vh .9vw;display:flex;align-items:center;min-width:0;overflow:hidden">
+                  <p style="display:block;width:100%;font-size:max(16px,.9vw);font-weight:500;line-height:1.3;color:var(--text-primary);margin:0;max-width:100%;white-space:normal;overflow-wrap:anywhere;word-break:break-word">“限期清运（3 个工作日）· 复拍确认 · 复核销号。复发点位建议从严重处。”</p>
                 </div>
               </article>
             </div>
@@ -2411,24 +2439,24 @@
     <h4>SPEAKER NOTES · 另一类场景（占道经营）</h4>
     <p>被问"还有别的场景吗"时口头讲：<b>识别到占道 ≠ 认定违规</b>。CV 输入「疑似占道经营 0.88」，高架桥下便民服务区。</p>
     <p>系统 Trace：① 理解场景，区分占道 / 店外经营 / 临时停留 → ② 查地点白名单，命中「高架桥下便民早餐点」备案 → ③ 核对允许时段（06:00–09:00，巡检 08:15，时段内）→ ④ 生成巡查记录留档，<b>不派单</b>。</p>
-    <p>落点：备案摊点留档但不派单；核验条件不完整时，不让系统直接作合规判断。与工地物料案例同一逻辑：查台账 / 白名单后做降级，不直接执法。</p>
+    <p>落点：备案摊点留档但不派单；核验条件不完整时，系统转人工复核。与工地物料案例同一逻辑：查台账 / 白名单后做降级，不直接执法。</p>
     <p style="color:#888;font-size:13px">按 N 关闭备注。</p>
   </div>
 </section>
 
-<!-- ====================== 11 / 19 · 事件详情（接续 P10 案例） ====================== -->
+<!-- ====================== 13 / 20 · 事件详情（接续 P12 案例） ====================== -->
 <section class="slide dark workbench-slide" data-layout="S22" data-animate="grid-reveal" id="slide-11">
-  <div class="canvas-card"><header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">落地与容错 · 11 / 18</div></header><main class="deck-main">
+  <div class="canvas-card"><header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">落地与容错 · 13 / 20</div></header><main class="deck-main">
     <div class="workbench-hero" data-anim="up"><figure class="workbench-shot"><div class="frame-img swiss-lined"><img src="assets/images/系统截图_事件详情.png" data-image-slot="s22-hero-21x9" alt="系统界面 · 事件详情"></div><figcaption class="swiss-img-caption"><span>系统界面 · 事件详情</span><strong>详情页</strong></figcaption></figure><aside class="workbench-side"><div class="t-cat accent">EVENT DETAIL · 同页查看</div><h2 class="deck-title">事件详情<br>一页看全</h2><p class="deck-lead">图像、证据链、报告字段和下游状态，同一页查看，不再跨系统翻材料。</p><div class="workbench-flow"><div class="t-cat">五类信息，不用跳转</div><div class="step-list">
       <div class="step-row"><span class="step-n">01</span><span class="step-t">事件信息</span><span class="step-d">CV 图像 · 告警标签</span></div><div class="step-row"><span class="step-n">02</span><span class="step-t">理解结果</span><span class="step-d">语义描述 · 初步判定</span></div><div class="step-row"><span class="step-n">03</span><span class="step-t">辅助证据</span><span class="step-d">RAG 引用 · 台账命中</span></div><div class="step-row"><span class="step-n">04</span><span class="step-t">报告字段</span><span class="step-d">字段契约 · 下游状态</span></div><div class="step-row"><span class="step-n">05</span><span class="step-t">处置留痕</span><span class="step-d">推送记录 · 状态回溯</span></div>
     </div></div></aside></div>
   </main></div>
 </section>
 
-<!-- ====================== 12 / 19 · 烟火 L1 · L1/L2 策略对比 ====================== -->
+<!-- ====================== 14 / 20 · 烟火 L1 · L1/L2 策略对比 ====================== -->
 <section class="slide light" data-layout="S13" data-animate="three-forces" id="slide-fire">
   <div class="canvas-card">
-    <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">落地与容错 · 12 / 18</div></header>
+    <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">落地与容错 · 14 / 20</div></header>
     <main class="deck-main">
       <div class="deck-head" data-anim="line">
         <div class="deck-head-title"><div class="t-cat accent">CASE 02 · L1 / L2 STRATEGY</div><h2 class="deck-title" style="font-size:min(4.2vw,7.4vh)">L1 和 L2，同一套引擎，<br>完全不同的策略</h2></div>
@@ -2464,10 +2492,10 @@
   </div>
 </section>
 
-<!-- ====================== 13 / 18 · 容错与兜底 ====================== -->
+<!-- ====================== 15 / 20 · 容错与兜底 ====================== -->
 <section class="slide dark has-strip" data-layout="S20" data-animate="stacked-ledger" id="slide-fallback">
   <div class="canvas-card">
-    <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">落地与容错 · 13 / 18</div></header>
+    <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">落地与容错 · 15 / 20</div></header>
     <main class="deck-main">
       <div class="deck-head" data-anim="line">
         <div class="deck-head-title"><div class="t-cat accent">FAILSAFE · 不确定时怎么办</div><h2 class="deck-title">当系统<br>判不准的时候</h2></div>
@@ -2481,19 +2509,19 @@
           <div class="ledger-row"><div class="ledger-num">04</div><div class="ledger-label"><div class="k">汇总生成</div><h3>JSON Schema 校验失败</h3><p>拦截不推送，回退重试或转人工。</p></div><i data-lucide="file-x" class="ledger-icon"></i></div>
           <div class="ledger-row"><div class="ledger-num">05</div><div class="ledger-label"><div class="k">反馈学习</div><h3>业务人员驳回</h3><p>驳回入库；同类驳回累积到阈值，触发规则或知识库排查。</p></div><i data-lucide="undo-2" class="ledger-icon"></i></div>
         </div>
-        <div class="decision-strip" data-anim="foot">政务 AI 慢一点可以接受，错了还没人发现才危险。每个控制点都要留兜底：不确定就转人工，不让自动化把错误藏住。</div>
+        <div class="decision-strip" data-anim="foot">政务 AI 慢一点可以接受，错了还没人发现才危险。每个控制点都要留兜底：不确定就转人工，系统必须暴露低置信、失败原因和转人工记录。</div>
       </div>
     </main>
   </div>
 </section>
 
-<!-- ====================== 14 / 18 · 转场：验证与上线 ====================== -->
+<!-- ====================== 16 / 20 · 转场：验证与上线 ====================== -->
 <section class="slide split" data-layout="S03" data-animate="split-statement" id="slide-break-eval">
   <div class="canvas-card" style="padding:0">
     <div class="split-half break-split">
       <div class="half b-accent break-claim">
         <canvas class="ascii-bg" aria-hidden="true"></canvas>
-        <header class="chrome-min" style="position:relative;z-index:1"><div class="l">低空感知 AI 处置中枢</div><div class="r">验证与上线 · 14 / 18</div></header>
+        <header class="chrome-min" style="position:relative;z-index:1"><div class="l">低空感知 AI 处置中枢</div><div class="r">验证与上线 · 16 / 20</div></header>
         <div class="break-claim-main" data-anim="left" style="position:relative;z-index:1">
           <div class="t-meta" style="color:rgba(255,255,255,.72)">SECTION 04</div>
           <h2>验证<br>与上线</h2>
@@ -2501,13 +2529,13 @@
         <p class="break-claim-note" data-anim="left" style="position:relative;z-index:1">AI PM 的活，是把不稳定的判断链做成能评测、能上线的系统。</p>
       </div>
       <div class="half break-detail">
-        <header class="chrome-min"><div class="l">THIS PART</div><div class="r">15 / 18 - 17 / 18</div></header>
+        <header class="chrome-min"><div class="l">THIS PART</div><div class="r">17 / 20 - 19 / 20</div></header>
         <div class="break-detail-main" data-anim="right">
           <h3>从评测到上线，三件事</h3>
           <div class="break-rows" style="grid-template-rows:repeat(3,1fr)">
             <div class="break-row"><span class="nb">01</span><strong>评测设计</strong><span>L1 看召回、L2 分层测精度、L3 不进评测。评测策略由风险等级决定。</span></div>
             <div class="break-row"><span class="nb">02</span><strong>指标边界</strong><span>只把系统自己能算的指标放进验收。采纳率、闭环率只做观察。</span></div>
-            <div class="break-row"><span class="nb">03</span><strong>建设成果</strong><span>44 套机场、28+9+18 知识底座、8 类场景报告已推送下游。</span></div>
+            <div class="break-row"><span class="nb">03</span><strong>建设成果</strong><span>8 类场景接入受控编排；可复核报告、转人工兜底和反馈回流进入真实告警试点。</span></div>
           </div>
         </div>
         <div class="break-conclusion" data-anim="right">没有同口径回归，就不上真实告警。</div>
@@ -2516,10 +2544,10 @@
   </div>
 </section>
 
-<!-- ====================== 15 / 18 · 评测体系设计 ====================== -->
+<!-- ====================== 17 / 20 · 评测体系设计 ====================== -->
 <section class="slide light" data-layout="S19" data-animate="grid-reveal" id="slide-12">
   <div class="canvas-card">
-    <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">验证与上线 · 15 / 18</div></header>
+    <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">验证与上线 · 17 / 20</div></header>
     <main class="deck-main">
       <div class="deck-head" data-anim="line">
         <div class="deck-head-title"><div class="t-cat accent">EVAL DESIGN · 评测体系</div><h2 class="deck-title">L1 和 L2，<br>不能用同一把尺</h2></div>
@@ -2529,7 +2557,7 @@
         <div class="four-cards" data-anim="up">
           <div class="fc-col"><div class="t-meta">01 · L1 评测</div><h3>火情专项 · 只看召回</h3><p><b>47 条火情/烟雾事件，漏一个即停推。</b><br>手工建集，覆盖炊烟、扬尘、雾气、已知焚烧点、低光照、小目标 6 类边界。端到端全链路跑，只看这一个数。</p></div>
                               <div class="fc-col"><div class="t-meta">02 · L2 评测</div><h3>按能力点测 · 精度优先</h3><p><b>多模态测复判准确率，RAG 测引用相关率，Schema 自动校验。</b><br>8 类场景各抽 12–15 条构成图像评测集；query-答案对在建知识库时同步标注。</p></div>
-                              <div class="fc-col"><div class="t-meta">03 · L3</div><h3>不进评测</h3><p><b>L3 不是 AI 行为，是安全网——不确定本身就是设计的一部分。</b><br>多模态灰区、查询信息不全、汇总校验失败，都落 L3 复核池，不考核准确性。</p></div>
+                              <div class="fc-col"><div class="t-meta">03 · L3</div><h3>不进评测</h3><p><b>L3 是安全网。系统把不确定告警送进复核池，不考核准确率。</b><br>多模态灰区、查询信息不全、汇总校验失败，都按 L3 记录并交给人工复核。</p></div>
                               <div class="fc-col"><div class="t-meta">04 · 红线</div><h3>L1 召回独立考核</h3><p><b>任何 Prompt/模型/知识库变更，L1 回归集先跑一次。</b><br>离线基线 97.9%（47 条召回 46），低于即打回。整体准确率不能盖住高危漏检。</p></div>
         </div>
         </div>
@@ -2537,11 +2565,11 @@
   </div>
   <div class="snotes" aria-hidden="true">
     <h4>SPEAKER NOTES · 评测体系追问</h4>
-        <p><b>L1 评测：</b>火情专项 47 条，不是随机抽的，是手工建的。覆盖 6 类边界：炊烟（像火但不是）、扬尘（工地常见）、雾气（山区低能见度）、已知焚烧点（合规的）、低光照（16:00 后）、小目标（<5m²）。端到端全链路跑，只看召回；低于当前基线就停推。不关心过滤率，L1 宁可误报。</p>
+        <p><b>L1 评测：</b>火情专项 47 条由人工建集。覆盖 6 类边界：炊烟（像火但不是）、扬尘（工地常见）、雾气（山区低能见度）、已知焚烧点（合规的）、低光照（16:00 后）、小目标（<5m²）。端到端全链路跑，只看召回；低于当前基线就停推。不关心过滤率，L1 宁可误报。</p>
         <p><b>L2 评测：</b>多模态理解测图像复判：100 条图像，人工写"看图判断"，AI 的语义描述和人工参照对比。RAG 与工具查询测引用命中：100 条 query→应命中答案对，后台手工建。汇总生成的 Schema 校验自动跑。L2 宁可漏判不能扰民。</p>
-        <p><b>L3：</b>不进评测。它是兜底机制：多模态灰区、查询信息不全、汇总校验失败都落 L3 复核池。不考核准确性，因为没有"正确答案"；不确定本身就是系统设计的一部分。</p>
+        <p><b>L3：</b>不进评测。多模态灰区、查询信息不全、汇总校验失败都落 L3 复核池。系统把不确定告警交给人工复核，不考核准确性。</p>
         <p><b>追问"评测数据从哪来"：</b>L1 火情集是人工筛选历史飞行影像建的。L2 多模态评测集从 8 类场景各抽 12-15 条构成。RAG query→答案对是在建知识库时同步标注的；每条法规入库时标注它适用的场景和条件。</p>
-        <p><b>评测集会老化：</b>评测集不是建一次就完了。季节一变，秋季落叶误报场景消失，冬季低光照翻倍；场景分布不跟着校准，指标就会漂。每季度刷新一次场景分布抽样，法规废止/新增 5 条以上触发专项重测。</p>
+        <p><b>评测集会老化：</b>评测集需要持续更新。季节一变，秋季落叶误报场景消失，冬季低光照翻倍；场景分布不跟着校准，指标就会漂。每季度刷新一次场景分布抽样，法规废止/新增 5 条以上触发专项重测。</p>
     <p style="color:#888;font-size:13px">按 N 关闭备注。</p>
   </div>
 </section>
@@ -2550,10 +2578,10 @@
 <!-- slide-eval-set 已并入 slide-12(评测体系设计)——第四章收敛为 评测设计/指标边界/建设成果 3 页 -->
 
 
-<!-- ====================== 17 / 21 · 指标边界 ====================== -->
+<!-- ====================== 18 / 20 · 指标边界 ====================== -->
 <section class="slide light has-strip" data-layout="S08" data-animate="duo-mirror" id="slide-metric-boundary">
   <div class="canvas-card">
-    <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">验证与上线 · 16 / 18</div></header>
+    <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">验证与上线 · 18 / 20</div></header>
     <main class="deck-main">
       <div class="deck-head" data-anim="line">
         <div class="deck-head-title"><div class="t-cat accent">METRIC BOUNDARY · 指标边界</div><h2 class="deck-title">选的指标，<br>和放弃的指标</h2></div>
@@ -2585,17 +2613,17 @@
             </ul>
           </article>
         </div>
-        <div class="decision-strip" data-anim="foot">业务反馈要看，但不拿主观口径卡验收。系统质量先用系统可计算的指标卡住。</div>
+        <div class="decision-strip" data-anim="foot">业务反馈保留观察；验收只看系统可计算、可复验的指标。</div>
       </div>
     </main>
   </div>
 </section>
 
 
-<!-- ====================== 17 / 18 · 运行实况 ====================== -->
+<!-- ====================== 19 / 20 · 运行实况 ====================== -->
 <section class="slide dark" data-layout="S20" data-animate="stacked-ledger" id="slide-15">
   <div class="canvas-card">
-    <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">验证与上线 · 17 / 18</div></header>
+    <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">验证与上线 · 19 / 20</div></header>
     <main class="deck-main">
       <div class="deck-head" data-anim="line">
         <div class="deck-head-title"><div class="t-cat accent">RESULTS · 建设成果</div><h2 class="deck-title">CV 告警进来，<br>出的是可复核报告</h2></div>
@@ -2603,7 +2631,7 @@
       </div>
       <div class="deck-content" style="gap:2.2vh">
         <div class="stacked-ledger" data-anim="ledger">
-          <div class="ledger-row"><div class="ledger-num">110<small>/日</small></div><div class="ledger-label"><div class="k">Scale</div><h3>告警进编排</h3><p>44 套机场、8 类场景，日均约 110 条 CV 告警进入受控编排。</p></div><i data-lucide="activity" class="ledger-icon"></i></div>
+          <div class="ledger-row"><div class="ledger-num">110<small>/日</small></div><div class="ledger-label"><div class="k">Scale</div><h3>告警进编排</h3><p>8 类场景，日均约 110 条 CV 告警进入受控编排。</p></div><i data-lucide="activity" class="ledger-icon"></i></div>
           <div class="ledger-row"><div class="ledger-num">85<small>%</small></div><div class="ledger-label"><div class="k">Observation</div><h3>业务反馈观察</h3><p>抽样 1,200 条，85% 被业务采纳或认可；仅作运营观察，不作为验收指标。</p></div><i data-lucide="badge-check" class="ledger-icon"></i></div>
           <div class="ledger-row"><div class="ledger-num">≥90<small>%</small></div><div class="ledger-label"><div class="k">Filter</div><h3>误报过滤率</h3><p>多模态过滤、最新台账匹配和历史去重同时起作用。</p></div><i data-lucide="filter" class="ledger-icon"></i></div>
           <div class="ledger-row"><div class="ledger-num">97.9<small>%</small></div><div class="ledger-label"><div class="k">L1 Recall</div><h3>L1 召回率</h3><p>烟火、积水等高危场景，变更后不能低于离线基线。</p></div><i data-lucide="shield" class="ledger-icon"></i></div>
@@ -2613,7 +2641,7 @@
   </div>
 </section>
 
-
+<!-- ====================== 20 / 20 · 封底 ====================== -->
 <section class="slide split" data-layout="SWISS-CLOSING-ASCII" data-animate="split-statement" id="slide-19">
   <div class="canvas-card" style="padding:0"><div class="split-half">
     <div class="half b-accent" style="justify-content:center;align-items:center;text-align:center;gap:2vh">

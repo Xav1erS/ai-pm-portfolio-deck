@@ -1,0 +1,1831 @@
+{
+  "fileUrl": "file:///C:/Users/admin/Desktop/ai-pm-portfolio-deck/index.html",
+  "baseInfo": {
+    "title": "低空感知 AI 处置中枢 · 把 CV 告警加工成可复核的事件报告",
+    "bodyClass": "canvas-mode is-win dark-bg motion-ready",
+    "slideCount": 20,
+    "navDots": 20,
+    "imageCount": 7,
+    "brokenImages": [],
+    "viewport": {
+      "w": 1600,
+      "h": 900
+    },
+    "hasLucide": true,
+    "hasGo": true
+  },
+  "messages": [
+    {
+      "type": "error",
+      "text": "Access to script at 'file:///C:/Users/admin/Desktop/ai-pm-portfolio-deck/assets/motion.min.js' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-untrusted, data, http, https."
+    },
+    {
+      "type": "requestfailed",
+      "url": "file:///C:/Users/admin/Desktop/ai-pm-portfolio-deck/assets/motion.min.js",
+      "failure": "net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    }
+  ],
+  "slides": [
+    {
+      "index": 1,
+      "id": "slide-1",
+      "cls": "slide accent",
+      "title": "低空感知 AI 处置中枢",
+      "slideRect": [
+        0,
+        0,
+        1600,
+        900
+      ],
+      "clipRisk": [
+        {
+          "selector": "h1",
+          "text": "低空感知 AI 处置中枢",
+          "client": [
+            907,
+            225
+          ],
+          "scroll": [
+            907,
+            238
+          ],
+          "overflow": "visible/visible/visible"
+        }
+      ],
+      "outside": [],
+      "tiny": [],
+      "imgs": []
+    },
+    {
+      "index": 2,
+      "id": "slide-2",
+      "cls": "slide light",
+      "title": "44 套自动机场， 支撑崂山日常飞行作业",
+      "slideRect": [
+        5,
+        0,
+        1600,
+        900
+      ],
+      "clipRisk": [
+        {
+          "selector": "div.deck-head",
+          "text": "PLATFORM · 已运行 44 套自动机场， 支撑崂山日常飞行作业 云世纪承建的平台已投入运行，覆盖机场调度、航线、飞行作业、影像采集和 CV 识别，为 AI 分析层提供数据基础。",
+          "client": [
+            1440,
+            202
+          ],
+          "scroll": [
+            1440,
+            210
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.deck-head-title",
+          "text": "PLATFORM · 已运行 44 套自动机场， 支撑崂山日常飞行作业",
+          "client": [
+            835,
+            184
+          ],
+          "scroll": [
+            835,
+            192
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "h2.deck-title",
+          "text": "44 套自动机场， 支撑崂山日常飞行作业",
+          "client": [
+            835,
+            155
+          ],
+          "scroll": [
+            835,
+            164
+          ],
+          "overflow": "visible/visible/visible"
+        }
+      ],
+      "outside": [],
+      "tiny": [],
+      "imgs": [
+        {
+          "src": "assets/images/机场监控.jpg",
+          "natural": [
+            1280,
+            720
+          ],
+          "rendered": [
+            702,
+            393
+          ]
+        },
+        {
+          "src": "assets/images/楼顶部署.jpg",
+          "natural": [
+            1080,
+            721
+          ],
+          "rendered": [
+            702,
+            393
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "id": "slide-3",
+      "cls": "slide dark has-strip",
+      "title": "CV 看得见， 却分不清合规",
+      "slideRect": [
+        5,
+        0,
+        1600,
+        900
+      ],
+      "clipRisk": [
+        {
+          "selector": "div.deck-head",
+          "text": "THE GAP · 现状 CV 看得见， 却分不清合规 2023 年方案就提了自动 AI 分析报警，当年只做到基础 CV 识别：检测到“有”，判不了“违不违规”。",
+          "client": [
+            1440,
+            202
+          ],
+          "scroll": [
+            1440,
+            210
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.deck-head-title",
+          "text": "THE GAP · 现状 CV 看得见， 却分不清合规",
+          "client": [
+            835,
+            184
+          ],
+          "scroll": [
+            835,
+            192
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "h2.deck-title",
+          "text": "CV 看得见， 却分不清合规",
+          "client": [
+            835,
+            155
+          ],
+          "scroll": [
+            835,
+            164
+          ],
+          "overflow": "visible/visible/visible"
+        }
+      ],
+      "outside": [],
+      "tiny": [],
+      "imgs": [
+        {
+          "src": "assets/images/Before_CV_脱敏_建筑垃圾.png",
+          "natural": [
+            861,
+            558
+          ],
+          "rendered": [
+            584,
+            387
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "id": "slide-4",
+      "cls": "slide light",
+      "title": "四层系统协作， AI 只补中间一层",
+      "slideRect": [
+        5,
+        0,
+        1600,
+        900
+      ],
+      "clipRisk": [
+        {
+          "selector": "div.deck-head",
+          "text": "SYSTEM CHAIN · 四层协作 四层系统协作， AI 只补中间一层 飞行、采集、处置消费都在原业务系统完成。AI 处置层只接收 CV 告警，推送待复核报告，不越过业务系统。",
+          "client": [
+            1440,
+            202
+          ],
+          "scroll": [
+            1440,
+            210
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.deck-head-title",
+          "text": "SYSTEM CHAIN · 四层协作 四层系统协作， AI 只补中间一层",
+          "client": [
+            835,
+            184
+          ],
+          "scroll": [
+            835,
+            192
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "h2.deck-title",
+          "text": "四层系统协作， AI 只补中间一层",
+          "client": [
+            835,
+            155
+          ],
+          "scroll": [
+            835,
+            164
+          ],
+          "overflow": "visible/visible/visible"
+        }
+      ],
+      "outside": [],
+      "tiny": [],
+      "imgs": []
+    },
+    {
+      "index": 5,
+      "id": "slide-break-solution",
+      "cls": "slide split",
+      "title": "产品 方案",
+      "slideRect": [
+        3,
+        0,
+        1600,
+        900
+      ],
+      "clipRisk": [
+        {
+          "selector": "div.break-claim-main",
+          "text": "SECTION 02 产品 方案",
+          "client": [
+            241,
+            270
+          ],
+          "scroll": [
+            241,
+            287
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "h2",
+          "text": "产品 方案",
+          "client": [
+            241,
+            232
+          ],
+          "scroll": [
+            241,
+            249
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "h3",
+          "text": "编排、模型、知识和场景",
+          "client": [
+            685,
+            52
+          ],
+          "scroll": [
+            685,
+            56
+          ],
+          "overflow": "visible/visible/visible"
+        }
+      ],
+      "outside": [],
+      "tiny": [],
+      "imgs": []
+    },
+    {
+      "index": 6,
+      "id": "slide-5",
+      "cls": "slide dark orchestration-slide",
+      "title": "AI 处置层 采用受控编排",
+      "slideRect": [
+        3,
+        0,
+        1600,
+        900
+      ],
+      "clipRisk": [
+        {
+          "selector": "div.deck-head",
+          "text": "CONTROLLED ORCHESTRATION AI 处置层 采用受控编排 事件发现后，编排层统一调度理解、检索和查询；结果再汇总生成，失败即转人工。",
+          "client": [
+            1440,
+            186
+          ],
+          "scroll": [
+            1440,
+            194
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.deck-head-title",
+          "text": "CONTROLLED ORCHESTRATION AI 处置层 采用受控编排",
+          "client": [
+            864,
+            174
+          ],
+          "scroll": [
+            864,
+            182
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "h2.deck-title",
+          "text": "AI 处置层 采用受控编排",
+          "client": [
+            864,
+            148
+          ],
+          "scroll": [
+            864,
+            156
+          ],
+          "overflow": "visible/visible/visible"
+        }
+      ],
+      "outside": [],
+      "tiny": [],
+      "imgs": []
+    },
+    {
+      "index": 7,
+      "id": "slide-model-plan",
+      "cls": "slide dark model-plan-slide",
+      "title": "一条告警， 需要多步处理",
+      "slideRect": [
+        3,
+        0,
+        1600,
+        900
+      ],
+      "clipRisk": [
+        {
+          "selector": "div.deck-head",
+          "text": "MODEL PLAN · 多步处理 一条告警， 需要多步处理 每一步用不同的模型和参数，因为每一步要解决的精度、延迟和成本问题不一样。",
+          "client": [
+            1440,
+            180
+          ],
+          "scroll": [
+            1440,
+            185
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.deck-head-title",
+          "text": "MODEL PLAN · 多步处理 一条告警， 需要多步处理",
+          "client": [
+            835,
+            167
+          ],
+          "scroll": [
+            835,
+            173
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "h2.deck-title",
+          "text": "一条告警， 需要多步处理",
+          "client": [
+            835,
+            139
+          ],
+          "scroll": [
+            835,
+            144
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.ledger-num",
+          "text": "01",
+          "client": [
+            157,
+            63
+          ],
+          "scroll": [
+            157,
+            69
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.ledger-num",
+          "text": "02",
+          "client": [
+            157,
+            63
+          ],
+          "scroll": [
+            157,
+            69
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.ledger-num",
+          "text": "03",
+          "client": [
+            157,
+            63
+          ],
+          "scroll": [
+            157,
+            69
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.ledger-num",
+          "text": "04",
+          "client": [
+            157,
+            63
+          ],
+          "scroll": [
+            157,
+            69
+          ],
+          "overflow": "visible/visible/visible"
+        }
+      ],
+      "outside": [],
+      "tiny": [],
+      "imgs": []
+    },
+    {
+      "index": 8,
+      "id": "slide-6",
+      "cls": "slide light knowledge-slide",
+      "title": "法规稳定，台账在变： 报告必须带版本",
+      "slideRect": [
+        3,
+        0,
+        1600,
+        900
+      ],
+      "clipRisk": [
+        {
+          "selector": "div.kb-head",
+          "text": "KNOWLEDGE BASE · RAG 法规稳定，台账在变： 报告必须带版本",
+          "client": [
+            481,
+            132
+          ],
+          "scroll": [
+            481,
+            135
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "h2.deck-title.kb-title",
+          "text": "法规稳定，台账在变： 报告必须带版本",
+          "client": [
+            481,
+            103
+          ],
+          "scroll": [
+            481,
+            107
+          ],
+          "overflow": "visible/visible/visible"
+        }
+      ],
+      "outside": [],
+      "tiny": [],
+      "imgs": [
+        {
+          "src": "assets/images/系统截图_知识库管理.png",
+          "natural": [
+            3640,
+            2047
+          ],
+          "rendered": [
+            911,
+            510
+          ]
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "id": "slide-rag-trace",
+      "cls": "slide light rag-trace-slide",
+      "title": "召回结果 必须经过筛选",
+      "slideRect": [
+        3,
+        0,
+        1600,
+        900
+      ],
+      "clipRisk": [
+        {
+          "selector": "div.deck-head",
+          "text": "RAG TRACE · 检索实例 召回结果 必须经过筛选 一条建筑垃圾告警的 RAG 查询：法规召回优先，动态台账查最新；精准判断留到汇总生成时由编排层用完整上下文完成。",
+          "client": [
+            1440,
+            170
+          ],
+          "scroll": [
+            1440,
+            178
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.deck-head-title",
+          "text": "RAG TRACE · 检索实例 召回结果 必须经过筛选",
+          "client": [
+            835,
+            158
+          ],
+          "scroll": [
+            835,
+            165
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "h2.deck-title",
+          "text": "召回结果 必须经过筛选",
+          "client": [
+            835,
+            130
+          ],
+          "scroll": [
+            835,
+            137
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.ledger-num",
+          "text": "01",
+          "client": [
+            163,
+            62
+          ],
+          "scroll": [
+            163,
+            73
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.ledger-num",
+          "text": "02",
+          "client": [
+            163,
+            62
+          ],
+          "scroll": [
+            163,
+            73
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.ledger-num",
+          "text": "03",
+          "client": [
+            163,
+            62
+          ],
+          "scroll": [
+            163,
+            73
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.ledger-num",
+          "text": "04",
+          "client": [
+            163,
+            62
+          ],
+          "scroll": [
+            163,
+            73
+          ],
+          "overflow": "visible/visible/visible"
+        }
+      ],
+      "outside": [],
+      "tiny": [
+        {
+          "selector": "div.rag-note",
+          "text": "汇总生成负责精准判断；动态数据先取最新",
+          "font": "11px"
+        },
+        {
+          "selector": "div.rag-note",
+          "text": "8 条候选 → 2 条引用；台账记录当前版本",
+          "font": "11px"
+        },
+        {
+          "selector": "strong",
+          "text": "8 条候选",
+          "font": "11px"
+        },
+        {
+          "selector": "strong",
+          "text": "2 条引用",
+          "font": "11px"
+        },
+        {
+          "selector": "div.rag-note",
+          "text": "围挡外 + 混杂堆体 + 不在当前工地红线内 → 市容条例 §29 / 建废管理办法 §20",
+          "font": "11px"
+        }
+      ],
+      "imgs": []
+    },
+    {
+      "index": 10,
+      "id": "slide-scope",
+      "cls": "slide dark",
+      "title": "先做能判得准、 误报高的 8 类场景",
+      "slideRect": [
+        5,
+        0,
+        1600,
+        900
+      ],
+      "clipRisk": [
+        {
+          "selector": "div.deck-head",
+          "text": "SCOPE · SCENE COVERAGE 先做能判得准、 误报高的 8 类场景 选场景 = 价值 × 可判定性。优先接入视觉证据充分、上下文可补、数据可得、责任清晰的场景。 L1 宁可误报不可漏报，烟火积水只做过滤和路由，不生成处置建议",
+          "client": [
+            1440,
+            202
+          ],
+          "scroll": [
+            1440,
+            210
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.deck-head-title",
+          "text": "SCOPE · SCENE COVERAGE 先做能判得准、 误报高的 8 类场景",
+          "client": [
+            835,
+            184
+          ],
+          "scroll": [
+            835,
+            192
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "h2.deck-title",
+          "text": "先做能判得准、 误报高的 8 类场景",
+          "client": [
+            835,
+            155
+          ],
+          "scroll": [
+            835,
+            164
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.matrix-fill",
+          "text": "城管 · 建废渣土 建筑垃圾 / 渣土 L2 · 依托在建工地台账（住建局） 城管 · 工地 / 扬尘 裸土 / 物料未覆盖 L2 · 依托工地台账 + 扬尘过滤 城管 · 市容堆物 占道堆物 / 障碍 L2 · 依托时间维度（瞬时 vs ",
+          "client": [
+            1440,
+            435
+          ],
+          "scroll": [
+            1440,
+            440
+          ],
+          "overflow": "visible/visible/visible"
+        }
+      ],
+      "outside": [],
+      "tiny": [],
+      "imgs": []
+    },
+    {
+      "index": 11,
+      "id": "slide-break-cases",
+      "cls": "slide split",
+      "title": "从设计 到落地",
+      "slideRect": [
+        5,
+        0,
+        1600,
+        900
+      ],
+      "clipRisk": [
+        {
+          "selector": "div.break-claim-main",
+          "text": "SECTION 03 从设计 到落地",
+          "client": [
+            361,
+            270
+          ],
+          "scroll": [
+            361,
+            287
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "h2",
+          "text": "从设计 到落地",
+          "client": [
+            361,
+            232
+          ],
+          "scroll": [
+            361,
+            249
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "h3",
+          "text": "从案例到兜底",
+          "client": [
+            685,
+            52
+          ],
+          "scroll": [
+            685,
+            56
+          ],
+          "overflow": "visible/visible/visible"
+        }
+      ],
+      "outside": [],
+      "tiny": [],
+      "imgs": []
+    },
+    {
+      "index": 12,
+      "id": "slide-9",
+      "cls": "slide light dataflow-slide",
+      "title": "从告警 到报文",
+      "slideRect": [
+        3,
+        0,
+        1600,
+        900
+      ],
+      "clipRisk": [
+        {
+          "selector": "div.deck-head",
+          "text": "CASE 01 · 建筑垃圾 从告警 到报文 每个推送字段的来源都可追溯。评测时能直接定位是哪一层的问题。",
+          "client": [
+            1440,
+            157
+          ],
+          "scroll": [
+            1440,
+            163
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.deck-head-title",
+          "text": "CASE 01 · 建筑垃圾 从告警 到报文",
+          "client": [
+            562,
+            145
+          ],
+          "scroll": [
+            562,
+            151
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "h2.deck-title",
+          "text": "从告警 到报文",
+          "client": [
+            562,
+            120
+          ],
+          "scroll": [
+            562,
+            126
+          ],
+          "overflow": "visible/visible/visible"
+        }
+      ],
+      "outside": [],
+      "tiny": [
+        {
+          "selector": "span.cv-tag",
+          "text": "CV · 0.82",
+          "font": "10px"
+        },
+        {
+          "selector": "span",
+          "text": "算法标签",
+          "font": "11px"
+        },
+        {
+          "selector": "span",
+          "text": "点位时间",
+          "font": "11px"
+        },
+        {
+          "selector": "span",
+          "text": "原始输入",
+          "font": "11px"
+        },
+        {
+          "selector": "div.df-map-src",
+          "text": "SYSTEM · 直接带入",
+          "font": "11px"
+        },
+        {
+          "selector": "div.df-map-fields-title",
+          "text": "进入报文",
+          "font": "11px"
+        },
+        {
+          "selector": "div.df-map-src",
+          "text": "VISION · 多模态理解",
+          "font": "11px"
+        },
+        {
+          "selector": "div.df-map-fields-title",
+          "text": "进入报文",
+          "font": "11px"
+        },
+        {
+          "selector": "div.df-map-src",
+          "text": "RAG · 知识库 / 台账检索",
+          "font": "11px"
+        },
+        {
+          "selector": "div.df-map-fields-title",
+          "text": "进入报文",
+          "font": "11px"
+        },
+        {
+          "selector": "div.df-map-src",
+          "text": "编排层 · 汇总生成",
+          "font": "11px"
+        },
+        {
+          "selector": "span.df-source-tag",
+          "text": "固定四步链路",
+          "font": "11px"
+        }
+      ],
+      "imgs": [
+        {
+          "src": "assets/images/Before_CV_脱敏_建筑垃圾.png",
+          "natural": [
+            861,
+            558
+          ],
+          "rendered": [
+            332,
+            220
+          ]
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "id": "slide-11",
+      "cls": "slide dark workbench-slide",
+      "title": "事件详情 一页看全",
+      "slideRect": [
+        3,
+        0,
+        1600,
+        900
+      ],
+      "clipRisk": [
+        {
+          "selector": "h2.deck-title",
+          "text": "事件详情 一页看全",
+          "client": [
+            305,
+            112
+          ],
+          "scroll": [
+            305,
+            117
+          ],
+          "overflow": "visible/visible/visible"
+        }
+      ],
+      "outside": [],
+      "tiny": [],
+      "imgs": [
+        {
+          "src": "assets/images/系统截图_事件详情.png",
+          "natural": [
+            2548,
+            1434
+          ],
+          "rendered": [
+            1103,
+            628
+          ]
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "id": "slide-fire",
+      "cls": "slide light",
+      "title": "L1 和 L2，同一套引擎， 完全不同的策略",
+      "slideRect": [
+        5,
+        0,
+        1600,
+        900
+      ],
+      "clipRisk": [
+        {
+          "selector": "main.deck-main",
+          "text": "CASE 02 · L1 / L2 STRATEGY L1 和 L2，同一套引擎， 完全不同的策略 同一套编排引擎，会随风险等级切换温度、调用链路和产出内容。 L1 · 真实告警输入 CV · 0.90 疑似烟火 · L1 林区边缘 / 防",
+          "client": [
+            1440,
+            757
+          ],
+          "scroll": [
+            1468,
+            757
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.deck-head",
+          "text": "CASE 02 · L1 / L2 STRATEGY L1 和 L2，同一套引擎， 完全不同的策略 同一套编排引擎，会随风险等级切换温度、调用链路和产出内容。",
+          "client": [
+            1440,
+            177
+          ],
+          "scroll": [
+            1440,
+            185
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.deck-head-title",
+          "text": "CASE 02 · L1 / L2 STRATEGY L1 和 L2，同一套引擎， 完全不同的策略",
+          "client": [
+            835,
+            159
+          ],
+          "scroll": [
+            835,
+            167
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "h2.deck-title",
+          "text": "L1 和 L2，同一套引擎， 完全不同的策略",
+          "client": [
+            835,
+            131
+          ],
+          "scroll": [
+            835,
+            138
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.deck-content",
+          "text": "L1 · 真实告警输入 CV · 0.90 疑似烟火 · L1 林区边缘 / 防火航次 火情有独立应急指挥流程，本系统只做过滤、路由和预警，最终确认权留给应急 / 林业。 01 温度不同 同一套多模态理解，不同风险等级下判断口径相反。 L2",
+          "client": [
+            1440,
+            535
+          ],
+          "scroll": [
+            1468,
+            535
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.three-forces",
+          "text": "L1 · 真实告警输入 CV · 0.90 疑似烟火 · L1 林区边缘 / 防火航次 火情有独立应急指挥流程，本系统只做过滤、路由和预警，最终确认权留给应急 / 林业。 01 温度不同 同一套多模态理解，不同风险等级下判断口径相反。 L2",
+          "client": [
+            1440,
+            475
+          ],
+          "scroll": [
+            1468,
+            475
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.force-stack",
+          "text": "01 温度不同 同一套多模态理解，不同风险等级下判断口径相反。 L2 0.3 偏保守，低光照下宁可标灰区。 L1 召回优先，宁可把炊烟判成火情。 02 调用链路不同 L2 需要补上下文；L1 要快，跳过会拖慢和越界的环节。 L2 多模态 +",
+          "client": [
+            957,
+            475
+          ],
+          "scroll": [
+            985,
+            475
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.force-num",
+          "text": "01",
+          "client": [
+            102,
+            58
+          ],
+          "scroll": [
+            102,
+            67
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.force-num",
+          "text": "02",
+          "client": [
+            102,
+            58
+          ],
+          "scroll": [
+            102,
+            67
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.force-num",
+          "text": "03",
+          "client": [
+            102,
+            58
+          ],
+          "scroll": [
+            102,
+            67
+          ],
+          "overflow": "visible/visible/visible"
+        }
+      ],
+      "outside": [],
+      "tiny": [],
+      "imgs": [
+        {
+          "src": "assets/images/Before_CV_脱敏_疑似烟火.png",
+          "natural": [
+            861,
+            558
+          ],
+          "rendered": [
+            411,
+            265
+          ]
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "id": "slide-fallback",
+      "cls": "slide dark has-strip",
+      "title": "当系统 判不准的时候",
+      "slideRect": [
+        3,
+        0,
+        1600,
+        900
+      ],
+      "clipRisk": [
+        {
+          "selector": "div.deck-head",
+          "text": "FAILSAFE · 不确定时怎么办 当系统 判不准的时候 系统要说明自己什么时候不确定，并把这类告警交回人工。受控编排的重点，是每个控制点都有兜底动作。",
+          "client": [
+            1440,
+            202
+          ],
+          "scroll": [
+            1440,
+            210
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.deck-head-title",
+          "text": "FAILSAFE · 不确定时怎么办 当系统 判不准的时候",
+          "client": [
+            835,
+            184
+          ],
+          "scroll": [
+            835,
+            192
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "h2.deck-title",
+          "text": "当系统 判不准的时候",
+          "client": [
+            835,
+            155
+          ],
+          "scroll": [
+            835,
+            164
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.stacked-ledger.rows-5",
+          "text": "01 事件输入 CV 置信度过低 / 图像太糊 标「待复拍确认」，不进入编排。 02 多模态理解 现场判断落在灰区 标 L3 低置信进复核池，不自动推送。 03 编排调用 工具超时 / 3 轮用完 停推理，保留已有结果，标「信息不完整」转人",
+          "client": [
+            1440,
+            397
+          ],
+          "scroll": [
+            1440,
+            413
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.ledger-row",
+          "text": "01 事件输入 CV 置信度过低 / 图像太糊 标「待复拍确认」，不进入编排。",
+          "client": [
+            1440,
+            78
+          ],
+          "scroll": [
+            1440,
+            90
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.ledger-num",
+          "text": "01",
+          "client": [
+            232,
+            52
+          ],
+          "scroll": [
+            232,
+            62
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.ledger-row",
+          "text": "02 多模态理解 现场判断落在灰区 标 L3 低置信进复核池，不自动推送。",
+          "client": [
+            1440,
+            78
+          ],
+          "scroll": [
+            1440,
+            95
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.ledger-num",
+          "text": "02",
+          "client": [
+            232,
+            52
+          ],
+          "scroll": [
+            232,
+            62
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.ledger-row",
+          "text": "03 编排调用 工具超时 / 3 轮用完 停推理，保留已有结果，标「信息不完整」转人工。",
+          "client": [
+            1440,
+            78
+          ],
+          "scroll": [
+            1440,
+            95
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.ledger-num",
+          "text": "03",
+          "client": [
+            232,
+            52
+          ],
+          "scroll": [
+            232,
+            62
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.ledger-row",
+          "text": "04 汇总生成 JSON Schema 校验失败 拦截不推送，回退重试或转人工。",
+          "client": [
+            1440,
+            78
+          ],
+          "scroll": [
+            1440,
+            95
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.ledger-num",
+          "text": "04",
+          "client": [
+            232,
+            52
+          ],
+          "scroll": [
+            232,
+            62
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.ledger-row",
+          "text": "05 反馈学习 业务人员驳回 驳回入库；同类驳回累积到阈值，触发规则或知识库排查。",
+          "client": [
+            1440,
+            78
+          ],
+          "scroll": [
+            1440,
+            95
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.ledger-num",
+          "text": "05",
+          "client": [
+            232,
+            52
+          ],
+          "scroll": [
+            232,
+            62
+          ],
+          "overflow": "visible/visible/visible"
+        }
+      ],
+      "outside": [],
+      "tiny": [],
+      "imgs": []
+    },
+    {
+      "index": 16,
+      "id": "slide-break-eval",
+      "cls": "slide split",
+      "title": "验证 与上线",
+      "slideRect": [
+        3,
+        0,
+        1600,
+        900
+      ],
+      "clipRisk": [
+        {
+          "selector": "div.break-claim-main",
+          "text": "SECTION 04 验证 与上线",
+          "client": [
+            361,
+            270
+          ],
+          "scroll": [
+            361,
+            287
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "h2",
+          "text": "验证 与上线",
+          "client": [
+            361,
+            232
+          ],
+          "scroll": [
+            361,
+            249
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "h3",
+          "text": "从评测到上线，三件事",
+          "client": [
+            685,
+            52
+          ],
+          "scroll": [
+            685,
+            56
+          ],
+          "overflow": "visible/visible/visible"
+        }
+      ],
+      "outside": [],
+      "tiny": [],
+      "imgs": []
+    },
+    {
+      "index": 17,
+      "id": "slide-12",
+      "cls": "slide light",
+      "title": "L1 和 L2， 不能用同一把尺",
+      "slideRect": [
+        3,
+        0,
+        1600,
+        900
+      ],
+      "clipRisk": [
+        {
+          "selector": "div.deck-head",
+          "text": "EVAL DESIGN · 评测体系 L1 和 L2， 不能用同一把尺 L1 和 L2 的允许误差方向相反：L1 宁可误报不能漏报，L2 宁可漏判不能扰民。所以评测目标、评测集和红线要分开。",
+          "client": [
+            1440,
+            202
+          ],
+          "scroll": [
+            1440,
+            210
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.deck-head-title",
+          "text": "EVAL DESIGN · 评测体系 L1 和 L2， 不能用同一把尺",
+          "client": [
+            835,
+            184
+          ],
+          "scroll": [
+            835,
+            192
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "h2.deck-title",
+          "text": "L1 和 L2， 不能用同一把尺",
+          "client": [
+            835,
+            155
+          ],
+          "scroll": [
+            835,
+            164
+          ],
+          "overflow": "visible/visible/visible"
+        }
+      ],
+      "outside": [],
+      "tiny": [],
+      "imgs": []
+    },
+    {
+      "index": 18,
+      "id": "slide-metric-boundary",
+      "cls": "slide light has-strip",
+      "title": "选的指标， 和放弃的指标",
+      "slideRect": [
+        5,
+        0,
+        1600,
+        900
+      ],
+      "clipRisk": [
+        {
+          "selector": "main.deck-main",
+          "text": "METRIC BOUNDARY · 指标边界 选的指标， 和放弃的指标 一条原则：上线后还要靠人工主观判断的指标，不放进验收。 IN 进验收 · 系统自己能算 验收指标 只放自动计算、自动校验、可复验的指标。出了问题，能直接追到编排链路里的",
+          "client": [
+            1440,
+            757
+          ],
+          "scroll": [
+            1464,
+            757
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.deck-head",
+          "text": "METRIC BOUNDARY · 指标边界 选的指标， 和放弃的指标 一条原则：上线后还要靠人工主观判断的指标，不放进验收。",
+          "client": [
+            1440,
+            202
+          ],
+          "scroll": [
+            1440,
+            210
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.deck-head-title",
+          "text": "METRIC BOUNDARY · 指标边界 选的指标， 和放弃的指标",
+          "client": [
+            835,
+            184
+          ],
+          "scroll": [
+            835,
+            192
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "h2.deck-title",
+          "text": "选的指标， 和放弃的指标",
+          "client": [
+            835,
+            155
+          ],
+          "scroll": [
+            835,
+            164
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.deck-content",
+          "text": "IN 进验收 · 系统自己能算 验收指标 只放自动计算、自动校验、可复验的指标。出了问题，能直接追到编排链路里的哪个能力点。 North Star · 报告生成完整率 Schema 校验通过的结构化报告数 / 进入受控编排的告警数。 ≥98",
+          "client": [
+            1440,
+            510
+          ],
+          "scroll": [
+            1464,
+            510
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.duo-compare",
+          "text": "IN 进验收 · 系统自己能算 验收指标 只放自动计算、自动校验、可复验的指标。出了问题，能直接追到编排链路里的哪个能力点。 North Star · 报告生成完整率 Schema 校验通过的结构化报告数 / 进入受控编排的告警数。 ≥98",
+          "client": [
+            1440,
+            394
+          ],
+          "scroll": [
+            1464,
+            394
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.col-ttl",
+          "text": "验收指标",
+          "client": [
+            652,
+            47
+          ],
+          "scroll": [
+            652,
+            51
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.col-ttl",
+          "text": "业务反馈",
+          "client": [
+            652,
+            47
+          ],
+          "scroll": [
+            652,
+            51
+          ],
+          "overflow": "visible/visible/visible"
+        }
+      ],
+      "outside": [],
+      "tiny": [],
+      "imgs": []
+    },
+    {
+      "index": 19,
+      "id": "slide-15",
+      "cls": "slide dark",
+      "title": "CV 告警进来， 出的是可复核报告",
+      "slideRect": [
+        5,
+        0,
+        1600,
+        900
+      ],
+      "clipRisk": [
+        {
+          "selector": "div.deck-head",
+          "text": "RESULTS · 建设成果 CV 告警进来， 出的是可复核报告 V1.2 试点的实际规模。本层只负责把告警编排成可复核报告；下游派单、结案的产能不计入。",
+          "client": [
+            1440,
+            202
+          ],
+          "scroll": [
+            1440,
+            210
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.deck-head-title",
+          "text": "RESULTS · 建设成果 CV 告警进来， 出的是可复核报告",
+          "client": [
+            835,
+            184
+          ],
+          "scroll": [
+            835,
+            192
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "h2.deck-title",
+          "text": "CV 告警进来， 出的是可复核报告",
+          "client": [
+            835,
+            155
+          ],
+          "scroll": [
+            835,
+            164
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.stacked-ledger",
+          "text": "110/日 SCALE 告警进编排 8 类场景，日均约 110 条 CV 告警进入受控编排。 85% OBSERVATION 业务反馈观察 抽样 1,200 条，85% 被业务采纳或认可；仅作运营观察，不作为验收指标。 ≥90% FILTE",
+          "client": [
+            1440,
+            459
+          ],
+          "scroll": [
+            1440,
+            473
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.ledger-row",
+          "text": "110/日 SCALE 告警进编排 8 类场景，日均约 110 条 CV 告警进入受控编排。",
+          "client": [
+            1440,
+            114
+          ],
+          "scroll": [
+            1440,
+            123
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.ledger-num",
+          "text": "110/日",
+          "client": [
+            232,
+            76
+          ],
+          "scroll": [
+            232,
+            90
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.ledger-row",
+          "text": "85% OBSERVATION 业务反馈观察 抽样 1,200 条，85% 被业务采纳或认可；仅作运营观察，不作为验收指标。",
+          "client": [
+            1440,
+            114
+          ],
+          "scroll": [
+            1440,
+            129
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.ledger-num",
+          "text": "85%",
+          "client": [
+            232,
+            76
+          ],
+          "scroll": [
+            232,
+            90
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.ledger-row",
+          "text": "≥90% FILTER 误报过滤率 多模态过滤、最新台账匹配和历史去重同时起作用。",
+          "client": [
+            1440,
+            114
+          ],
+          "scroll": [
+            1440,
+            129
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.ledger-num",
+          "text": "≥90%",
+          "client": [
+            232,
+            76
+          ],
+          "scroll": [
+            232,
+            90
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.ledger-row",
+          "text": "97.9% L1 RECALL L1 召回率 烟火、积水等高危场景，变更后不能低于离线基线。",
+          "client": [
+            1440,
+            114
+          ],
+          "scroll": [
+            1440,
+            129
+          ],
+          "overflow": "visible/visible/visible"
+        },
+        {
+          "selector": "div.ledger-num",
+          "text": "97.9%",
+          "client": [
+            232,
+            76
+          ],
+          "scroll": [
+            232,
+            90
+          ],
+          "overflow": "visible/visible/visible"
+        }
+      ],
+      "outside": [],
+      "tiny": [],
+      "imgs": []
+    },
+    {
+      "index": 20,
+      "id": "slide-19",
+      "cls": "slide split",
+      "title": "",
+      "slideRect": [
+        3,
+        0,
+        1600,
+        900
+      ],
+      "clipRisk": [
+        {
+          "selector": "div",
+          "text": "低空感知 AI 处置中枢",
+          "client": [
+            470,
+            198
+          ],
+          "scroll": [
+            470,
+            203
+          ],
+          "overflow": "visible/visible/visible"
+        }
+      ],
+      "outside": [],
+      "tiny": [],
+      "imgs": []
+    }
+  ],
+  "overviewAudit": {
+    "visible": true,
+    "cardCount": 20,
+    "scrollHeight": 1261,
+    "clientHeight": 900
+  },
+  "mobileAudit": {
+    "viewport": {
+      "w": 390,
+      "h": 844
+    },
+    "bodyClass": "canvas-mode is-win motion-ready",
+    "firstSlideRect": [
+      -1169,
+      0,
+      390,
+      844
+    ],
+    "activeSlideRect": [
+      1,
+      0,
+      390,
+      844
+    ],
+    "deckWidth": 7800,
+    "titleFont": "28.86px",
+    "clipped": [
+      {
+        "tag": "MAIN",
+        "className": "deck-main",
+        "text": "SYSTEM CHAIN · 四层协作 四层系统协作， AI 只补中间一层 飞行、采集、处置消费都在原业务系统完成。AI 处置层只接收 CV 告警，推送待复核报告，不越过业务系统。 01 · 任务发起层 城市云脑 · 一网统管 提交飞行申请",
+        "client": [
+          351,
+          707
+        ],
+        "scroll": [
+          351,
+          733
+        ]
+      },
+      {
+        "tag": "DIV",
+        "className": "deck-content",
+        "text": "01 · 任务发起层 城市云脑 · 一网统管 提交飞行申请，配置算法类型，形成飞行需求。它定义任务，不处理 AI 报告。 02 · 飞行作业层 崂山低空感知平台 机场调度、航线规划、影像采集和 CV 识别，输出两类 CV 告警。 03 · ",
+        "client": [
+          351,
+          449
+        ],
+        "scroll": [
+          351,
+          496
+        ]
+      }
+    ]
+  },
+  "mobileMessages": [
+    {
+      "type": "error",
+      "text": "Access to script at 'file:///C:/Users/admin/Desktop/ai-pm-portfolio-deck/assets/motion.min.js' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-untrusted, data, http, https."
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    }
+  ]
+}
