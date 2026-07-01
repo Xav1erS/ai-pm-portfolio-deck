@@ -578,6 +578,21 @@
     font-family:var(--sans),var(--sans-zh);font-size:max(16px,.9vw);
     font-weight:600;letter-spacing:0;text-transform:none;color:var(--text-primary)
   }
+  .slide[data-layout-variant] .deck-content{min-height:0}
+  .slide[data-layout-variant] .frame-img{border-radius:0;box-shadow:none}
+  .slide[data-layout-variant] .swiss-img-caption{font-size:max(14px,.82vw);line-height:1.35}
+  .slide[data-layout-variant] .t-cat,
+  .slide[data-layout-variant] .t-meta{font-size:max(14px,.82vw)}
+  .slide[data-layout-variant] .deck-lead{font-size:max(18px,.98vw)}
+  .slide[data-layout-variant] .cv-frame>img,
+  .slide[data-layout-variant] .frame-img.fit-contain>img{object-fit:contain}
+  .slide[data-layout-variant="two-image-evidence"] .deck-content,
+  .slide[data-layout-variant="single-image-argument"] .deck-content,
+  .slide[data-layout-variant="screenshot-evidence-16x9"] .deck-main{padding-bottom:calc(var(--nav-safe-bottom) * .35)}
+  .slide[data-layout-variant="two-image-evidence"] .cv-frame>img,
+  .slide[data-layout-variant="single-image-argument"] .cv-frame>img,
+  .slide[data-layout-variant="knowledge-evidence-16x9"] .frame-img>img,
+  .slide[data-layout-variant="screenshot-evidence-16x9"] .frame-img>img{object-fit:contain}
 
   /* ============ Bar Chart (扁平几何图表) ============ */
   .bar-chart{display:flex;flex-direction:column;gap:1.4vh}
@@ -1202,7 +1217,7 @@
   .jump-link{appearance:none;border:1px solid var(--grey-2);background:transparent;color:inherit;padding:.42em .72em;font-family:var(--mono);font-size:14px;font-weight:500;letter-spacing:.08em;cursor:pointer;border-radius:0}
   .jump-link:hover{border-color:var(--accent);color:var(--accent)}
   .slide.dark .jump-link{border-color:rgba(255,255,255,.25)}
-  .state-pill{display:inline-block;border:1px solid var(--grey-2);padding:.32em .65em;font-family:var(--mono);font-size:14px;font-weight:500;letter-spacing:.08em}
+  .state-pill{display:inline-block;border:1px solid var(--grey-2);padding:.32em .65em;font-family:var(--mono);font-size:max(14px,.82vw);font-weight:500;letter-spacing:.08em}
   .state-pill.accent{border-color:var(--accent);color:var(--accent)}
   .state-pill.dark{background:var(--ink);border-color:var(--ink);color:var(--paper)}
   .slide.accent .state-pill{border-color:rgba(255,255,255,.48);color:#fff}
@@ -1241,7 +1256,7 @@
   .knowledge-slide .deck-main{display:grid;grid-template-columns:minmax(330px,4.15fr) minmax(0,7.85fr);grid-template-rows:minmax(0,1fr);gap:0 3vw;align-items:center;border-top:2px solid var(--accent);padding-top:1.9vh}
   .knowledge-slide .kb-text{display:flex;flex-direction:column;min-width:0;height:auto;align-self:stretch}
   .knowledge-slide .kb-head{display:flex;flex-direction:column;gap:1.15vh;min-width:0}
-  .knowledge-slide .kb-title{font-size:min(3.05vw,5.4vh);line-height:1.06;letter-spacing:-.02em}
+  .knowledge-slide .kb-title{font-size:min(3.2vw,5.7vh);line-height:1.06;letter-spacing:0}
   .knowledge-slide .kb-lead{font-size:max(18px,.96vw);font-weight:400;line-height:1.48;color:var(--text-primary);opacity:.86;margin:2.4vh 0 0;max-width:43ch}
   .knowledge-slide .kb-flow{display:flex;flex-direction:column;flex:0 0 auto;min-height:0;margin-top:3.4vh}
   .knowledge-slide .kb-flow>.t-cat{margin-bottom:1.8vh}
@@ -1251,7 +1266,7 @@
   .knowledge-slide .kb-strip{width:100%;max-width:none;box-sizing:border-box;font-size:max(16px,.86vw);line-height:1.42;padding:.8vh 1vw;margin-top:3vh;margin-bottom:0}
   .knowledge-slide .kb-figure{margin:0;display:flex;flex-direction:column;gap:1.1vh;min-width:0;align-self:center}
   .knowledge-slide .kb-figure .frame-img{width:100%;background:var(--paper);overflow:hidden}
-  .knowledge-slide .kb-figure .frame-img img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block}
+  .knowledge-slide .kb-figure .frame-img img{width:100%;height:100%;object-fit:contain;object-position:center center;display:block}
   .slide.dark .duo-compare .vrule{background:rgba(255,255,255,.22)}
   .slide.dark .duo-compare .col-tag{color:rgba(255,255,255,.55)}
   .slide.dark .duo-compare .col-tag .num{color:var(--paper);border-color:rgba(255,255,255,.5)}
@@ -1262,28 +1277,28 @@
   #slide-metric-boundary .duo-compare{margin-top:1.2vh}
   #slide-metric-boundary .duo-compare .col{gap:1.15vh}
   #slide-metric-boundary .duo-compare .col-ttl{font-size:min(3vw,5.2vh)}
-  #slide-metric-boundary .duo-compare .col-desc{font-size:max(15px,.92vw);line-height:1.4}
+  #slide-metric-boundary .duo-compare .col-desc{font-size:max(16px,.92vw);line-height:1.4}
   #slide-metric-boundary .duo-compare .col-list{gap:.55vh!important;padding-top:1.3vh!important;margin-top:1.6vh!important}
-  #slide-metric-boundary .duo-compare .col-list li{font-size:max(15px,.9vw);line-height:1.38}
+  #slide-metric-boundary .duo-compare .col-list li{font-size:max(16px,.9vw);line-height:1.38}
   #slide-metric-boundary .deck-content>.decision-strip{margin-bottom:calc(var(--nav-safe-bottom)*.85)}
   #slide-fire .three-forces{grid-template-columns:5.2fr 10.8fr;gap:1.35vw;margin-top:1vh}
-  #slide-fire .hero-ink-col{padding:2.1vh 1.55vw;gap:1.5vh}
+  #slide-fire .hero-ink-col{padding:1.9vh 1.45vw;gap:1.25vh}
   #slide-fire .hero-ink-col .t-cat{color:rgba(255,255,255,.62)}
   #slide-fire .hero-ink-col h3{font-size:min(2.18vw,4vh);line-height:1.08}
-  #slide-fire .hero-ink-col p{font-size:max(14px,.82vw);font-weight:400;line-height:1.45;color:rgba(255,255,255,.72)}
+  #slide-fire .hero-ink-col p{font-size:max(16px,.82vw);font-weight:400;line-height:1.42;color:rgba(255,255,255,.72)}
   #slide-fire .fire-hero-shot{aspect-ratio:861/558;width:100%;background:#050505;border-top:2px solid var(--accent)}
   #slide-fire .fire-hero-shot>img{object-fit:contain}
   #slide-fire .fire-hero-meta{display:grid;grid-template-columns:1fr auto;gap:.9vw;align-items:end;border-top:1px solid rgba(255,255,255,.22);padding-top:1vh}
-  #slide-fire .fire-hero-meta strong{font-family:var(--mono);font-size:max(13px,.78vw);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-bright)}
-  #slide-fire .fire-hero-meta span{font-family:var(--mono);font-size:max(12px,.68vw);font-weight:600;letter-spacing:.08em;color:rgba(255,255,255,.58);text-align:right}
-  #slide-fire .force-stack{gap:1vh}
-  #slide-fire .force-card{grid-template-columns:minmax(4.8vw,6.4vw) 1fr;padding:1.45vh 1.35vw;gap:1.25vw}
+  #slide-fire .fire-hero-meta strong{font-family:var(--mono);font-size:max(14px,.78vw);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-bright)}
+  #slide-fire .fire-hero-meta span{font-family:var(--mono);font-size:max(14px,.68vw);font-weight:600;letter-spacing:.08em;color:rgba(255,255,255,.58);text-align:right}
+  #slide-fire .force-stack{gap:.75vh}
+  #slide-fire .force-card{grid-template-columns:minmax(4.8vw,6.4vw) 1fr;padding:1.25vh 1.15vw;gap:1vw}
   #slide-fire .force-num{font-size:min(4.1vw,7.1vh)}
   #slide-fire .force-card h3{font-size:max(20px,1.35vw);line-height:1.08}
-  #slide-fire .force-card p{font-size:max(15px,.84vw);line-height:1.38;margin-top:.42vh}
-  #slide-fire .force-card .force-lines{display:grid;grid-template-columns:1fr 1fr;gap:.8vw;margin-top:.7vh;border-top:1px solid var(--grey-2);padding-top:.75vh}
-  #slide-fire .force-card .force-lines span{font-size:max(13px,.74vw);font-weight:500;line-height:1.34;color:var(--text-secondary)}
-  #slide-fire .force-card .force-lines b{display:block;font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.25vh}
+  #slide-fire .force-card p{font-size:max(16px,.84vw);line-height:1.32;margin-top:.36vh}
+  #slide-fire .force-card .force-lines{display:grid;grid-template-columns:1fr 1fr;gap:.7vw;margin-top:.58vh;border-top:1px solid var(--grey-2);padding-top:.6vh}
+  #slide-fire .force-card .force-lines span{font-size:max(16px,.74vw);font-weight:500;line-height:1.28;color:var(--text-secondary)}
+  #slide-fire .force-card .force-lines b{display:block;font-family:var(--mono);font-size:max(14px,.64vw);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.18vh}
   .stacked-ledger{display:grid;grid-template-rows:repeat(4,1fr);flex:1;min-height:0;border-top:1px solid var(--border-subtle)}
   .stacked-ledger.rows-5{grid-template-rows:repeat(5,1fr)}
   .ledger-row{display:grid;grid-template-columns:minmax(9vw,14.5vw) minmax(0,1fr) 2.5vw;gap:1.6vw;align-items:center;min-height:0;border-bottom:1px solid var(--border-subtle)}
@@ -1294,10 +1309,10 @@
   .ledger-label .k{font-family:var(--mono);font-size:max(14px,.78vw);font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
   .ledger-label h3{font-size:max(22px,1.55vw);font-weight:400;line-height:1.2}
   .ledger-label p{font-size:max(16px,.94vw);font-weight:400;line-height:1.48;color:var(--text-secondary)}
-  .stacked-ledger.rows-5 .ledger-label{gap:.24vh}
+  .stacked-ledger.rows-5 .ledger-label{gap:.18vh}
   .stacked-ledger.rows-5 .ledger-label .k{font-size:max(14px,.72vw);letter-spacing:.13em}
   .stacked-ledger.rows-5 .ledger-label h3{font-size:max(18px,1.18vw);line-height:1.12}
-  .stacked-ledger.rows-5 .ledger-label p{font-size:max(13px,.76vw);line-height:1.28}
+  .stacked-ledger.rows-5 .ledger-label p{font-size:max(16px,.76vw);line-height:1.22}
   .ledger-icon{width:2.15vw;height:2.15vw;stroke-width:1.4;color:var(--accent);justify-self:end}
   .slide.dark .stacked-ledger{border-top-color:rgba(255,255,255,.24)}
   .slide.dark .ledger-row{border-bottom-color:rgba(255,255,255,.18)}
@@ -1309,24 +1324,24 @@
   .rag-trace-slide .deck-main{gap:1.35vh}
   .rag-trace-slide .deck-head{gap:3vw;padding-top:1.35vh}
   .rag-trace-slide .deck-title{font-size:min(4.18vw,7.35vh);line-height:.98}
-  .rag-trace-slide .deck-lead{font-size:max(16px,.9vw);line-height:1.45;max-width:46ch}
+  .rag-trace-slide .deck-lead{font-size:max(18px,.9vw);line-height:1.42;max-width:46ch}
   .rag-trace-slide .deck-content{gap:1vh}
   .rag-trace-slide .stacked-ledger{margin-top:0}
-  .rag-trace-slide .ledger-row{grid-template-columns:minmax(7.1vw,10.2vw) minmax(0,1fr) 2.2vw;gap:1.25vw;align-items:start;padding:.62vh 0}
+  .rag-trace-slide .ledger-row{grid-template-columns:minmax(7.1vw,10.2vw) minmax(0,1fr) 2.2vw;gap:1.25vw;align-items:start;padding:.5vh 0}
   .rag-trace-slide .ledger-num{font-size:min(5.45vw,7.8vh)}
   .rag-trace-slide .ledger-label{gap:.16vh}
   .rag-trace-slide .ledger-label .k{font-size:max(14px,.72vw);letter-spacing:.12em}
   .rag-trace-slide .ledger-label h3{font-size:max(18px,1.18vw);line-height:1.08}
-  .rag-trace-slide .ledger-label p{font-size:max(14px,.78vw);line-height:1.24;max-width:88ch}
+  .rag-trace-slide .ledger-label p{font-size:max(16px,.78vw);line-height:1.22;max-width:88ch}
   .rag-trace-slide .ledger-icon{width:1.75vw;height:1.75vw;margin-top:.4vh}
   .rag-tags{display:flex;flex-wrap:wrap;gap:.28vh .32vw;margin-top:.28vh}
-  .rag-chip{font-family:var(--mono);font-size:max(13px,.66vw);font-weight:600;letter-spacing:.04em;color:var(--accent);border:1px solid rgba(0,47,167,.28);padding:.22em .42em;background:rgba(0,47,167,.035)}
-  .rag-note{font-family:var(--mono);font-size:max(11px,.62vw);font-weight:600;letter-spacing:.04em;color:var(--text-helper);margin-top:.22vh}
+  .rag-chip{font-family:var(--mono);font-size:max(14px,.66vw);font-weight:600;letter-spacing:.04em;color:var(--accent);border:1px solid rgba(0,47,167,.28);padding:.22em .42em;background:rgba(0,47,167,.035)}
+  .rag-note{font-family:var(--mono);font-size:max(14px,.62vw);font-weight:600;letter-spacing:.04em;color:var(--text-helper);margin-top:.2vh}
   .rag-note strong{color:var(--accent);font-weight:700}
   .model-plan-slide .deck-main{gap:1.35vh}
   .model-plan-slide .deck-head{gap:3vw;padding-top:1.35vh}
   .model-plan-slide .deck-title{font-size:min(4.22vw,7.42vh);line-height:1.04}
-  .model-plan-slide .deck-lead{font-size:max(16px,.92vw);line-height:1.45;max-width:50ch}
+  .model-plan-slide .deck-lead{font-size:max(18px,.92vw);line-height:1.42;max-width:50ch}
   .model-plan-slide .deck-content{gap:1vh}
   .model-plan-slide .stacked-ledger{margin-top:0}
   .model-plan-slide .ledger-row{grid-template-columns:minmax(7.1vw,9.8vw) minmax(0,1fr) 2.1vw;gap:1.25vw;align-items:start;padding:.72vh 0}
@@ -1335,12 +1350,12 @@
   .model-plan-slide .ledger-label .k{font-size:max(14px,.72vw);letter-spacing:.13em}
   .model-plan-slide .ledger-label h3{font-size:max(18px,1.18vw);line-height:1.08}
   .model-plan-slide .ledger-icon{width:1.75vw;height:1.75vw;margin-top:.35vh}
-  .model-meta-grid{display:grid;grid-template-columns:minmax(14vw,1.05fr) minmax(5.8vw,.34fr) minmax(0,2.05fr);gap:.75vw;align-items:start;margin-top:.46vh}
-  .model-chip,.temp-chip,.model-reason{min-height:100%;border-top:1px solid rgba(255,255,255,.18);padding-top:.58vh}
-  .model-chip span,.temp-chip span{display:block;font-family:var(--mono);font-size:max(12px,.64vw);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.42);margin-bottom:.22vh}
-  .model-chip strong,.temp-chip strong{display:block;font-size:max(15px,.82vw);font-weight:500;line-height:1.28;color:var(--paper)}
+  .model-meta-grid{display:grid;grid-template-columns:minmax(14vw,1.05fr) minmax(5.8vw,.34fr) minmax(0,2.05fr);gap:.65vw;align-items:start;margin-top:.42vh}
+  .model-chip,.temp-chip,.model-reason{min-height:100%;border-top:1px solid rgba(255,255,255,.18);padding-top:.45vh}
+  .model-chip span,.temp-chip span{display:block;font-family:var(--mono);font-size:max(14px,.64vw);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.42);margin-bottom:.18vh}
+  .model-chip strong,.temp-chip strong{display:block;font-size:max(16px,.82vw);font-weight:500;line-height:1.24;color:var(--paper)}
   .temp-chip strong{font-family:var(--mono);color:var(--accent-bright)}
-  .model-plan-slide .model-reason{font-size:max(15px,.82vw);font-weight:400;line-height:1.35;color:rgba(255,255,255,.72);margin:0}
+  .model-plan-slide .model-reason{font-size:max(16px,.82vw);font-weight:400;line-height:1.3;color:rgba(255,255,255,.72);margin:0}
   .model-plan-slide .decision-strip{max-width:min(116ch,90vw);font-size:max(14px,.8vw);line-height:1.34;padding:.58vh .9vw;margin-bottom:calc(var(--nav-safe-bottom) * .32)}
   .brief-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,minmax(0,1fr));gap:1.4vh 1.2vw;flex:1;margin-top:3vh;min-height:0}
   .brief-card{padding:2vh 1.4vw;display:flex;flex-direction:column;min-height:0}
@@ -1610,27 +1625,27 @@
   .orchestration-slide .deck-head{gap:3vw;padding-top:1.35vh}
   .orchestration-slide .deck-head-title{flex-basis:60%;gap:.85vh}
   .orchestration-slide .deck-title{font-size:min(4.75vw,8.4vh);line-height:.98}
-  .orchestration-slide .deck-lead{font-size:max(17px,.98vw);line-height:1.48;max-width:46ch}
+  .orchestration-slide .deck-lead{font-size:max(18px,.98vw);line-height:1.45;max-width:46ch}
   .orchestration-map{display:grid;grid-template-rows:minmax(60px,.66fr) 14px minmax(205px,2.48fr) 14px minmax(58px,.66fr);gap:0;flex:1;min-height:0;color:var(--paper);padding-bottom:2.4vh}
   .orch-card,.orch-agent{background:#151515;border:1px solid rgba(255,255,255,.18);min-height:0}
   .orch-card{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2vw;align-items:center;padding:1.05vh 1.35vw}
   .orch-card.is-entry{border-top:2px solid rgba(255,255,255,.34)}
   .orch-card.is-feedback{border-bottom:2px solid rgba(255,255,255,.34)}
-  .orch-eyebrow{font-family:var(--mono);font-size:max(13px,.78vw);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-bright)}
+  .orch-eyebrow{font-family:var(--mono);font-size:max(14px,.78vw);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-bright)}
   .orch-card h3,.orch-agent h3{font-family:var(--sans),var(--sans-zh);font-size:max(20px,1.35vw);font-weight:500;line-height:1.18;color:var(--paper);margin-top:.35vh}
   .orch-card p,.orch-agent p{font-family:var(--sans),var(--sans-zh);font-size:max(16px,.88vw);font-weight:400;line-height:1.42;color:rgba(255,255,255,.72)}
-  .orch-state{font-family:var(--mono);font-size:max(13px,.78vw);font-weight:600;letter-spacing:.08em;color:rgba(255,255,255,.58);white-space:nowrap}
+  .orch-state{font-family:var(--mono);font-size:max(14px,.78vw);font-weight:600;letter-spacing:.08em;color:rgba(255,255,255,.58);white-space:nowrap}
   .orch-down{position:relative;display:flex;align-items:stretch;justify-content:center;min-height:14px}
   .orch-down::before{content:"";width:1px;background:rgba(255,255,255,.34)}
   .orch-down::after{content:"";position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:7px solid rgba(255,255,255,.46)}
   .orch-agent{display:grid;grid-template-rows:auto minmax(0,1fr);padding:1vh 1.35vw 1.15vh}
   .orch-agent-head{display:flex;justify-content:space-between;gap:2vw;align-items:start;border-bottom:1px solid rgba(255,255,255,.16);padding-bottom:.8vh}
-  .orch-guard{font-family:var(--mono);font-size:max(12px,.68vw);font-weight:600;letter-spacing:.08em;color:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.2);background:transparent;padding:.32em .56em;white-space:nowrap}
+  .orch-guard{font-family:var(--mono);font-size:max(14px,.68vw);font-weight:600;letter-spacing:.08em;color:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.2);background:transparent;padding:.32em .56em;white-space:nowrap}
   .orch-agent-body{display:grid;grid-template-rows:auto 18px auto;gap:.82vh;min-height:0;padding-top:.9vh}
   .orch-parallel{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1vw;align-items:stretch;min-height:0}
   .orch-tool{border:1px solid rgba(255,255,255,.22);background:#0f0f0f;padding:1vh 1vw;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;min-height:7.8vh}
   .orch-tool strong{font-family:var(--sans),var(--sans-zh);font-size:max(18px,1.1vw);font-weight:500;color:var(--paper)}
-  .orch-tool span{font-family:var(--mono);font-size:max(12px,.72vw);font-weight:600;letter-spacing:.08em;color:rgba(255,255,255,.5);margin-top:.5vh}
+  .orch-tool span{font-family:var(--mono);font-size:max(14px,.72vw);font-weight:600;letter-spacing:.08em;color:rgba(255,255,255,.5);margin-top:.5vh}
   .orch-joins{position:relative;height:18px}
   .orch-joins::before{content:"";position:absolute;left:16.666%;right:16.666%;top:0;height:1px;background:rgba(255,255,255,.28)}
   .orch-joins span{position:absolute;top:0;bottom:0;width:1px;background:rgba(255,255,255,.28)}
@@ -1661,6 +1676,7 @@
   .cv-frame{position:relative}
   .cv-tag{position:absolute;left:0;top:0;background:var(--accent);color:#fff;font-family:var(--mono);font-size:max(13px,.78vw);font-weight:600;letter-spacing:.04em;padding:.42em .72em;z-index:2}
   .cv-tag.ink{background:var(--ink)}
+  .slide[data-layout-variant="two-image-evidence"] .cv-frame.tag-align-contained-3x2 .cv-tag{left:7.8%}
   .cv-empty-copy{text-align:center;color:rgba(255,255,255,.42);font-family:var(--mono);font-size:max(12px,.8vw);line-height:1.7}
   .img-note{font-family:var(--sans),var(--sans-zh);font-size:max(14px,.86vw);font-weight:500;color:var(--text-secondary);margin-top:.9vh}
   .img-meta{display:flex;flex-direction:column;gap:.5vh;margin-top:1vh}
@@ -1750,8 +1766,8 @@
   .dataflow-slide .deck-main{gap:1.35vh}
   .dataflow-slide .deck-head{gap:3vw;padding-top:1.35vh}
   .dataflow-slide .deck-head-title{gap:.75vh}
-  .dataflow-slide .deck-lead{font-size:max(16px,.9vw);line-height:1.42}
-  .dataflow-slide .deck-main>.decision-strip{max-width:min(82ch,74vw);font-size:max(15px,.84vw);padding:.58vh .9vw;margin-bottom:calc(var(--nav-safe-bottom) * .55)}
+  .dataflow-slide .deck-lead{font-size:max(18px,.9vw);line-height:1.42}
+  .dataflow-slide .deck-main>.decision-strip{max-width:min(82ch,74vw);font-size:max(16px,.84vw);padding:.58vh .9vw;margin-bottom:calc(var(--nav-safe-bottom) * .55)}
   .dataflow{display:grid;grid-template-columns:minmax(260px,2.85fr) minmax(0,9.15fr);gap:2vw;flex:1;min-height:0;align-items:stretch}
   .df-col{display:flex;flex-direction:column;min-height:0}
   .df-sec-title{font-family:var(--mono);font-size:14px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--text-helper);border-bottom:1px solid var(--grey-2);padding-bottom:.55vh;margin-bottom:.85vh}
@@ -1768,37 +1784,61 @@
   .df-map-source{padding:1vh .95vw;display:flex;flex-direction:column;justify-content:center;min-width:0}
   .df-map-src{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--text-helper);text-transform:uppercase}
   .df-map-source h3{font-size:max(18px,1.22vw);font-weight:500;line-height:1.22;color:var(--text-primary);margin-top:.6vh}
-  .df-map-source p{font-size:max(13.5px,.8vw);line-height:1.38;color:var(--text-secondary);margin-top:.55vh}
+  .df-map-source p{font-size:max(16px,.8vw);line-height:1.32;color:var(--text-secondary);margin-top:.45vh}
   .df-map-row.ai .df-map-src,.df-map-row.ai .df-map-source h3{color:var(--accent)}
   .df-map-row.mix{border-top:2px solid var(--accent)}
   .df-map-bridge{position:relative;display:grid;place-items:center;border-left:1px solid var(--grey-2);border-right:1px solid var(--grey-2)}
   .df-map-bridge::before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:var(--grey-2)}
   .df-map-bridge span{position:relative;z-index:1;background:var(--paper);font-family:var(--mono);font-size:18px;color:var(--accent);line-height:1;padding:0 .2em}
   .df-map-fields{padding:.95vh 1vw;display:flex;flex-direction:column;justify-content:center;gap:.62vh;min-width:0}
-  .df-map-fields-title{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--text-helper);text-transform:uppercase}
+  .df-map-fields-title{font-family:var(--mono);font-size:14px;font-weight:700;letter-spacing:.12em;color:var(--text-helper);text-transform:uppercase}
   .df-field-chips{display:flex;gap:.45vw;flex-wrap:wrap}
-  .df-field-chip{border:1px solid var(--grey-2);padding:.35em .58em;font-family:var(--mono);font-size:max(12px,.72vw);font-weight:600;letter-spacing:.02em;color:var(--text-primary);background:var(--paper);white-space:nowrap}
+  .df-field-chip{border:1px solid var(--grey-2);padding:.32em .52em;font-family:var(--mono);font-size:max(14px,.72vw);font-weight:600;letter-spacing:.02em;color:var(--text-primary);background:var(--paper);white-space:nowrap}
   .df-map-row.ai .df-field-chip{border-color:rgba(var(--accent-rgb),.34);color:var(--accent)}
-  .df-field-sample{font-size:max(13.5px,.8vw);line-height:1.38;color:var(--text-secondary);white-space:normal}
+  .df-field-sample{font-size:max(16px,.8vw);line-height:1.32;color:var(--text-secondary);white-space:normal}
   .df-source-tags{display:flex;flex-wrap:wrap;gap:.35vw;margin-top:.7vh}
-  .df-source-tag{border:1px solid var(--border-subtle);padding:.22em .48em;font-family:var(--mono);font-size:max(11px,.62vw);font-weight:600;color:var(--text-helper);white-space:nowrap}
+  .df-source-tag{border:1px solid var(--border-subtle);padding:.2em .44em;font-family:var(--mono);font-size:max(14px,.62vw);font-weight:600;color:var(--text-helper);white-space:nowrap}
+  .df-legacy-list{display:grid;grid-template-rows:repeat(5,minmax(0,1fr));gap:1px;background:var(--grey-2);min-height:0;flex:1}
+  .df-legacy-row{background:var(--paper);display:grid;grid-template-columns:minmax(280px,4.2fr) minmax(0,6.8fr);align-items:stretch;min-height:0}
+  .df-legacy-row.is-ruled{border-top:2px solid var(--grey-2)}
+  .df-legacy-left{padding:.5vh .8vw;display:flex;flex-direction:column;justify-content:center;gap:.22vh;min-width:0}
+  .df-legacy-heading{display:flex;align-items:center;gap:.45vw;flex-wrap:wrap}
+  .df-legacy-pain{font-family:var(--mono);font-size:max(15px,.82vw);font-weight:700;letter-spacing:.08em;color:var(--accent)}
+  .df-legacy-chip{font-family:var(--mono);font-size:max(14px,.76vw);font-weight:700;color:var(--text-primary);border:1px solid var(--grey-2);padding:.12em .38em;background:var(--paper)}
+  .df-legacy-desc{font-size:max(16px,.86vw);font-weight:500;line-height:1.24;color:var(--text-secondary);margin:0}
+  .df-legacy-meta{font-family:var(--mono);font-size:max(14px,.7vw);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-helper)}
+  .df-legacy-output{border-left:2px solid var(--accent);padding:.5vh .9vw;display:flex;align-items:center;min-width:0;overflow:hidden}
+  .df-legacy-quote{display:block;width:100%;font-size:max(16px,.9vw);font-weight:500;line-height:1.3;color:var(--text-primary);margin:0;max-width:100%;white-space:normal;overflow-wrap:anywhere;word-break:break-word}
 
   /* 工作台页：按 S22 单张核心截图处理，截图优先，流程退为辅助 */
   .workbench-slide{--deck-title-vw:4.35vw;--deck-title-vh:7.7vh;--deck-title-basis:46%}
   .workbench-slide .deck-main{display:flex;flex-direction:column;gap:0}
   .workbench-hero{display:grid;grid-template-columns:minmax(0,9.4fr) minmax(300px,2.6fr);gap:2vw;align-items:stretch;flex:1;min-height:0;border-top:2px solid var(--accent-bright);padding-top:1.8vh}
   .workbench-shot{margin:0;display:flex;flex-direction:column;gap:1vh;min-width:0;min-height:0}
-  .workbench-shot .frame-img{height:70vh;max-height:70vh;aspect-ratio:auto;background:#111}
+  .workbench-shot .frame-img{height:70vh;max-height:70vh;aspect-ratio:auto;background:#111;border-top:2px solid var(--accent-bright)}
   .workbench-shot .frame-img>img{object-fit:contain}
   .workbench-side{display:flex;flex-direction:column;min-height:0;padding-top:1vh}
   .workbench-side .deck-title{font-size:min(3.45vw,6.1vh);line-height:1.02;margin-top:1vh}
-  .workbench-side .deck-lead{flex:0;max-width:34ch;font-size:max(16px,.94vw);line-height:1.48;padding-bottom:0;margin-top:1.6vh}
+  .workbench-side .deck-lead{flex:0;max-width:34ch;font-size:max(18px,.94vw);line-height:1.46;padding-bottom:0;margin-top:1.6vh}
   .workbench-flow{display:flex;flex-direction:column;min-height:0;margin-top:3vh}
   .workbench-flow .t-cat{margin-bottom:1.2vh}
   .workbench-flow .step-list{flex:0}
-  .workbench-flow .step-row{grid-template-columns:2.1em 5.4em 1fr;gap:.75vw;padding:.72vh 0}
-  .workbench-flow .step-t{font-size:max(15px,.94vw)}
-  .workbench-flow .step-d{font-size:max(15px,.84vw);line-height:1.34}
+  .workbench-flow .step-row{grid-template-columns:2.1em 5.4em 1fr;gap:.75vw;padding:.62vh 0}
+  .workbench-flow .step-t{font-size:max(16px,.94vw)}
+  .workbench-flow .step-d{font-size:max(16px,.84vw);line-height:1.3}
+
+  .closing-contact-left,
+  .closing-contact-right{position:relative;overflow:hidden;justify-content:space-between;gap:3vh}
+  .closing-contact-left>*:not(.ascii-bg),
+  .closing-contact-right>*{position:relative;z-index:1}
+  .closing-contact-left .chrome-min{color:rgba(255,255,255,.62)}
+  .closing-contact-title{display:flex;flex-direction:column;gap:1.4vh;align-self:center;text-align:center}
+  .closing-contact-title .name{font-size:min(6.8vw,12vh);font-weight:200;color:#fff;line-height:1.02;letter-spacing:0}
+  .closing-contact-title .sub{font-size:max(18px,1vw);color:rgba(255,255,255,.72);line-height:1.45}
+  .closing-contact-meta{align-self:center;color:rgba(255,255,255,.58);letter-spacing:.18em}
+  .closing-contact-card{display:flex;flex-direction:column;gap:1.5vh;align-self:center;text-align:left;border-top:2px solid var(--accent);padding-top:2vh;min-width:min(34vw,520px)}
+  .closing-contact-card .person{font-size:max(24px,1.6vw);font-weight:400;color:var(--ink);line-height:1.2}
+  .closing-contact-card .contact{font-size:max(18px,1vw);color:var(--text-secondary);line-height:1.5}
 
   /* 双栏（图 + 内容 / 文 + 文）通用容器，填满 deck-content */
   .split2{display:grid;gap:2.4vw;flex:1;min-height:0;align-items:center}
@@ -1971,12 +2011,12 @@
     <main style="flex:1;display:grid;grid-template-columns:8fr 4fr;gap:5vw;align-items:end;min-height:0">
       <div data-anim="title" style="display:flex;flex-direction:column;gap:2.2vh;align-self:center">
         <div class="t-meta" style="color:rgba(255,255,255,.75);letter-spacing:.22em">LOW-ALTITUDE PERCEPTION · AI DISPOSITION HUB</div>
-        <h1 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(7.4vw,13vh);line-height:.96;letter-spacing:-.035em;color:#fff">低空感知<br>AI 处置<span style="font-style:italic;font-weight:300">中枢</span></h1>
+        <h1 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(7.8vw,13.6vh);line-height:.96;letter-spacing:0;color:#fff">低空感知<br>AI 处置<span style="font-style:italic;font-weight:300">中枢</span></h1>
         <p style="font-size:max(18px,1.15vw);font-weight:400;line-height:1.55;color:rgba(255,255,255,.86);max-width:46ch">我在感知平台与政务处置之间增加 AI 分析，把 CV 告警加工成可复核的事件报告。</p>
       </div>
-      <div data-anim="bottom" style="display:flex;flex-direction:column;border-top:1px solid rgba(255,255,255,.35)">
+      <div data-anim="bottom" style="display:flex;flex-direction:column;gap:.2vh;border-top:1px solid rgba(255,255,255,.35)">
         <div style="padding:2vh 0;border-bottom:1px solid rgba(255,255,255,.18)"><div class="t-meta" style="color:rgba(255,255,255,.62)">ROLE</div><div style="font-size:max(20px,1.45vw);font-weight:400;margin-top:.55vh">AI 产品经理</div></div>
-        <div style="padding:2vh 0;border-bottom:1px solid rgba(255,255,255,.18)"><div class="t-meta" style="color:rgba(255,255,255,.62)">SCOPE</div><div style="font-size:16px;line-height:1.55;margin-top:.55vh">产品边界 · 版本节奏 · 人机协作 · 模型治理 · 指标验收</div></div>
+        <div style="padding:2vh 0;border-bottom:1px solid rgba(255,255,255,.18)"><div class="t-meta" style="color:rgba(255,255,255,.62)">SCOPE</div><div style="font-size:max(18px,.95vw);line-height:1.55;margin-top:.55vh">产品边界 · 版本节奏 · 人机协作 · 模型治理 · 指标验收</div></div>
         <div style="padding:2vh 0"><div class="t-meta" style="color:rgba(255,255,255,.62)">STATUS</div><div style="display:flex;gap:.5vw;flex-wrap:wrap;margin-top:1vh"><span class="state-pill">V1.1 已完成</span><span class="state-pill">V1.2 真实告警试点</span><span class="state-pill">V1.3 规划中</span></div></div>
         <div class="t-meta" style="color:rgba(255,255,255,.58);margin-top:1.5vh;line-height:1.7">崂山区全域低空智能感知平台 · 云世纪承建<br>客户：崂山区电子政务和大数据中心</div>
       </div>
@@ -1985,7 +2025,7 @@
 </section>
 
 <!-- ====================== 02 / 20 · 平台长什么样 ====================== -->
-<section class="slide light" data-layout="S16" data-animate="grid-reveal" id="slide-2">
+<section class="slide light" data-layout="S16" data-layout-variant="two-image-evidence" data-animate="grid-reveal" id="slide-2">
   <div class="canvas-card">
     <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">背景与缺口 · 02 / 20</div></header>
     <main class="deck-main">
@@ -1996,7 +2036,7 @@
       <div class="deck-content">
         <div data-anim="up" style="display:grid;grid-template-columns:1fr 1fr;gap:2.2vw;align-items:start;flex:1;min-height:0">
           <figure style="margin:0;display:flex;flex-direction:column;gap:1vh"><div class="frame-img r-16x9 swiss-lined cv-frame"><img src="assets/images/机场监控.jpg" data-image-slot="s16-brief-16x9" alt="机场监控中心实时画面"><span class="cv-tag ink">全域实时画面</span></div><figcaption class="swiss-img-caption"><span>机场监控中心 · 实时画面</span><strong>全域调度</strong></figcaption></figure>
-          <figure style="margin:0;display:flex;flex-direction:column;gap:1vh"><div class="frame-img r-16x9 swiss-lined cv-frame"><img src="assets/images/楼顶部署.jpg" data-image-slot="s16-brief-16x9" alt="U3 自动机场楼顶部署实拍" style="object-position:center 42%"><span class="cv-tag ink">云世纪 U3 自动机场</span></div><figcaption class="swiss-img-caption"><span>U3 自动机场 · 楼顶部署实拍</span><strong>无人值守</strong></figcaption></figure>
+          <figure style="margin:0;display:flex;flex-direction:column;gap:1vh"><div class="frame-img r-16x9 swiss-lined cv-frame tag-align-contained-3x2"><img src="assets/images/楼顶部署.jpg" data-image-slot="s16-brief-16x9" alt="U3 自动机场楼顶部署实拍" style="object-position:center 42%"><span class="cv-tag ink">云世纪 U3 自动机场</span></div><figcaption class="swiss-img-caption"><span>U3 自动机场 · 楼顶部署实拍</span><strong>无人值守</strong></figcaption></figure>
         </div>
       </div>
       </main>
@@ -2004,7 +2044,7 @@
 </section>
 
 <!-- ====================== 03 / 20 · 发现什么，给不出什么 ====================== -->
-<section class="slide dark has-strip" data-layout="S08" data-animate="grid-reveal" id="slide-3">
+<section class="slide dark has-strip" data-layout="S08" data-layout-variant="single-image-argument" data-animate="grid-reveal" id="slide-3">
   <div class="canvas-card">
     <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">背景与缺口 · 03 / 20</div></header>
     <main class="deck-main">
@@ -2043,12 +2083,12 @@
     <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">产品方案 · 04 / 20</div></header>
     <main class="deck-main">
       <div class="deck-head" data-anim="line">
-        <div class="deck-head-title"><div class="t-cat accent">SYSTEM CHAIN · 四层协作</div><h2 class="deck-title">四层系统协作，<br>AI 只补中间一层</h2></div>
+        <div class="deck-head-title"><div class="t-cat accent">SYSTEM CHAIN · 四层协作</div><h2 class="deck-title">四层系统协作，<br>AI 只做处置分析层</h2></div>
         <p class="deck-lead">飞行、采集、处置消费都在原业务系统完成。AI 处置层只接收 CV 告警，推送待复核报告，不越过业务系统。</p>
       </div>
       <div class="deck-content" style="gap:2.2vh">
         <div class="four-cards" data-anim="up">
-          <div class="fc-col"><div class="t-meta">01 · 任务发起层</div><h3>城市云脑 · 一网统管</h3><p>提交飞行申请，配置算法类型，形成飞行需求。它定义任务，不处理 AI 报告。</p></div>
+          <div class="fc-col"><div class="t-meta">01 · 任务发起层</div><h3>城市云脑 · 一网统管</h3><p>提交飞行申请，配置算法类型，形成飞行需求。</p></div>
           <div class="fc-col"><div class="t-meta">02 · 飞行作业层</div><h3>崂山低空感知平台</h3><p>机场调度、航线规划、影像采集和 CV 识别，输出两类 CV 告警。</p></div>
           <div class="fc-col is-project"><div class="t-meta">03 · AI 处置层</div><span class="project-badge">本项目</span><h3>低空感知 AI 处置中枢</h3><p>接收 CV 告警，完成语义理解、辅助核验和事件报告生成，推送下游待复核。</p></div>
           <div class="fc-col"><div class="t-meta">04 · 处置消费层</div><h3>一网统管 / 城管执法</h3><p>复核、派发、执法、结案，并把确认、忽略、修改结果回流为反馈。</p></div>
@@ -2089,7 +2129,7 @@
 
 
 <!-- ====================== 06 / 20 · 受控编排架构 ====================== -->
-<section class="slide dark orchestration-slide" data-layout="S17" data-animate="grid-reveal" id="slide-5">
+<section class="slide dark orchestration-slide" data-layout="S17" data-layout-variant="orchestration-flow" data-animate="grid-reveal" id="slide-5">
   <div class="canvas-card">
     <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">产品方案 · 06 / 20</div></header>
     <main class="deck-main">
@@ -2131,7 +2171,7 @@
 </section>
 
 <!-- ====================== 07 / 20 · 多步处理与模型选择 ====================== -->
-<section class="slide dark model-plan-slide" data-layout="S20" data-animate="stacked-ledger" id="slide-model-plan">
+<section class="slide dark model-plan-slide" data-layout="S20" data-layout-variant="process-ledger" data-animate="stacked-ledger" id="slide-model-plan">
   <div class="canvas-card">
     <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">产品方案 · 07 / 20</div></header>
     <main class="deck-main">
@@ -2206,7 +2246,7 @@
 </section>
 
 <!-- ====================== 08 / 20 · 知识库 / RAG ====================== -->
-<section class="slide light knowledge-slide" data-layout="S08" data-animate="kb-reveal" id="slide-6">
+<section class="slide light knowledge-slide" data-layout="S08" data-layout-variant="knowledge-evidence-16x9" data-animate="kb-reveal" id="slide-6">
   <div class="canvas-card">
     <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">产品方案 · 08 / 20</div></header>
     <main class="deck-main">
@@ -2234,7 +2274,7 @@
 </section>
 
 <!-- ====================== 09 / 20 · RAG 检索实例 ====================== -->
-<section class="slide light rag-trace-slide" data-layout="S20" data-animate="stacked-ledger" id="slide-rag-trace">
+<section class="slide light rag-trace-slide" data-layout="S20" data-layout-variant="process-ledger" data-animate="stacked-ledger" id="slide-rag-trace">
   <div class="canvas-card">
     <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">产品方案 · 09 / 20</div></header>
     <main class="deck-main">
@@ -2300,7 +2340,7 @@
 </section>
 
 <!-- ====================== 10 / 20 · 场景取舍与覆盖 ====================== -->
-<section class="slide dark" data-layout="S15" data-animate="matrix-fill" id="slide-scope">
+<section class="slide dark" data-layout="S15" data-layout-variant="scope-matrix-8" data-animate="matrix-fill" id="slide-scope">
   <div class="canvas-card">
     <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">产品方案 · 10 / 20</div></header>
     <main class="deck-main">
@@ -2357,7 +2397,7 @@
 </section>
 
 <!-- ====================== 12 / 20 · 建筑垃圾工作原理 ====================== -->
-<section class="slide light dataflow-slide" data-layout="S08" data-animate="grid-reveal" id="slide-9">
+<section class="slide light dataflow-slide" data-layout="S08" data-layout-variant="field-map" data-animate="grid-reveal" id="slide-9">
   <div class="canvas-card">
     <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">落地与容错 · 12 / 20</div></header>
     <main class="deck-main">
@@ -2369,7 +2409,7 @@
         <div class="dataflow" data-anim="up">
           <aside class="df-col df-input">
             <div class="df-sec-title">01 · CV 告警进来</div>
-            <div class="frame-img cv-frame fit-contain"><img src="assets/images/Before_CV_脱敏_建筑垃圾.png" alt="CV 告警原图"><span class="cv-tag">CV · 0.82</span></div>
+            <div class="frame-img cv-frame fit-contain"><img src="assets/images/Before_CV_脱敏_建筑垃圾.png" data-image-slot="field-map-source-3x2" alt="CV 告警原图"><span class="cv-tag">CV · 0.82</span></div>
             <div class="df-kv-list">
               <div><span>算法标签</span><strong>疑似建筑垃圾</strong></div>
               <div><span>点位时间</span><strong>董家埠村东侧空地 · 03-09 10:30</strong></div>
@@ -2378,55 +2418,55 @@
           </aside>
           <div class="df-col df-map">
             <div class="df-sec-title">02 · 五个字段对应 P03 三个痛点</div>
-            <div style="display:grid;grid-template-rows:repeat(5,minmax(0,1fr));gap:1px;background:var(--grey-2);min-height:0;flex:1">
-              <article style="background:var(--paper);display:grid;grid-template-columns:minmax(280px,4.2fr) minmax(0,6.8fr);align-items:stretch;min-height:0">
-                <div style="padding:.5vh .8vw;display:flex;flex-direction:column;justify-content:center;gap:.22vh;min-width:0">
-                  <div style="display:flex;align-items:center;gap:.45vw;flex-wrap:wrap"><span style="font-family:var(--mono);font-size:max(15px,.82vw);font-weight:700;letter-spacing:.08em;color:var(--accent)">① 真假判断</span><span style="font-family:var(--mono);font-size:max(14px,.76vw);font-weight:700;color:var(--text-primary);border:1px solid var(--grey-2);padding:.12em .38em;background:var(--paper)">visual_summary</span></div>
-                  <p style="font-size:max(16px,.86vw);font-weight:500;line-height:1.24;color:var(--text-secondary);margin:0">看图判断框选区域内有什么、周边环境是什么</p>
-                  <div style="font-family:var(--mono);font-size:max(14px,.7vw);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-helper)">VLM 多模态理解</div>
+            <div class="df-legacy-list">
+              <article class="df-legacy-row">
+                <div class="df-legacy-left">
+                  <div class="df-legacy-heading"><span class="df-legacy-pain">① 真假判断</span><span class="df-legacy-chip">visual_summary</span></div>
+                  <p class="df-legacy-desc">看图判断框选区域内有什么、周边环境是什么</p>
+                  <div class="df-legacy-meta">VLM 多模态理解</div>
                 </div>
-                <div style="border-left:2px solid var(--accent);padding:.5vh .9vw;display:flex;align-items:center;min-width:0;overflow:hidden">
-                  <p style="display:block;width:100%;font-size:max(16px,.9vw);font-weight:500;line-height:1.3;color:var(--text-primary);margin:0;max-width:100%;white-space:normal;overflow-wrap:anywhere;word-break:break-word">“围挡外空地存在混杂堆体，含砖块、混凝土碎块及少量编织袋。综合判断符合建筑垃圾特征。”</p>
-                </div>
-              </article>
-              <article style="background:var(--paper);display:grid;grid-template-columns:minmax(280px,4.2fr) minmax(0,6.8fr);align-items:stretch;min-height:0;border-top:2px solid var(--grey-2)">
-                <div style="padding:.5vh .8vw;display:flex;flex-direction:column;justify-content:center;gap:.22vh;min-width:0">
-                  <div style="display:flex;align-items:center;gap:.45vw;flex-wrap:wrap"><span style="font-family:var(--mono);font-size:max(15px,.82vw);font-weight:700;letter-spacing:.08em;color:var(--accent)">② 查依据</span><span style="font-family:var(--mono);font-size:max(14px,.76vw);font-weight:700;color:var(--text-primary);border:1px solid var(--grey-2);padding:.12em .38em;background:var(--paper)">regulation_refs</span></div>
-                  <p style="font-size:max(16px,.86vw);font-weight:500;line-height:1.24;color:var(--text-secondary);margin:0">引用适用的法规条款及裁量基准</p>
-                  <div style="font-family:var(--mono);font-size:max(14px,.7vw);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-helper)">RAG · 法规/裁量基准</div>
-                </div>
-                <div style="border-left:2px solid var(--accent);padding:.5vh .9vw;display:flex;align-items:center;min-width:0;overflow:hidden">
-                  <p style="display:block;width:100%;font-size:max(16px,.9vw);font-weight:500;line-height:1.3;color:var(--text-primary);margin:0;max-width:100%;white-space:normal;overflow-wrap:anywhere;word-break:break-word">“市容条例 §29（公共场地堆放）· 建废管理办法 §20（违规倾倒）”</p>
+                <div class="df-legacy-output">
+                  <p class="df-legacy-quote">“围挡外空地存在混杂堆体，含砖块、混凝土碎块及少量编织袋。综合判断符合建筑垃圾特征。”</p>
                 </div>
               </article>
-              <article style="background:var(--paper);display:grid;grid-template-columns:minmax(280px,4.2fr) minmax(0,6.8fr);align-items:stretch;min-height:0">
-                <div style="padding:.5vh .8vw;display:flex;flex-direction:column;justify-content:center;gap:.22vh;min-width:0">
-                  <div style="display:flex;align-items:center;gap:.45vw;flex-wrap:wrap"><span style="font-family:var(--mono);font-size:max(15px,.82vw);font-weight:700;letter-spacing:.08em;color:var(--accent)">② 台账核验</span><span style="font-family:var(--mono);font-size:max(14px,.76vw);font-weight:700;color:var(--text-primary);border:1px solid var(--grey-2);padding:.12em .38em;background:var(--paper)">ledger_match</span></div>
-                  <p style="font-size:max(16px,.86vw);font-weight:500;line-height:1.24;color:var(--text-secondary);margin:0">查询工地红线，判断是否位于在建工程用地范围内</p>
-                  <div style="font-family:var(--mono);font-size:max(14px,.7vw);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-helper)">RAG · 台账/点位</div>
+              <article class="df-legacy-row is-ruled">
+                <div class="df-legacy-left">
+                  <div class="df-legacy-heading"><span class="df-legacy-pain">② 查依据</span><span class="df-legacy-chip">regulation_refs</span></div>
+                  <p class="df-legacy-desc">引用适用的法规条款及裁量基准</p>
+                  <div class="df-legacy-meta">RAG · 法规/裁量基准</div>
                 </div>
-                <div style="border-left:2px solid var(--accent);padding:.5vh .9vw;display:flex;align-items:center;min-width:0;overflow:hidden">
-                  <p style="display:block;width:100%;font-size:max(16px,.9vw);font-weight:500;line-height:1.3;color:var(--text-primary);margin:0;max-width:100%;white-space:normal;overflow-wrap:anywhere;word-break:break-word">“在建工地红线：未命中。该点位不在任何在建工程用地范围内。”</p>
-                </div>
-              </article>
-              <article style="background:var(--paper);display:grid;grid-template-columns:minmax(280px,4.2fr) minmax(0,6.8fr);align-items:stretch;min-height:0">
-                <div style="padding:.5vh .8vw;display:flex;flex-direction:column;justify-content:center;gap:.22vh;min-width:0">
-                  <div style="display:flex;align-items:center;gap:.45vw;flex-wrap:wrap"><span style="font-family:var(--mono);font-size:max(15px,.82vw);font-weight:700;letter-spacing:.08em;color:var(--accent)">② 查历史</span><span style="font-family:var(--mono);font-size:max(14px,.76vw);font-weight:700;color:var(--text-primary);border:1px solid var(--grey-2);padding:.12em .38em;background:var(--paper)">history_check</span></div>
-                  <p style="font-size:max(16px,.86vw);font-weight:500;line-height:1.24;color:var(--text-secondary);margin:0">查询同点位历史事件，判断是否复发</p>
-                  <div style="font-family:var(--mono);font-size:max(14px,.7vw);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-helper)">工具查询 · 历史事件</div>
-                </div>
-                <div style="border-left:2px solid var(--accent);padding:.5vh .9vw;display:flex;align-items:center;min-width:0;overflow:hidden">
-                  <p style="display:block;width:100%;font-size:max(16px,.9vw);font-weight:500;line-height:1.3;color:var(--text-primary);margin:0;max-width:100%;white-space:normal;overflow-wrap:anywhere;word-break:break-word">“近 6 个月同点位 2 条：03-09 建筑垃圾/已处置 · 01-14 渣土/已处置。当前为第 3 次同类事件。”</p>
+                <div class="df-legacy-output">
+                  <p class="df-legacy-quote">“市容条例 §29（公共场地堆放）· 建废管理办法 §20（违规倾倒）”</p>
                 </div>
               </article>
-              <article style="background:var(--paper);display:grid;grid-template-columns:minmax(280px,4.2fr) minmax(0,6.8fr);align-items:stretch;min-height:0;border-top:2px solid var(--grey-2)">
-                <div style="padding:.5vh .8vw;display:flex;flex-direction:column;justify-content:center;gap:.22vh;min-width:0">
-                  <div style="display:flex;align-items:center;gap:.45vw;flex-wrap:wrap"><span style="font-family:var(--mono);font-size:max(15px,.82vw);font-weight:700;letter-spacing:.08em;color:var(--accent)">③ 处置建议</span><span style="font-family:var(--mono);font-size:max(14px,.76vw);font-weight:700;color:var(--text-primary);border:1px solid var(--grey-2);padding:.12em .38em;background:var(--paper)">suggested_action</span></div>
-                  <p style="font-size:max(16px,.86vw);font-weight:500;line-height:1.24;color:var(--text-secondary);margin:0">根据视觉判断、法规引用、台账状态和历史记录，综合生成处置建议</p>
-                  <div style="font-family:var(--mono);font-size:max(14px,.7vw);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-helper)">编排层 · 汇总生成</div>
+              <article class="df-legacy-row">
+                <div class="df-legacy-left">
+                  <div class="df-legacy-heading"><span class="df-legacy-pain">② 台账核验</span><span class="df-legacy-chip">ledger_match</span></div>
+                  <p class="df-legacy-desc">查询工地红线，判断是否位于在建工程用地范围内</p>
+                  <div class="df-legacy-meta">RAG · 台账/点位</div>
                 </div>
-                <div style="border-left:2px solid var(--accent);padding:.5vh .9vw;display:flex;align-items:center;min-width:0;overflow:hidden">
-                  <p style="display:block;width:100%;font-size:max(16px,.9vw);font-weight:500;line-height:1.3;color:var(--text-primary);margin:0;max-width:100%;white-space:normal;overflow-wrap:anywhere;word-break:break-word">“限期清运（3 个工作日）· 复拍确认 · 复核销号。复发点位建议从严重处。”</p>
+                <div class="df-legacy-output">
+                  <p class="df-legacy-quote">“在建工地红线：未命中。该点位不在任何在建工程用地范围内。”</p>
+                </div>
+              </article>
+              <article class="df-legacy-row">
+                <div class="df-legacy-left">
+                  <div class="df-legacy-heading"><span class="df-legacy-pain">② 查历史</span><span class="df-legacy-chip">history_check</span></div>
+                  <p class="df-legacy-desc">查询同点位历史事件，判断是否复发</p>
+                  <div class="df-legacy-meta">工具查询 · 历史事件</div>
+                </div>
+                <div class="df-legacy-output">
+                  <p class="df-legacy-quote">“近 6 个月同点位 2 条：03-09 建筑垃圾/已处置 · 01-14 渣土/已处置。当前为第 3 次同类事件。”</p>
+                </div>
+              </article>
+              <article class="df-legacy-row is-ruled">
+                <div class="df-legacy-left">
+                  <div class="df-legacy-heading"><span class="df-legacy-pain">③ 处置建议</span><span class="df-legacy-chip">suggested_action</span></div>
+                  <p class="df-legacy-desc">根据视觉判断、法规引用、台账状态和历史记录，综合生成处置建议</p>
+                  <div class="df-legacy-meta">编排层 · 汇总生成</div>
+                </div>
+                <div class="df-legacy-output">
+                  <p class="df-legacy-quote">“限期清运（3 个工作日）· 复拍确认 · 复核销号。复发点位建议从严重处。”</p>
                 </div>
               </article>
             </div>
@@ -2445,16 +2485,39 @@
 </section>
 
 <!-- ====================== 13 / 20 · 事件详情（接续 P12 案例） ====================== -->
-<section class="slide dark workbench-slide" data-layout="S22" data-animate="grid-reveal" id="slide-11">
-  <div class="canvas-card"><header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">落地与容错 · 13 / 20</div></header><main class="deck-main">
-    <div class="workbench-hero" data-anim="up"><figure class="workbench-shot"><div class="frame-img swiss-lined"><img src="assets/images/系统截图_事件详情.png" data-image-slot="s22-hero-21x9" alt="系统界面 · 事件详情"></div><figcaption class="swiss-img-caption"><span>系统界面 · 事件详情</span><strong>详情页</strong></figcaption></figure><aside class="workbench-side"><div class="t-cat accent">EVENT DETAIL · 同页查看</div><h2 class="deck-title">事件详情<br>一页看全</h2><p class="deck-lead">图像、证据链、报告字段和下游状态，同一页查看，不再跨系统翻材料。</p><div class="workbench-flow"><div class="t-cat">五类信息，不用跳转</div><div class="step-list">
-      <div class="step-row"><span class="step-n">01</span><span class="step-t">事件信息</span><span class="step-d">CV 图像 · 告警标签</span></div><div class="step-row"><span class="step-n">02</span><span class="step-t">理解结果</span><span class="step-d">语义描述 · 初步判定</span></div><div class="step-row"><span class="step-n">03</span><span class="step-t">辅助证据</span><span class="step-d">RAG 引用 · 台账命中</span></div><div class="step-row"><span class="step-n">04</span><span class="step-t">报告字段</span><span class="step-d">字段契约 · 下游状态</span></div><div class="step-row"><span class="step-n">05</span><span class="step-t">处置留痕</span><span class="step-d">推送记录 · 状态回溯</span></div>
-    </div></div></aside></div>
-  </main></div>
+<section class="slide dark workbench-slide" data-layout="S22" data-layout-variant="screenshot-evidence-16x9" data-animate="grid-reveal" id="slide-11">
+  <div class="canvas-card">
+    <header class="chrome-min tight" data-anim="line"><div class="l">低空感知 AI 处置中枢</div><div class="r">落地与容错 · 13 / 20</div></header>
+    <main class="deck-main">
+      <div class="workbench-hero" data-anim="up">
+        <figure class="workbench-shot" data-anim="shot">
+          <div class="frame-img swiss-lined">
+            <img src="assets/images/系统截图_事件详情.png" data-image-slot="s22-hero-21x9" data-image-variant="screenshot-evidence-16x9" alt="系统界面 · 事件详情">
+          </div>
+          <figcaption class="swiss-img-caption" data-anim="caption"><span>系统界面 · 事件详情</span><strong>详情页</strong></figcaption>
+        </figure>
+        <aside class="workbench-side" data-anim="side">
+          <div class="t-cat accent">EVENT DETAIL · 同页查看</div>
+          <h2 class="deck-title">事件详情<br>一页看全</h2>
+          <p class="deck-lead">图像、证据链、报告字段和下游状态，同一页查看，不再跨系统翻材料。</p>
+          <div class="workbench-flow">
+            <div class="t-cat">五类信息，不用跳转</div>
+            <div class="step-list">
+              <div class="step-row"><span class="step-n">01</span><span class="step-t">事件信息</span><span class="step-d">CV 图像 · 告警标签</span></div>
+              <div class="step-row"><span class="step-n">02</span><span class="step-t">理解结果</span><span class="step-d">语义描述 · 初步判定</span></div>
+              <div class="step-row"><span class="step-n">03</span><span class="step-t">辅助证据</span><span class="step-d">RAG 引用 · 台账命中</span></div>
+              <div class="step-row"><span class="step-n">04</span><span class="step-t">报告字段</span><span class="step-d">字段契约 · 下游状态</span></div>
+              <div class="step-row"><span class="step-n">05</span><span class="step-t">处置留痕</span><span class="step-d">推送记录 · 状态回溯</span></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </div>
 </section>
 
 <!-- ====================== 14 / 20 · 烟火 L1 · L1/L2 策略对比 ====================== -->
-<section class="slide light" data-layout="S13" data-animate="three-forces" id="slide-fire">
+<section class="slide light" data-layout="S13" data-layout-variant="image-force-evidence" data-animate="three-forces" id="slide-fire">
   <div class="canvas-card">
     <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">落地与容错 · 14 / 20</div></header>
     <main class="deck-main">
@@ -2468,7 +2531,7 @@
             <div>
               <div class="t-cat">L1 · 真实告警输入</div>
             </div>
-            <div class="frame-img fit-contain cv-frame fire-hero-shot"><img src="assets/images/Before_CV_脱敏_疑似烟火.png" data-image-slot="s13-fire-evidence" alt="CV 原始告警 · 疑似烟火"><span class="cv-tag">CV · 0.90</span></div>
+            <div class="frame-img fit-contain cv-frame fire-hero-shot"><img src="assets/images/Before_CV_脱敏_疑似烟火.png" data-image-slot="image-force-evidence-original-3x2" alt="CV 原始告警 · 疑似烟火"><span class="cv-tag">CV · 0.90</span></div>
             <div class="fire-hero-meta"><strong>疑似烟火 · L1</strong><span>林区边缘 / 防火航次</span></div>
             <p>火情有独立应急指挥流程，本系统只做过滤、路由和预警，最终确认权留给应急 / 林业。</p>
           </aside>
@@ -2493,7 +2556,7 @@
 </section>
 
 <!-- ====================== 15 / 20 · 容错与兜底 ====================== -->
-<section class="slide dark has-strip" data-layout="S20" data-animate="stacked-ledger" id="slide-fallback">
+<section class="slide dark has-strip" data-layout="S20" data-layout-variant="process-ledger" data-animate="stacked-ledger" id="slide-fallback">
   <div class="canvas-card">
     <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">落地与容错 · 15 / 20</div></header>
     <main class="deck-main">
@@ -2545,7 +2608,7 @@
 </section>
 
 <!-- ====================== 17 / 20 · 评测体系设计 ====================== -->
-<section class="slide light" data-layout="S19" data-animate="grid-reveal" id="slide-12">
+<section class="slide light" data-layout="S19" data-layout-variant="four-card-eval" data-animate="grid-reveal" id="slide-12">
   <div class="canvas-card">
     <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">验证与上线 · 17 / 20</div></header>
     <main class="deck-main">
@@ -2579,7 +2642,7 @@
 
 
 <!-- ====================== 18 / 20 · 指标边界 ====================== -->
-<section class="slide light has-strip" data-layout="S08" data-animate="duo-mirror" id="slide-metric-boundary">
+<section class="slide light has-strip" data-layout="S08" data-layout-variant="metric-boundary-dual" data-animate="duo-mirror" id="slide-metric-boundary">
   <div class="canvas-card">
     <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">验证与上线 · 18 / 20</div></header>
     <main class="deck-main">
@@ -2642,15 +2705,24 @@
 </section>
 
 <!-- ====================== 20 / 20 · 封底 ====================== -->
-<section class="slide split" data-layout="SWISS-CLOSING-ASCII" data-animate="split-statement" id="slide-19">
+<section class="slide split" data-layout="SWISS-CLOSING-ASCII" data-layout-variant="closing-contact" data-animate="split-statement" id="slide-19">
   <div class="canvas-card" style="padding:0"><div class="split-half">
-    <div class="half b-accent" style="justify-content:center;align-items:center;text-align:center;gap:2vh">
-      <div style="font-size:min(6vw,10vh);font-weight:200;color:#fff;line-height:1.1">低空感知<br>AI 处置中枢</div>
-      <div style="font-size:max(16px,.95vw);color:rgba(255,255,255,.7)">AI 产品经理作品集</div>
+    <div class="half b-accent closing-contact-left">
+      <canvas class="ascii-bg" aria-hidden="true"></canvas>
+      <header class="chrome-min"><div class="l">低空感知 AI 处置中枢</div><div class="r">END · 20 / 20</div></header>
+      <div class="closing-contact-title" data-anim="left">
+        <div class="name">低空感知<br>AI 处置中枢</div>
+        <div class="sub">AI 产品经理作品集</div>
+      </div>
+      <div class="t-meta closing-contact-meta" data-anim="left">AI PRODUCT MANAGER PORTFOLIO</div>
     </div>
-    <div class="half" style="justify-content:center;align-items:center;text-align:center;gap:1.5vh">
-      <div style="font-size:max(20px,1.3vw);font-weight:400;color:var(--ink)">孙昕 · 求职中</div>
-      <div style="font-size:max(16px,.9vw);color:var(--text-secondary)">微信 / 电话 15561689991 · sunxin9991@gmail.com</div>
+    <div class="half closing-contact-right">
+      <header class="chrome-min"><div class="l">CONTACT</div><div class="r">PORTFOLIO</div></header>
+      <div class="closing-contact-card" data-anim="right">
+        <div class="person">孙昕 · 求职中</div>
+        <div class="contact">微信 / 电话 15561689991 · sunxin9991@gmail.com</div>
+      </div>
+      <div class="t-meta" data-anim="right">LOW-ALTITUDE PERCEPTION · AI DISPOSITION HUB</div>
     </div>
   </div></div>
 </section>
