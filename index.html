@@ -71,6 +71,36 @@
 
     /* 底部分页组件安全区: 主内容最低处不要进入这条区域 */
     --nav-safe-bottom:8vh;
+
+    /* ============ Deck 视觉系统 token（二次收敛） ============ */
+    --ds-title-cover:min(7.8vw,13.6vh);
+    --ds-title-standard:min(5vw,8.8vh);
+    --ds-title-dense:min(4.2vw,7.4vh);
+    --ds-title-side:min(3.45vw,6.1vh);
+    --ds-title-line:.98;
+    --ds-title-letter:-.035em;
+    --ds-lead-size:max(18px,.98vw);
+    --ds-lead-line:1.48;
+    --ds-lead-width:48ch;
+    --ds-body-size:max(18px,.98vw);
+    --ds-copy-size:max(16px,.92vw);
+    --ds-caption-size:max(16px,.82vw);
+    --ds-meta-size:max(14px,.82vw);
+    --ds-card-pad-y:1.8vh;
+    --ds-card-pad-x:1.4vw;
+    --ds-card-gap:1.2vh;
+    --ds-content-gap:2.4vh;
+    --ds-content-gap-tight:1.35vh;
+    --ds-head-gap:4vw;
+    --ds-head-gap-tight:3vw;
+    --ds-head-pad:2vh;
+    --ds-head-pad-tight:1.35vh;
+    --ds-hairline:1px solid var(--border-subtle);
+    --ds-hairline-dark:1px solid rgba(255,255,255,.18);
+    --ds-accent-line:2px solid var(--accent);
+    --ds-accent-line-dark:2px solid var(--accent-bright);
+    --ds-frame-bg:var(--paper);
+    --ds-frame-bg-dark:rgba(255,255,255,.06);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{
@@ -478,9 +508,9 @@
   /* ============ Callout (引用框 · 极简) ============ */
   .callout{
     padding:2vh 2vw;
-    border-left:3px solid var(--accent);
+    border-left:var(--ds-accent-line);
     font-family:var(--sans),var(--sans-zh);
-    font-size:max(14px,1vw);
+    font-size:var(--ds-body-size);
     line-height:1.55;
     opacity:.9;
   }
@@ -506,8 +536,8 @@
   .geo-circle-o{width:.9vw;height:.9vw;border:2px solid currentColor;border-radius:50%;display:inline-block;vertical-align:middle}
 
   /* ============ 图片 frame-img ============ */
-  .frame-img{overflow:hidden;position:relative;background:var(--paper);box-sizing:border-box;width:100%}
-  .slide.dark .frame-img{background:rgba(255,255,255,.06)}
+  .frame-img{overflow:hidden;position:relative;background:var(--ds-frame-bg);box-sizing:border-box;width:100%;border-radius:0;box-shadow:none}
+  .slide.dark .frame-img{background:var(--ds-frame-bg-dark)}
   .frame-img > img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block}
   .frame-img.fit-contain > img{object-fit:contain;object-position:center center}
   .frame-img.pos-top > img{object-position:top center}
@@ -525,8 +555,8 @@
   .frame-img.h-26{height:26vh}
   .frame-img.h-28{height:28vh}
   .frame-img.h-32{height:32vh}
-  .frame-img.swiss-lined{border-top:2px solid var(--accent)}
-  .slide.dark .frame-img.swiss-lined{border-top-color:var(--accent-bright)}
+  .frame-img.swiss-lined{border-top:var(--ds-accent-line)}
+  .slide.dark .frame-img.swiss-lined{border-top:var(--ds-accent-line-dark)}
   .slide.dark .swiss-img-caption strong{color:var(--paper)}
   .slide.dark .swiss-img-caption{color:rgba(255,255,255,.6);border-top-color:rgba(255,255,255,.2)}
   .frame-img.swiss-keyline{border:0}
@@ -542,7 +572,7 @@
   .img-cap{
     display:block;margin-top:.8vh;
     font-family:var(--mono);
-    font-size:max(14px,.82vw);
+    font-size:var(--ds-caption-size);
     letter-spacing:.2em;text-transform:uppercase;
     opacity:.6;
   }
@@ -570,9 +600,9 @@
   .swiss-img-caption{
     display:flex;justify-content:space-between;gap:var(--sp-5);
     margin-top:var(--sp-4);
-    font-family:var(--mono);font-size:max(14px,.74vw);
+    font-family:var(--mono);font-size:var(--ds-caption-size);
     letter-spacing:.16em;text-transform:uppercase;color:var(--text-helper);
-    border-top:1px solid var(--border-subtle);padding-top:var(--sp-4)
+    border-top:var(--ds-hairline);padding-top:var(--sp-4)
   }
   .swiss-img-caption strong{
     font-family:var(--sans),var(--sans-zh);font-size:max(16px,.9vw);
@@ -580,10 +610,10 @@
   }
   .slide[data-layout-variant] .deck-content{min-height:0}
   .slide[data-layout-variant] .frame-img{border-radius:0;box-shadow:none}
-  .slide[data-layout-variant] .swiss-img-caption{font-size:max(14px,.82vw);line-height:1.35}
+  .slide[data-layout-variant] .swiss-img-caption{font-size:var(--ds-caption-size);line-height:1.35}
   .slide[data-layout-variant] .t-cat,
-  .slide[data-layout-variant] .t-meta{font-size:max(14px,.82vw)}
-  .slide[data-layout-variant] .deck-lead{font-size:max(18px,.98vw)}
+  .slide[data-layout-variant] .t-meta{font-size:var(--ds-meta-size)}
+  .slide[data-layout-variant] .deck-lead{font-size:var(--ds-lead-size)}
   .slide[data-layout-variant] .cv-frame>img,
   .slide[data-layout-variant] .frame-img.fit-contain>img{object-fit:contain}
   .slide[data-layout-variant="two-image-evidence"] .deck-content,
@@ -943,7 +973,7 @@
   /* category label / eyebrow / section tag — small, bold, uppercase */
   .t-cat{
     font-family:var(--mono);
-    font-size:14px;font-weight:600;
+    font-size:var(--ds-meta-size);font-weight:600;
     letter-spacing:.15em;text-transform:uppercase;
     color:var(--text-helper);line-height:1.3
   }
@@ -953,7 +983,7 @@
   /* page chrome / breadcrumb / running header — extra-small mono */
   .t-meta{
     font-family:var(--mono);
-    font-size:14px;font-weight:500;
+    font-size:var(--ds-meta-size);font-weight:500;
     letter-spacing:.14em;text-transform:uppercase;
     color:var(--text-helper);line-height:1.45
   }
@@ -961,7 +991,7 @@
   /* helper / caption — secondary text */
   .t-helper{
     font-family:var(--sans),var(--sans-zh);
-    font-size:14px;font-weight:400;
+    font-size:var(--ds-caption-size);font-weight:400;
     color:var(--text-helper);line-height:1.5;
     letter-spacing:.005em
   }
@@ -1175,7 +1205,7 @@
   /* 极简页眉 — t-meta 风格 (Carbon productive label-01) */
   .canvas-card .chrome-min{
     display:flex;justify-content:space-between;align-items:flex-start;
-    font-family:var(--mono);font-size:14px;font-weight:500;
+    font-family:var(--mono);font-size:var(--ds-meta-size);font-weight:500;
     letter-spacing:.14em;text-transform:uppercase;
     color:var(--text-helper);
     flex:0 0 auto;
@@ -1202,18 +1232,33 @@
 
   /* ============ 低空感知 AI 处置中枢 Deck 扩展：均绑定登记 Sxx 版式 ============ */
   .sub-card{border-radius:0}
-  .deck-main{flex:1;min-height:0;display:grid;grid-template-rows:auto minmax(0,1fr) auto;gap:2.4vh}
-  .deck-head{display:flex;gap:4vw;align-items:end;border-top:2px solid var(--accent);padding-top:2vh}
+  .deck-main{flex:1;min-height:0;display:grid;grid-template-rows:auto minmax(0,1fr) auto;gap:var(--deck-main-gap,var(--ds-content-gap))}
+  .deck-head{display:flex;gap:var(--deck-head-gap,var(--ds-head-gap));align-items:end;border-top:var(--ds-accent-line);padding-top:var(--deck-head-pad,var(--ds-head-pad))}
   .deck-head-title{display:flex;flex:0 0 var(--deck-title-basis,58%);flex-direction:column;gap:1.15vh;min-width:0}
-  .deck-title{font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(var(--deck-title-vw,5vw),var(--deck-title-vh,8.8vh));line-height:.98;letter-spacing:-.035em;color:var(--text-primary);text-wrap:balance}
-  .deck-lead{flex:1;min-width:0;font-family:var(--sans),var(--sans-zh);font-size:max(18px,1.02vw);font-weight:400;line-height:1.55;color:var(--text-secondary);padding-bottom:.3vh}
+  .deck-title{font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:var(--deck-title-size,var(--ds-title-standard));line-height:var(--deck-title-line,var(--ds-title-line));letter-spacing:var(--ds-title-letter);color:var(--text-primary);text-wrap:balance}
+  .deck-lead{flex:1;min-width:0;max-width:var(--deck-lead-width,var(--ds-lead-width));font-family:var(--sans),var(--sans-zh);font-size:var(--ds-lead-size);font-weight:400;line-height:var(--deck-lead-line,var(--ds-lead-line));color:var(--text-secondary);padding-bottom:.3vh}
   .deck-content{min-height:0;display:flex;flex-direction:column;padding-bottom:5.6vh}
+  .deck-content.is-spaced{gap:var(--ds-content-gap)}
+  .deck-content.is-tight{gap:var(--ds-content-gap-tight)}
   .has-strip .deck-content{padding-bottom:0}
   .slide.dark .deck-title{color:var(--paper)}
   .slide.dark .deck-lead{color:rgba(255,255,255,.76)}
-  .slide.dark .deck-head{border-top-color:var(--accent-bright)}
-  .evidence-nav{display:flex;align-items:center;gap:.8vw;border-top:1px solid var(--border-subtle);padding-top:1.1vh;min-height:3.6vh}
-  .slide.dark .evidence-nav{border-top-color:rgba(255,255,255,.18)}
+  .slide.dark .deck-head{border-top:var(--ds-accent-line-dark)}
+  .slide[data-layout-variant="process-ledger"],
+  .slide[data-layout-variant="field-map"],
+  .slide[data-layout-variant="scope-matrix-8"],
+  .slide[data-layout-variant="image-force-evidence"],
+  .slide[data-layout-variant="four-card-eval"],
+  .slide[data-layout-variant="metric-boundary-dual"]{
+    --deck-title-size:var(--ds-title-dense);
+    --deck-main-gap:var(--ds-content-gap-tight);
+    --deck-head-gap:var(--ds-head-gap-tight);
+    --deck-head-pad:var(--ds-head-pad-tight);
+    --deck-lead-line:1.42;
+  }
+  .slide[data-layout-variant="screenshot-evidence-16x9"]{--deck-title-size:var(--ds-title-side)}
+  .evidence-nav{display:flex;align-items:center;gap:.8vw;border-top:var(--ds-hairline);padding-top:1.1vh;min-height:3.6vh}
+  .slide.dark .evidence-nav{border-top:var(--ds-hairline-dark)}
   .jump-link{appearance:none;border:1px solid var(--grey-2);background:transparent;color:inherit;padding:.42em .72em;font-family:var(--mono);font-size:14px;font-weight:500;letter-spacing:.08em;cursor:pointer;border-radius:0}
   .jump-link:hover{border-color:var(--accent);color:var(--accent)}
   .slide.dark .jump-link{border-color:rgba(255,255,255,.25)}
@@ -1221,10 +1266,10 @@
   .state-pill.accent{border-color:var(--accent);color:var(--accent)}
   .state-pill.dark{background:var(--ink);border-color:var(--ink);color:var(--paper)}
   .slide.accent .state-pill{border-color:rgba(255,255,255,.48);color:#fff}
-  .decision-strip{display:flex;align-items:center;align-self:flex-start;max-width:min(78ch,74vw);min-height:0;background:transparent;border-left:2px solid var(--accent);padding:.75vh 1vw;font-family:var(--sans),var(--sans-zh);font-size:max(16px,.92vw);font-weight:500;line-height:1.45;color:var(--text-secondary)}
+  .decision-strip{display:flex;align-items:center;align-self:flex-start;max-width:min(78ch,74vw);min-height:0;background:transparent;border-left:var(--ds-accent-line);padding:.75vh 1vw;font-family:var(--sans),var(--sans-zh);font-size:var(--ds-copy-size);font-weight:500;line-height:1.45;color:var(--text-secondary)}
   .deck-main > .decision-strip{margin-top:auto;margin-bottom:calc(var(--nav-safe-bottom) * .85)}
   .deck-content > .decision-strip{margin-top:auto;margin-bottom:calc(var(--nav-safe-bottom) * .45)}
-  .slide.dark .decision-strip{background:transparent;border-left-color:rgba(255,255,255,.42);color:rgba(255,255,255,.78)}
+  .slide.dark .decision-strip{background:transparent;border-left:1px solid rgba(255,255,255,.42);color:rgba(255,255,255,.78)}
   .deck-timeline{min-height:30vh}
   .deck-timeline .tl-row{width:100%}
   .deck-timeline-v{margin-top:1.5vh}
@@ -1240,12 +1285,12 @@
   .slide.dark .timeline-h .th-node .dot{background:var(--paper)}
   .slide.dark .timeline-h .th-node.accent .dot{background:var(--accent-bright)}
   .cell-6{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,minmax(0,1fr));gap:1px;background:var(--grey-2);flex:1;margin-top:3.2vh}
-  .cell-item{background:var(--paper);padding:2.2vh 1.5vw;display:flex;flex-direction:column;min-height:0}
+  .cell-item{background:var(--paper);padding:var(--ds-card-pad-y) var(--ds-card-pad-x);display:flex;flex-direction:column;min-height:0}
   .cell-item.is-accent{background:var(--accent);color:var(--accent-on)}
   .cell-top{display:flex;justify-content:space-between;gap:1vw;font-family:var(--mono);font-size:14px;font-weight:600;letter-spacing:.12em;color:var(--text-helper)}
   .cell-item.is-accent .cell-top{color:rgba(255,255,255,.75)}
   .cell-item h3{font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(22px,1.65vw);line-height:1.2;margin-top:1.3vh}
-  .cell-item p{font-family:var(--sans),var(--sans-zh);font-size:max(16px,.92vw);font-weight:400;line-height:1.5;color:var(--text-secondary);margin-top:auto;padding-top:1.2vh}
+  .cell-item p{font-family:var(--sans),var(--sans-zh);font-size:var(--ds-copy-size);font-weight:400;line-height:1.5;color:var(--text-secondary);margin-top:auto;padding-top:1.2vh}
   .cell-item.is-accent p{color:rgba(255,255,255,.86)}
   .cell-item small{font-family:var(--mono);font-size:14px;font-weight:500;line-height:1.4;margin-top:.8vh}
   .slide.dark .cell-6{background:rgba(255,255,255,.16)}
@@ -1256,8 +1301,8 @@
   .knowledge-slide .deck-main{display:grid;grid-template-columns:minmax(330px,4.15fr) minmax(0,7.85fr);grid-template-rows:minmax(0,1fr);gap:0 3vw;align-items:center;border-top:2px solid var(--accent);padding-top:1.9vh}
   .knowledge-slide .kb-text{display:flex;flex-direction:column;min-width:0;height:auto;align-self:stretch}
   .knowledge-slide .kb-head{display:flex;flex-direction:column;gap:1.15vh;min-width:0}
-  .knowledge-slide .kb-title{font-size:min(3.2vw,5.7vh);line-height:1.06;letter-spacing:0}
-  .knowledge-slide .kb-lead{font-size:max(18px,.96vw);font-weight:400;line-height:1.48;color:var(--text-primary);opacity:.86;margin:2.4vh 0 0;max-width:43ch}
+  .knowledge-slide .kb-title{font-size:var(--ds-title-side);line-height:1.06;letter-spacing:0}
+  .knowledge-slide .kb-lead{font-size:var(--ds-lead-size);font-weight:400;line-height:1.48;color:var(--text-primary);opacity:.86;margin:2.4vh 0 0;max-width:43ch}
   .knowledge-slide .kb-flow{display:flex;flex-direction:column;flex:0 0 auto;min-height:0;margin-top:3.4vh}
   .knowledge-slide .kb-flow>.t-cat{margin-bottom:1.8vh}
   .knowledge-slide .kb-flow .step-list{flex:0 0 auto;border-top:1px solid var(--border-subtle)}
@@ -1278,8 +1323,11 @@
   #slide-metric-boundary .duo-compare .col{gap:1.15vh}
   #slide-metric-boundary .duo-compare .col-ttl{font-size:min(3vw,5.2vh)}
   #slide-metric-boundary .duo-compare .col-desc{font-size:max(16px,.92vw);line-height:1.4}
+  #slide-metric-boundary .duo-compare .col-desc.in{max-width:34vw}
+  #slide-metric-boundary .duo-compare .col-desc.out{max-width:32vw}
   #slide-metric-boundary .duo-compare .col-list{gap:.55vh!important;padding-top:1.3vh!important;margin-top:1.6vh!important}
   #slide-metric-boundary .duo-compare .col-list li{font-size:max(16px,.9vw);line-height:1.38}
+  #slide-metric-boundary .duo-compare b{font-weight:600}
   #slide-metric-boundary .deck-content>.decision-strip{margin-bottom:calc(var(--nav-safe-bottom)*.85)}
   #slide-fire .three-forces{grid-template-columns:5.2fr 10.8fr;gap:1.35vw;margin-top:1vh}
   #slide-fire .hero-ink-col{padding:1.9vh 1.45vw;gap:1.25vh}
@@ -1292,39 +1340,39 @@
   #slide-fire .fire-hero-meta strong{font-family:var(--mono);font-size:max(14px,.78vw);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-bright)}
   #slide-fire .fire-hero-meta span{font-family:var(--mono);font-size:max(14px,.68vw);font-weight:600;letter-spacing:.08em;color:rgba(255,255,255,.58);text-align:right}
   #slide-fire .force-stack{gap:.75vh}
-  #slide-fire .force-card{grid-template-columns:minmax(4.8vw,6.4vw) 1fr;padding:1.25vh 1.15vw;gap:1vw}
+  #slide-fire .force-card{grid-template-columns:minmax(4.8vw,6.4vw) 1fr;padding:calc(var(--ds-card-pad-y) * .72) calc(var(--ds-card-pad-x) * .82);gap:1vw}
   #slide-fire .force-num{font-size:min(4.1vw,7.1vh)}
   #slide-fire .force-card h3{font-size:max(20px,1.35vw);line-height:1.08}
-  #slide-fire .force-card p{font-size:max(16px,.84vw);line-height:1.32;margin-top:.36vh}
-  #slide-fire .force-card .force-lines{display:grid;grid-template-columns:1fr 1fr;gap:.7vw;margin-top:.58vh;border-top:1px solid var(--grey-2);padding-top:.6vh}
-  #slide-fire .force-card .force-lines span{font-size:max(16px,.74vw);font-weight:500;line-height:1.28;color:var(--text-secondary)}
-  #slide-fire .force-card .force-lines b{display:block;font-family:var(--mono);font-size:max(14px,.64vw);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.18vh}
-  .stacked-ledger{display:grid;grid-template-rows:repeat(4,1fr);flex:1;min-height:0;border-top:1px solid var(--border-subtle)}
+  #slide-fire .force-card p{font-size:var(--ds-copy-size);line-height:1.32;margin-top:.36vh}
+  #slide-fire .force-card .force-lines{display:grid;grid-template-columns:1fr 1fr;gap:.7vw;margin-top:.58vh;border-top:var(--ds-hairline);padding-top:.6vh}
+  #slide-fire .force-card .force-lines span{font-size:var(--ds-copy-size);font-weight:500;line-height:1.28;color:var(--text-secondary)}
+  #slide-fire .force-card .force-lines b{display:block;font-family:var(--mono);font-size:var(--ds-meta-size);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.18vh}
+  .stacked-ledger{display:grid;grid-template-rows:repeat(4,1fr);flex:1;min-height:0;border-top:var(--ds-hairline)}
   .stacked-ledger.rows-5{grid-template-rows:repeat(5,1fr)}
-  .ledger-row{display:grid;grid-template-columns:minmax(9vw,14.5vw) minmax(0,1fr) 2.5vw;gap:1.6vw;align-items:center;min-height:0;border-bottom:1px solid var(--border-subtle)}
+  .ledger-row{display:grid;grid-template-columns:minmax(9vw,14.5vw) minmax(0,1fr) 2.5vw;gap:1.6vw;align-items:center;min-height:0;border-bottom:var(--ds-hairline)}
   .ledger-num{font-family:var(--sans);font-size:min(6.8vw,9.6vh);font-weight:200;line-height:.88;letter-spacing:-.045em;font-feature-settings:"tnum"}
   .stacked-ledger.rows-5 .ledger-num{font-size:min(4.6vw,6.6vh)}
   .ledger-num small{font-size:.28em;font-weight:300;opacity:.65;margin-left:.12em;vertical-align:.48em}
   .ledger-label{display:flex;flex-direction:column;gap:.65vh;min-width:0}
   .ledger-label .k{font-family:var(--mono);font-size:max(14px,.78vw);font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
   .ledger-label h3{font-size:max(22px,1.55vw);font-weight:400;line-height:1.2}
-  .ledger-label p{font-size:max(16px,.94vw);font-weight:400;line-height:1.48;color:var(--text-secondary)}
+  .ledger-label p{font-size:var(--ds-copy-size);font-weight:400;line-height:1.48;color:var(--text-secondary)}
   .stacked-ledger.rows-5 .ledger-label{gap:.18vh}
   .stacked-ledger.rows-5 .ledger-label .k{font-size:max(14px,.72vw);letter-spacing:.13em}
   .stacked-ledger.rows-5 .ledger-label h3{font-size:max(18px,1.18vw);line-height:1.12}
-  .stacked-ledger.rows-5 .ledger-label p{font-size:max(16px,.76vw);line-height:1.22}
+  .stacked-ledger.rows-5 .ledger-label p{font-size:var(--ds-copy-size);line-height:1.22}
   .ledger-icon{width:2.15vw;height:2.15vw;stroke-width:1.4;color:var(--accent);justify-self:end}
-  .slide.dark .stacked-ledger{border-top-color:rgba(255,255,255,.24)}
-  .slide.dark .ledger-row{border-bottom-color:rgba(255,255,255,.18)}
+  .slide.dark .stacked-ledger{border-top:1px solid rgba(255,255,255,.24)}
+  .slide.dark .ledger-row{border-bottom:var(--ds-hairline-dark)}
   .slide.dark .ledger-label p{color:rgba(255,255,255,.68)}
   .slide.dark .ledger-icon{color:var(--accent-bright)}
   .slide.dark .ledger-label .k{color:var(--accent-bright)}
   /* P2.5 运行实况页(slide-15):KPI 数字用 accent-bright,与分步 ledger 的白色步骤号拉开 */
   #slide-15 .ledger-num{color:var(--accent-bright)}
-  .rag-trace-slide .deck-main{gap:1.35vh}
-  .rag-trace-slide .deck-head{gap:3vw;padding-top:1.35vh}
-  .rag-trace-slide .deck-title{font-size:min(4.18vw,7.35vh);line-height:.98}
-  .rag-trace-slide .deck-lead{font-size:max(18px,.9vw);line-height:1.42;max-width:46ch}
+  .rag-trace-slide .deck-main{gap:var(--ds-content-gap-tight)}
+  .rag-trace-slide .deck-head{gap:var(--ds-head-gap-tight);padding-top:var(--ds-head-pad-tight)}
+  .rag-trace-slide .deck-title{font-size:var(--ds-title-dense);line-height:var(--ds-title-line)}
+  .rag-trace-slide .deck-lead{font-size:var(--ds-lead-size);line-height:1.42;max-width:46ch}
   .rag-trace-slide .deck-content{gap:1vh}
   .rag-trace-slide .stacked-ledger{margin-top:0}
   .rag-trace-slide .ledger-row{grid-template-columns:minmax(7.1vw,10.2vw) minmax(0,1fr) 2.2vw;gap:1.25vw;align-items:start;padding:.5vh 0}
@@ -1332,16 +1380,16 @@
   .rag-trace-slide .ledger-label{gap:.16vh}
   .rag-trace-slide .ledger-label .k{font-size:max(14px,.72vw);letter-spacing:.12em}
   .rag-trace-slide .ledger-label h3{font-size:max(18px,1.18vw);line-height:1.08}
-  .rag-trace-slide .ledger-label p{font-size:max(16px,.78vw);line-height:1.22;max-width:88ch}
+  .rag-trace-slide .ledger-label p{font-size:var(--ds-copy-size);line-height:1.22;max-width:88ch}
   .rag-trace-slide .ledger-icon{width:1.75vw;height:1.75vw;margin-top:.4vh}
   .rag-tags{display:flex;flex-wrap:wrap;gap:.28vh .32vw;margin-top:.28vh}
   .rag-chip{font-family:var(--mono);font-size:max(14px,.66vw);font-weight:600;letter-spacing:.04em;color:var(--accent);border:1px solid rgba(0,47,167,.28);padding:.22em .42em;background:rgba(0,47,167,.035)}
   .rag-note{font-family:var(--mono);font-size:max(14px,.62vw);font-weight:600;letter-spacing:.04em;color:var(--text-helper);margin-top:.2vh}
   .rag-note strong{color:var(--accent);font-weight:700}
-  .model-plan-slide .deck-main{gap:1.35vh}
-  .model-plan-slide .deck-head{gap:3vw;padding-top:1.35vh}
-  .model-plan-slide .deck-title{font-size:min(4.22vw,7.42vh);line-height:1.04}
-  .model-plan-slide .deck-lead{font-size:max(18px,.92vw);line-height:1.42;max-width:50ch}
+  .model-plan-slide .deck-main{gap:var(--ds-content-gap-tight)}
+  .model-plan-slide .deck-head{gap:var(--ds-head-gap-tight);padding-top:var(--ds-head-pad-tight)}
+  .model-plan-slide .deck-title{font-size:var(--ds-title-dense);line-height:1.04}
+  .model-plan-slide .deck-lead{font-size:var(--ds-lead-size);line-height:1.42;max-width:50ch}
   .model-plan-slide .deck-content{gap:1vh}
   .model-plan-slide .stacked-ledger{margin-top:0}
   .model-plan-slide .ledger-row{grid-template-columns:minmax(7.1vw,9.8vw) minmax(0,1fr) 2.1vw;gap:1.25vw;align-items:start;padding:.72vh 0}
@@ -1356,26 +1404,26 @@
   .model-chip strong,.temp-chip strong{display:block;font-size:max(16px,.82vw);font-weight:500;line-height:1.24;color:var(--paper)}
   .temp-chip strong{font-family:var(--mono);color:var(--accent-bright)}
   .model-plan-slide .model-reason{font-size:max(16px,.82vw);font-weight:400;line-height:1.3;color:rgba(255,255,255,.72);margin:0}
-  .model-plan-slide .decision-strip{max-width:min(116ch,90vw);font-size:max(14px,.8vw);line-height:1.34;padding:.58vh .9vw;margin-bottom:calc(var(--nav-safe-bottom) * .32)}
-  .brief-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,minmax(0,1fr));gap:1.4vh 1.2vw;flex:1;margin-top:3vh;min-height:0}
-  .brief-card{padding:2vh 1.4vw;display:flex;flex-direction:column;min-height:0}
+  .model-plan-slide .decision-strip{max-width:min(116ch,90vw);font-size:var(--ds-copy-size);line-height:1.34;padding:.58vh .9vw;margin-bottom:calc(var(--nav-safe-bottom) * .32)}
+  .brief-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,minmax(0,1fr));gap:var(--ds-card-gap) 1.2vw;flex:1;margin-top:3vh;min-height:0}
+  .brief-card{padding:var(--ds-card-pad-y) var(--ds-card-pad-x);display:flex;flex-direction:column;min-height:0}
   .brief-card.is-accent{background:var(--accent);color:var(--accent-on)}
-  .brief-meta{font-family:var(--mono);font-size:14px;font-weight:600;letter-spacing:.14em;color:var(--text-helper)}
+  .brief-meta{font-family:var(--mono);font-size:var(--ds-meta-size);font-weight:600;letter-spacing:.14em;color:var(--text-helper)}
   .brief-card.is-accent .brief-meta{color:rgba(255,255,255,.72)}
   .brief-card h3{font-size:max(20px,1.42vw);font-weight:400;line-height:1.2;margin-top:1.3vh}
-  .brief-card p{font-size:max(16px,.9vw);font-weight:400;line-height:1.5;color:var(--text-secondary);margin-top:auto;padding-top:1.2vh}
+  .brief-card p{font-size:var(--ds-copy-size);font-weight:400;line-height:1.5;color:var(--text-secondary);margin-top:auto;padding-top:1.2vh}
   .brief-card.is-accent p{color:rgba(255,255,255,.86)}
   .brief-state{font-family:var(--mono);font-size:14px;font-weight:500;letter-spacing:.08em;margin-top:1vh;border-top:1px solid currentColor;padding-top:.8vh}
   .slide.dark .brief-card{background:#151515;color:var(--paper)}
   .slide.dark .brief-card p{color:rgba(255,255,255,.7)}
   .slide.dark .brief-meta{color:rgba(255,255,255,.55)}
-  .matrix-fill{display:grid;grid-auto-rows:minmax(0,1fr);gap:1.2vh 1vw;flex:1;margin-top:2.8vh;min-height:0}
-  .matrix-cell{padding:1.55vh 1.1vw;display:flex;flex-direction:column;min-height:0}
+  .matrix-fill{display:grid;grid-auto-rows:minmax(0,1fr);gap:var(--ds-card-gap) 1vw;flex:1;margin-top:2.8vh;min-height:0}
+  .matrix-cell{padding:var(--ds-card-pad-y) var(--ds-card-pad-x);display:flex;flex-direction:column;min-height:0}
   .matrix-cell.is-accent{background:var(--accent);color:var(--accent-on)}
-  .matrix-meta{font-family:var(--mono);font-size:14px;font-weight:600;letter-spacing:.12em;color:var(--text-helper)}
+  .matrix-meta{font-family:var(--mono);font-size:var(--ds-meta-size);font-weight:600;letter-spacing:.12em;color:var(--text-helper)}
   .matrix-cell.is-accent .matrix-meta{color:rgba(255,255,255,.72)}
   .matrix-cell h3{font-size:max(18px,1.2vw);font-weight:500;line-height:1.2;margin-top:.9vh}
-  .matrix-cell p{font-size:16px;font-weight:400;line-height:1.42;color:var(--text-secondary);margin-top:auto;padding-top:.8vh}
+  .matrix-cell p{font-size:var(--ds-copy-size);font-weight:400;line-height:1.42;color:var(--text-secondary);margin-top:auto;padding-top:.8vh}
   .matrix-cell.is-accent p{color:rgba(255,255,255,.84)}
   .matrix-state{font-family:var(--mono);font-size:14px;font-weight:500;letter-spacing:.06em;margin-top:.7vh}
   .scope-ladder-note{font-size:max(15px,.82vw);font-weight:400;line-height:1.45;color:var(--text-helper);margin-top:1.2vh;max-width:55vw}
@@ -1526,10 +1574,10 @@
   .hero-ink-col .hero-number{font-size:min(8vw,14vh);font-weight:200;line-height:.9;letter-spacing:-.04em;color:var(--accent-bright)}
   .hero-ink-col h3{font-size:max(24px,2.1vw);font-weight:300;line-height:1.2}
   .force-stack{display:grid;grid-template-rows:repeat(3,1fr);gap:1.2vh;min-height:0}
-  .force-card{padding:1.8vh 1.5vw;display:grid;grid-template-columns:auto 1fr;gap:1.5vw;align-items:center;background:var(--grey-1)}
+  .force-card{padding:var(--ds-card-pad-y) var(--ds-card-pad-x);display:grid;grid-template-columns:auto 1fr;gap:1.5vw;align-items:center;background:var(--grey-1)}
   .force-num{font-family:var(--sans);font-size:min(4.8vw,8.5vh);font-weight:200;line-height:.9;color:var(--accent)}
   .force-card h3{font-size:max(20px,1.55vw);font-weight:400;line-height:1.2}
-  .force-card p{font-size:max(16px,.92vw);font-weight:400;line-height:1.5;color:var(--text-secondary);margin-top:.5vh}
+  .force-card p{font-size:var(--ds-copy-size);font-weight:400;line-height:1.5;color:var(--text-secondary);margin-top:.5vh}
   .slide.dark .force-card{background:#151515}
   .slide.dark .force-card p{color:rgba(255,255,255,.7)}
   .break-split>.half{padding:5.6vh 3.6vw 7vh}
@@ -1609,10 +1657,10 @@
   .system-ring span{font-family:var(--mono);font-size:14px;font-weight:600;letter-spacing:.08em;text-align:center;max-width:15ch}
   .system-ring.outer span{position:absolute;top:4%}.system-ring.middle span{position:absolute;top:8%;color:var(--accent)}
   .four-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--grey-2);flex:1;margin-top:3vh}
-  .fc-col{background:var(--paper);padding:2.2vh 1.4vw;display:flex;flex-direction:column}
+  .fc-col{background:var(--paper);padding:var(--ds-card-pad-y) var(--ds-card-pad-x);display:flex;flex-direction:column}
   .fc-col .t-meta{color:var(--accent)}
   .fc-col h3{font-size:max(22px,1.75vw);font-weight:400;line-height:1.2;margin-top:2vh}
-  .fc-col p{font-size:max(16px,.94vw);line-height:1.5;color:var(--text-secondary);margin-top:auto;padding-top:2vh}
+  .fc-col p{font-size:var(--ds-copy-size);line-height:1.5;color:var(--text-secondary);margin-top:auto;padding-top:2vh}
   .fc-col.is-project{background:var(--accent);color:var(--accent-on)}
   .fc-col.is-project .t-meta{color:rgba(255,255,255,.74)}
   .fc-col.is-project h3{color:#fff}
@@ -1621,11 +1669,11 @@
   .slide.dark .four-cards{background:rgba(255,255,255,.18)}
   .slide.dark .fc-col{background:#151515;color:var(--paper)}
   .slide.dark .fc-col p{color:rgba(255,255,255,.72)}
-  .orchestration-slide .deck-main{grid-template-rows:auto minmax(0,1fr);gap:1.45vh}
-  .orchestration-slide .deck-head{gap:3vw;padding-top:1.35vh}
+  .orchestration-slide .deck-main{grid-template-rows:auto minmax(0,1fr);gap:var(--ds-content-gap-tight)}
+  .orchestration-slide .deck-head{gap:var(--ds-head-gap-tight);padding-top:var(--ds-head-pad-tight)}
   .orchestration-slide .deck-head-title{flex-basis:60%;gap:.85vh}
-  .orchestration-slide .deck-title{font-size:min(4.75vw,8.4vh);line-height:.98}
-  .orchestration-slide .deck-lead{font-size:max(18px,.98vw);line-height:1.45;max-width:46ch}
+  .orchestration-slide .deck-title{font-size:var(--ds-title-standard);line-height:var(--ds-title-line)}
+  .orchestration-slide .deck-lead{font-size:var(--ds-lead-size);line-height:1.45;max-width:46ch}
   .orchestration-map{display:grid;grid-template-rows:minmax(60px,.66fr) 14px minmax(205px,2.48fr) 14px minmax(58px,.66fr);gap:0;flex:1;min-height:0;color:var(--paper);padding-bottom:2.4vh}
   .orch-card,.orch-agent{background:#151515;border:1px solid rgba(255,255,255,.18);min-height:0}
   .orch-card{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2vw;align-items:center;padding:1.05vh 1.35vw}
@@ -1666,22 +1714,47 @@
   .formula{font-family:var(--mono);font-size:max(16px,.9vw);font-weight:500;line-height:1.55;border-top:1px solid currentColor;padding-top:1vh;margin-top:auto}
   .appendix-return{margin-top:auto}
   @media (max-width:1100px){
-    .deck-title{font-size:min(5vw,8.8vh)}
+    .deck-title{font-size:var(--deck-title-size,var(--ds-title-standard))}
     .deck-head-title{flex-basis:55%}
-    .cell-item p,.brief-card p,.matrix-cell p,.force-card p,.system-copy p{font-size:15px}
+    .cell-item p,.brief-card p,.matrix-cell p,.force-card p,.system-copy p{font-size:16px}
   }
 
 
   /* ===== 新 17 页内容补充类（叠加在 v7 基座之上 · 直角/纯色/单一 IKB） ===== */
-  .cv-frame{position:relative}
-  .cv-tag{position:absolute;left:0;top:0;background:var(--accent);color:#fff;font-family:var(--mono);font-size:max(13px,.78vw);font-weight:600;letter-spacing:.04em;padding:.42em .72em;z-index:2}
+  .cover-main{flex:1;display:grid;grid-template-columns:8fr 4fr;gap:5vw;align-items:end;min-height:0}
+  .cover-title-stack{display:flex;flex-direction:column;gap:2.2vh;align-self:center}
+  .cover-kicker{color:rgba(255,255,255,.75);letter-spacing:.22em}
+  .cover-title{font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:var(--ds-title-cover);line-height:.96;letter-spacing:0;color:#fff}
+  .cover-title-em{font-style:italic;font-weight:300}
+  .cover-lead{font-size:max(18px,1.15vw);font-weight:400;line-height:1.55;color:rgba(255,255,255,.86);max-width:46ch}
+  .cover-info{display:flex;flex-direction:column;gap:.2vh;border-top:1px solid rgba(255,255,255,.35);margin-bottom:calc(var(--nav-safe-bottom) * .65)}
+  .cover-info-row{padding:2vh 0;border-bottom:1px solid rgba(255,255,255,.18)}
+  .cover-info-row:last-of-type{border-bottom:0}
+  .cover-info-label{color:rgba(255,255,255,.62)}
+  .cover-info-value{font-size:max(18px,.95vw);line-height:1.55;margin-top:.55vh}
+  .cover-info-value.role{font-size:max(20px,1.45vw);font-weight:400}
+  .cover-status-row{display:flex;gap:.5vw;flex-wrap:wrap;margin-top:1vh}
+  .cover-client{color:rgba(255,255,255,.58);margin-top:1.5vh;line-height:1.7}
+  .evidence-pair-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.2vw;align-items:start;flex:1;min-height:0}
+  .evidence-figure{margin:0;display:flex;flex-direction:column;gap:1vh;min-width:0}
+  .cv-frame{position:relative;--cv-tag-left:0;--cv-tag-top:0}
+  .cv-frame.tag-align-contained-3x2{--cv-tag-left:7.8%}
+  .cv-frame.pos-u3>img{object-position:center 42%}
+  .cv-tag{position:absolute;left:var(--cv-tag-left);top:var(--cv-tag-top);background:var(--accent);color:#fff;font-family:var(--mono);font-size:var(--ds-meta-size);font-weight:600;letter-spacing:.04em;padding:.42em .72em;z-index:2}
   .cv-tag.ink{background:var(--ink)}
-  .slide[data-layout-variant="two-image-evidence"] .cv-frame.tag-align-contained-3x2 .cv-tag{left:7.8%}
   .cv-empty-copy{text-align:center;color:rgba(255,255,255,.42);font-family:var(--mono);font-size:max(12px,.8vw);line-height:1.7}
   .img-note{font-family:var(--sans),var(--sans-zh);font-size:max(14px,.86vw);font-weight:500;color:var(--text-secondary);margin-top:.9vh}
   .img-meta{display:flex;flex-direction:column;gap:.5vh;margin-top:1vh}
   .img-meta .m{display:grid;grid-template-columns:5.2em 1fr;gap:.7vw;font-family:var(--sans),var(--sans-zh);font-size:max(14px,.88vw);line-height:1.35;color:var(--text-secondary)}
   .img-meta .m b{font-family:var(--mono);font-size:max(12px,.74vw);font-weight:600;letter-spacing:.06em;color:var(--text-helper);text-transform:uppercase}
+  .problem-copy-stack{display:flex;flex-direction:column;gap:1.5vh;min-height:0}
+  .problem-copy-block{min-width:0}
+  .problem-copy-block.is-ruled{border-top:var(--ds-hairline-dark);padding-top:1.2vh}
+  .problem-copy-block .t-cat{margin-bottom:.7vh}
+  .problem-copy-text{font-size:var(--ds-copy-size);line-height:1.5;color:rgba(255,255,255,.82);margin:0}
+  .problem-copy-text b{color:#fff}
+  .problem-token-row{display:flex;flex-wrap:wrap;gap:.4vw .7vw;margin-top:.9vh;font-size:var(--ds-copy-size);color:rgba(255,255,255,.68)}
+  .problem-token-sep{opacity:.35}
 
   .step-list{display:flex;flex-direction:column;width:100%}
   .step-row{display:grid;grid-template-columns:auto auto 1fr;gap:1vw;align-items:baseline;padding:1.3vh 0;border-top:1px solid var(--border-subtle)}
@@ -1712,12 +1785,12 @@
   .rpt-foot{font-family:var(--sans),var(--sans-zh);font-size:max(14px,.82vw);color:var(--text-helper);border-top:1px solid var(--border-subtle);padding-top:.85vh}
 
   /* 核心案例：原始告警 → 系统证据链 → 产品决策 */
-  .case-slide{--deck-title-vw:4.05vw;--deck-title-vh:7.15vh;--deck-title-basis:54%}
+  .case-slide{--deck-title-size:var(--ds-title-dense);--deck-title-basis:54%}
   .case-slide .deck-main{gap:1.7vh}
   .case-slide .deck-head{gap:3vw;padding-top:1.5vh}
   .case-slide .deck-head-title{flex-basis:52%;gap:.8vh}
-  .case-slide .deck-title{font-size:min(var(--deck-title-vw),var(--deck-title-vh));line-height:1.01}
-  .case-slide .deck-lead{font-size:max(17px,.96vw);line-height:1.45}
+  .case-slide .deck-title{font-size:var(--ds-title-dense);line-height:1.01}
+  .case-slide .deck-lead{font-size:var(--ds-lead-size);line-height:1.45}
   .case-study-grid{display:grid;grid-template-columns:4.8fr 4.15fr 3.05fr;gap:1.15vw;flex:1;min-height:0;align-items:stretch}
   .case-input{display:grid;grid-template-rows:auto auto;gap:.8vh;min-width:0;min-height:0;align-content:start}
   .case-input .frame-img{aspect-ratio:861/558;height:auto;align-self:center;min-height:0;border:1px solid var(--grey-2);border-top:2px solid var(--accent)}
@@ -1762,12 +1835,12 @@
   .flow-tag{border-width:1px;border-style:solid;padding:.15em .48em;font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.04em}
   .src-tag{font-family:var(--mono);font-size:9px;font-weight:600;margin-left:.35vw;white-space:nowrap}
   /* Dataflow (案例页 · 输入 / 补齐 / 字段来源) */
-  .dataflow-slide{--deck-title-vw:3.85vw;--deck-title-vh:6.8vh;--deck-title-basis:39%}
-  .dataflow-slide .deck-main{gap:1.35vh}
-  .dataflow-slide .deck-head{gap:3vw;padding-top:1.35vh}
+  .dataflow-slide{--deck-title-size:var(--ds-title-dense);--deck-title-basis:39%}
+  .dataflow-slide .deck-main{gap:var(--ds-content-gap-tight)}
+  .dataflow-slide .deck-head{gap:var(--ds-head-gap-tight);padding-top:var(--ds-head-pad-tight)}
   .dataflow-slide .deck-head-title{gap:.75vh}
-  .dataflow-slide .deck-lead{font-size:max(18px,.9vw);line-height:1.42}
-  .dataflow-slide .deck-main>.decision-strip{max-width:min(82ch,74vw);font-size:max(16px,.84vw);padding:.58vh .9vw;margin-bottom:calc(var(--nav-safe-bottom) * .55)}
+  .dataflow-slide .deck-lead{font-size:var(--ds-lead-size);line-height:1.42}
+  .dataflow-slide .deck-main>.decision-strip{max-width:min(82ch,74vw);font-size:var(--ds-copy-size);padding:.58vh .9vw;margin-bottom:calc(var(--nav-safe-bottom) * .55)}
   .dataflow{display:grid;grid-template-columns:minmax(260px,2.85fr) minmax(0,9.15fr);gap:2vw;flex:1;min-height:0;align-items:stretch}
   .df-col{display:flex;flex-direction:column;min-height:0}
   .df-sec-title{font-family:var(--mono);font-size:14px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--text-helper);border-bottom:1px solid var(--grey-2);padding-bottom:.55vh;margin-bottom:.85vh}
@@ -1782,7 +1855,7 @@
   .df-map-list{display:grid;grid-template-rows:minmax(0,1fr) minmax(0,.88fr) minmax(0,.88fr) minmax(0,1.18fr);gap:1px;background:var(--grey-2);min-height:0;flex:1}
   .df-map-row{background:var(--paper);display:grid;grid-template-columns:minmax(255px,2.45fr) minmax(42px,.28fr) minmax(0,4.55fr);align-items:stretch;min-height:0}
   .df-map-source{padding:1vh .95vw;display:flex;flex-direction:column;justify-content:center;min-width:0}
-  .df-map-src{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--text-helper);text-transform:uppercase}
+  .df-map-src{font-family:var(--mono);font-size:var(--ds-meta-size);font-weight:700;letter-spacing:.12em;color:var(--text-helper);text-transform:uppercase}
   .df-map-source h3{font-size:max(18px,1.22vw);font-weight:500;line-height:1.22;color:var(--text-primary);margin-top:.6vh}
   .df-map-source p{font-size:max(16px,.8vw);line-height:1.32;color:var(--text-secondary);margin-top:.45vh}
   .df-map-row.ai .df-map-src,.df-map-row.ai .df-map-source h3{color:var(--accent)}
@@ -1811,15 +1884,15 @@
   .df-legacy-quote{display:block;width:100%;font-size:max(16px,.9vw);font-weight:500;line-height:1.3;color:var(--text-primary);margin:0;max-width:100%;white-space:normal;overflow-wrap:anywhere;word-break:break-word}
 
   /* 工作台页：按 S22 单张核心截图处理，截图优先，流程退为辅助 */
-  .workbench-slide{--deck-title-vw:4.35vw;--deck-title-vh:7.7vh;--deck-title-basis:46%}
+  .workbench-slide{--deck-title-size:var(--ds-title-side);--deck-title-basis:46%}
   .workbench-slide .deck-main{display:flex;flex-direction:column;gap:0}
   .workbench-hero{display:grid;grid-template-columns:minmax(0,9.4fr) minmax(300px,2.6fr);gap:2vw;align-items:stretch;flex:1;min-height:0;border-top:2px solid var(--accent-bright);padding-top:1.8vh}
   .workbench-shot{margin:0;display:flex;flex-direction:column;gap:1vh;min-width:0;min-height:0}
   .workbench-shot .frame-img{height:70vh;max-height:70vh;aspect-ratio:auto;background:#111;border-top:2px solid var(--accent-bright)}
   .workbench-shot .frame-img>img{object-fit:contain}
   .workbench-side{display:flex;flex-direction:column;min-height:0;padding-top:1vh}
-  .workbench-side .deck-title{font-size:min(3.45vw,6.1vh);line-height:1.02;margin-top:1vh}
-  .workbench-side .deck-lead{flex:0;max-width:34ch;font-size:max(18px,.94vw);line-height:1.46;padding-bottom:0;margin-top:1.6vh}
+  .workbench-side .deck-title{font-size:var(--ds-title-side);line-height:1.02;margin-top:1vh}
+  .workbench-side .deck-lead{flex:0;max-width:34ch;font-size:var(--ds-lead-size);line-height:1.46;padding-bottom:0;margin-top:1.6vh}
   .workbench-flow{display:flex;flex-direction:column;min-height:0;margin-top:3vh}
   .workbench-flow .t-cat{margin-bottom:1.2vh}
   .workbench-flow .step-list{flex:0}
@@ -1895,9 +1968,10 @@
 
   .snotes{display:none}
   body.notes-on .snotes{display:block;position:absolute;left:5vw;right:5vw;bottom:9vh;z-index:60;max-height:44vh;overflow:auto;background:rgba(250,250,248,.975);color:#0a0a0a;border:1px solid rgba(0,0,0,.22);border-left:4px solid var(--accent);padding:1.6vh 1.4vw;box-shadow:0 10px 44px rgba(0,0,0,.20)}
-  .snotes h4{font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.9vh}
+  .snotes h4{font-family:var(--mono);font-size:var(--ds-meta-size);font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.9vh}
   .snotes p{font-family:var(--sans),var(--sans-zh);font-size:15px;line-height:1.62;color:#222;margin:.55em 0}
   .snotes b{font-weight:600;color:#0a0a0a}
+  .snotes .snotes-close{color:#888;font-size:var(--ds-meta-size)}
 
   /* 资源分配条（归因 → V1.2 投入） */
   .res-alloc{display:flex;flex-direction:column;gap:.7vh}
@@ -1908,11 +1982,11 @@
   .res-seg.s3{background:#a3a3a3}
 
   /* 第 16 页：评测归因摘要。只收束该页自定义组件，不改全局模板。 */
-  .eval-summary-slide{--deck-title-vw:4.55vw;--deck-title-vh:8vh;--deck-title-basis:50%}
+  .eval-summary-slide{--deck-title-size:var(--ds-title-dense);--deck-title-basis:50%}
   .eval-summary-slide .deck-main{grid-template-rows:auto minmax(0,1fr);gap:1.55vh}
   .eval-summary-slide .deck-head{gap:4.6vw;padding-top:1.35vh}
   .eval-summary-slide .deck-head-title{gap:.9vh}
-  .eval-summary-slide .deck-lead{font-size:max(18px,1vw);line-height:1.55;max-width:44ch}
+  .eval-summary-slide .deck-lead{font-size:var(--ds-lead-size);line-height:1.55;max-width:44ch}
   .eval-summary-content{display:grid;grid-template-rows:minmax(0,1fr) auto;gap:1.65vh;min-height:0;padding-bottom:3vh}
   .eval-summary-grid{display:grid;grid-template-columns:minmax(0,5.2fr) minmax(0,6.8fr);gap:2.8vw;align-items:start;min-height:0}
   .eval-rubric{min-width:0}
@@ -1935,10 +2009,10 @@
   .eval-summary-slide .res-seg{font-size:max(14px,.82vw);font-weight:600}
 
   /* ===== 评测基座 · Page A (slide-12) ===== */
-  .eval-base-slide{--deck-title-vw:4.4vw;--deck-title-vh:7.6vh}
+  .eval-base-slide{--deck-title-size:var(--ds-title-dense)}
   .eval-base-slide .deck-main{grid-template-rows:auto minmax(0,1fr);gap:1.4vh}
   .eval-base-slide .deck-head{gap:4.4vw;padding-top:1.3vh}
-  .eval-base-slide .deck-lead{font-size:max(17px,.98vw);line-height:1.5;max-width:48ch}
+  .eval-base-slide .deck-lead{font-size:var(--ds-lead-size);line-height:1.5;max-width:48ch}
   .eval-base-content{display:flex;flex-direction:column;gap:1.3vh;min-height:0;padding-bottom:2.2vh}
   .eval-base-top,.eval-base-bot{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:2.6vw;min-height:0}
   .eval-base-top>div,.eval-base-bot>div{display:flex;flex-direction:column;min-height:0}
@@ -2008,17 +2082,17 @@
       <div class="l">低空感知 AI 处置中枢</div>
       <div class="r">AI PRODUCT MANAGER PORTFOLIO · 01 / 20</div>
     </header>
-    <main style="flex:1;display:grid;grid-template-columns:8fr 4fr;gap:5vw;align-items:end;min-height:0">
-      <div data-anim="title" style="display:flex;flex-direction:column;gap:2.2vh;align-self:center">
-        <div class="t-meta" style="color:rgba(255,255,255,.75);letter-spacing:.22em">LOW-ALTITUDE PERCEPTION · AI DISPOSITION HUB</div>
-        <h1 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(7.8vw,13.6vh);line-height:.96;letter-spacing:0;color:#fff">低空感知<br>AI 处置<span style="font-style:italic;font-weight:300">中枢</span></h1>
-        <p style="font-size:max(18px,1.15vw);font-weight:400;line-height:1.55;color:rgba(255,255,255,.86);max-width:46ch">我在感知平台与政务处置之间增加 AI 分析，把 CV 告警加工成可复核的事件报告。</p>
+    <main class="cover-main">
+      <div class="cover-title-stack" data-anim="title">
+        <div class="t-meta cover-kicker">LOW-ALTITUDE PERCEPTION · AI DISPOSITION HUB</div>
+        <h1 class="cover-title">低空感知<br>AI 处置<span class="cover-title-em">中枢</span></h1>
+        <p class="cover-lead">我在感知平台与政务处置之间增加 AI 分析，把 CV 告警加工成可复核的事件报告。</p>
       </div>
-      <div data-anim="bottom" style="display:flex;flex-direction:column;gap:.2vh;border-top:1px solid rgba(255,255,255,.35)">
-        <div style="padding:2vh 0;border-bottom:1px solid rgba(255,255,255,.18)"><div class="t-meta" style="color:rgba(255,255,255,.62)">ROLE</div><div style="font-size:max(20px,1.45vw);font-weight:400;margin-top:.55vh">AI 产品经理</div></div>
-        <div style="padding:2vh 0;border-bottom:1px solid rgba(255,255,255,.18)"><div class="t-meta" style="color:rgba(255,255,255,.62)">SCOPE</div><div style="font-size:max(18px,.95vw);line-height:1.55;margin-top:.55vh">产品边界 · 版本节奏 · 人机协作 · 模型治理 · 指标验收</div></div>
-        <div style="padding:2vh 0"><div class="t-meta" style="color:rgba(255,255,255,.62)">STATUS</div><div style="display:flex;gap:.5vw;flex-wrap:wrap;margin-top:1vh"><span class="state-pill">V1.1 已完成</span><span class="state-pill">V1.2 真实告警试点</span><span class="state-pill">V1.3 规划中</span></div></div>
-        <div class="t-meta" style="color:rgba(255,255,255,.58);margin-top:1.5vh;line-height:1.7">崂山区全域低空智能感知平台 · 云世纪承建<br>客户：崂山区电子政务和大数据中心</div>
+      <div class="cover-info" data-anim="bottom">
+        <div class="cover-info-row"><div class="t-meta cover-info-label">ROLE</div><div class="cover-info-value role">AI 产品经理</div></div>
+        <div class="cover-info-row"><div class="t-meta cover-info-label">SCOPE</div><div class="cover-info-value">产品边界 · 版本节奏 · 人机协作 · 模型治理 · 指标验收</div></div>
+        <div class="cover-info-row"><div class="t-meta cover-info-label">STATUS</div><div class="cover-status-row"><span class="state-pill">V1.1 已完成</span><span class="state-pill">V1.2 真实告警试点</span><span class="state-pill">V1.3 规划中</span></div></div>
+        <div class="t-meta cover-client">崂山区全域低空智能感知平台 · 云世纪承建<br>客户：崂山区电子政务和大数据中心</div>
       </div>
     </main>
   </div>
@@ -2034,9 +2108,9 @@
         <p class="deck-lead">云世纪承建的平台已投入运行，覆盖机场调度、航线、飞行作业、影像采集和 CV 识别，为 AI 分析层提供数据基础。</p>
       </div>
       <div class="deck-content">
-        <div data-anim="up" style="display:grid;grid-template-columns:1fr 1fr;gap:2.2vw;align-items:start;flex:1;min-height:0">
-          <figure style="margin:0;display:flex;flex-direction:column;gap:1vh"><div class="frame-img r-16x9 swiss-lined cv-frame"><img src="assets/images/机场监控.jpg" data-image-slot="s16-brief-16x9" alt="机场监控中心实时画面"><span class="cv-tag ink">全域实时画面</span></div><figcaption class="swiss-img-caption"><span>机场监控中心 · 实时画面</span><strong>全域调度</strong></figcaption></figure>
-          <figure style="margin:0;display:flex;flex-direction:column;gap:1vh"><div class="frame-img r-16x9 swiss-lined cv-frame tag-align-contained-3x2"><img src="assets/images/楼顶部署.jpg" data-image-slot="s16-brief-16x9" alt="U3 自动机场楼顶部署实拍" style="object-position:center 42%"><span class="cv-tag ink">云世纪 U3 自动机场</span></div><figcaption class="swiss-img-caption"><span>U3 自动机场 · 楼顶部署实拍</span><strong>无人值守</strong></figcaption></figure>
+        <div class="evidence-pair-grid" data-anim="up">
+          <figure class="evidence-figure"><div class="frame-img r-16x9 swiss-lined cv-frame"><img src="assets/images/机场监控.jpg" data-image-slot="s16-brief-16x9" alt="机场监控中心实时画面"><span class="cv-tag ink">全域实时画面</span></div><figcaption class="swiss-img-caption"><span>机场监控中心 · 实时画面</span><strong>全域调度</strong></figcaption></figure>
+          <figure class="evidence-figure"><div class="frame-img r-16x9 swiss-lined cv-frame tag-align-contained-3x2 pos-u3"><img src="assets/images/楼顶部署.jpg" data-image-slot="s16-brief-16x9" alt="U3 自动机场楼顶部署实拍"><span class="cv-tag ink">云世纪 U3 自动机场</span></div><figcaption class="swiss-img-caption"><span>U3 自动机场 · 楼顶部署实拍</span><strong>无人值守</strong></figcaption></figure>
         </div>
       </div>
       </main>
@@ -2055,14 +2129,14 @@
       <div class="deck-content">
         <div class="split2 c57" data-anim="up">
           <div class="col-img"><div class="frame-img r-3x2 swiss-lined cv-frame"><img src="assets/images/Before_CV_脱敏_建筑垃圾.png" data-image-slot="s08-evidence-3x2" alt="CV 告警原图 · 疑似建筑垃圾"><span class="cv-tag">疑似建筑垃圾 · 置信度 0.82</span></div></div>
-          <div style="display:flex;flex-direction:column;gap:1.5vh;min-height:0">
-            <div>
-              <div class="t-cat accent" style="margin-bottom:.7vh">痛点① · 误报率高（行业通病）</div>
-              <p style="font-size:max(16px,.95vw);line-height:1.5;color:rgba(255,255,255,.82);margin:0">城市治理里<b style="color:#fff">同一视觉特征、合规与违规并存</b>。纯 CV 只做目标检测，做不了合规判断，误报率天然高：</p>
-              <div style="display:flex;flex-wrap:wrap;gap:.4vw .7vw;margin-top:.9vh;font-size:max(14px,.85vw);color:rgba(255,255,255,.68)"><span>工地物料 / 乱倒渣土</span><span style="opacity:.35">·</span><span>备案早餐摊 / 占道经营</span><span style="opacity:.35">·</span><span>秋季落叶 / 河道垃圾</span><span style="opacity:.35">·</span><span>炊烟扬尘 / 真实火情</span></div>
+          <div class="problem-copy-stack">
+            <div class="problem-copy-block">
+              <div class="t-cat accent">痛点① · 误报率高（行业通病）</div>
+              <p class="problem-copy-text">城市治理里<b>同一视觉特征、合规与违规并存</b>。纯 CV 只做目标检测，做不了合规判断，误报率天然高：</p>
+              <div class="problem-token-row"><span>工地物料 / 乱倒渣土</span><span class="problem-token-sep">·</span><span>备案早餐摊 / 占道经营</span><span class="problem-token-sep">·</span><span>秋季落叶 / 河道垃圾</span><span class="problem-token-sep">·</span><span>炊烟扬尘 / 真实火情</span></div>
             </div>
-            <div style="border-top:1px solid rgba(255,255,255,.18);padding-top:1.2vh">
-              <div class="t-cat accent" style="margin-bottom:.7vh">痛点② · 处置慢（每条三步人工 · 约 15 分钟）</div>
+            <div class="problem-copy-block is-ruled">
+              <div class="t-cat accent">痛点② · 处置慢（每条三步人工 · 约 15 分钟）</div>
               <div class="step-list">
                 <div class="step-row"><span class="step-n">01</span><span class="step-t">真假判断</span><span class="step-d">误报也得逐条看图核实</span></div>
                 <div class="step-row"><span class="step-n">02</span><span class="step-t">查重复 / 依据</span><span class="step-d">同点位报过没、引哪条法规，自己翻</span></div>
@@ -2086,7 +2160,7 @@
         <div class="deck-head-title"><div class="t-cat accent">SYSTEM CHAIN · 四层协作</div><h2 class="deck-title">四层系统协作，<br>AI 只做处置分析层</h2></div>
         <p class="deck-lead">飞行、采集、处置消费都在原业务系统完成。AI 处置层只接收 CV 告警，推送待复核报告，不越过业务系统。</p>
       </div>
-      <div class="deck-content" style="gap:2.2vh">
+      <div class="deck-content is-spaced">
         <div class="four-cards" data-anim="up">
           <div class="fc-col"><div class="t-meta">01 · 任务发起层</div><h3>城市云脑 · 一网统管</h3><p>提交飞行申请，配置算法类型，形成飞行需求。</p></div>
           <div class="fc-col"><div class="t-meta">02 · 飞行作业层</div><h3>崂山低空感知平台</h3><p>机场调度、航线规划、影像采集和 CV 识别，输出两类 CV 告警。</p></div>
@@ -2241,7 +2315,7 @@
     <h4>SPEAKER NOTES · 单条成本</h4>
     <p><b>单条约 ¥0.01–0.03，</b>成本主要压在多模态那一步。</p>
     <p><b>事件发现层先拦掉明显误报，</b>比更换便宜模型更能降低单条成本：省掉一次多模态调用，单条成本就能降一半。先做减法，再谈选型。</p>
-    <p style="color:#888;font-size:13px">按 N 关闭备注。</p>
+    <p class="snotes-close">按 N 关闭备注。</p>
   </div>
 </section>
 
@@ -2282,7 +2356,7 @@
         <div class="deck-head-title"><div class="t-cat accent">RAG TRACE · 检索实例</div><h2 class="deck-title">召回结果<br>必须经过筛选</h2></div>
         <p class="deck-lead">一条建筑垃圾告警的 RAG 查询：法规召回优先，动态台账查最新；精准判断留到汇总生成时由编排层用完整上下文完成。</p>
       </div>
-      <div class="deck-content" style="gap:2vh">
+      <div class="deck-content is-tight">
         <div class="stacked-ledger" data-anim="ledger">
           <div class="ledger-row">
             <div class="ledger-num">01</div>
@@ -2335,7 +2409,7 @@
     <p><b>03 · 汇总时交叉验证：</b>编排层拿到三路结果后做交叉验证：多模态说「围挡外公共空地混杂堆体」，RAG 捞回 8 条，Agent 返回 2 条历史记录和当前台账状态。LLM 逐条筛：讲弃置场管理的条款和当前事件主体不匹配，排除；讲处置单位义务的条款同理，排除；点位如果命中当前工地红线，则不按违规倾倒直接推送。最终引用市容条例 §29（公共场地堆放）和建废管理办法 §20（违规倾倒）。筛掉的 6 条里，有 1 条是已废止条款，入库时漏标了 valid_until。</p>
     <p><b>04 · 最终输出：</b>引用带原文片段、法规名称、条款编号、适用性标注，也记录台账来源、版本和更新时间。标注逻辑：「围挡外 + 混杂堆体 + 不在当前工地红线内」→ 适用上述两条。条款元数据结构见 P07 知识库管理界面。</p>
     <p><b>底部决策条：</b>RAG 先保召回。报告是否可用，关键看最新台账 / 点位状态是否可查；编排层在汇总生成时结合完整上下文完成精准判断。</p>
-    <p style="color:#888;font-size:13px">按 N 关闭备注。</p>
+    <p class="snotes-close">按 N 关闭备注。</p>
   </div>
 </section>
 
@@ -2480,7 +2554,7 @@
     <p>被问"还有别的场景吗"时口头讲：<b>识别到占道 ≠ 认定违规</b>。CV 输入「疑似占道经营 0.88」，高架桥下便民服务区。</p>
     <p>系统 Trace：① 理解场景，区分占道 / 店外经营 / 临时停留 → ② 查地点白名单，命中「高架桥下便民早餐点」备案 → ③ 核对允许时段（06:00–09:00，巡检 08:15，时段内）→ ④ 生成巡查记录留档，<b>不派单</b>。</p>
     <p>落点：备案摊点留档但不派单；核验条件不完整时，系统转人工复核。与工地物料案例同一逻辑：查台账 / 白名单后做降级，不直接执法。</p>
-    <p style="color:#888;font-size:13px">按 N 关闭备注。</p>
+    <p class="snotes-close">按 N 关闭备注。</p>
   </div>
 </section>
 
@@ -2522,7 +2596,7 @@
     <header class="chrome-min tight"><div class="l">低空感知 AI 处置中枢</div><div class="r">落地与容错 · 14 / 20</div></header>
     <main class="deck-main">
       <div class="deck-head" data-anim="line">
-        <div class="deck-head-title"><div class="t-cat accent">CASE 02 · L1 / L2 STRATEGY</div><h2 class="deck-title" style="font-size:min(4.2vw,7.4vh)">L1 和 L2，同一套引擎，<br>完全不同的策略</h2></div>
+        <div class="deck-head-title"><div class="t-cat accent">CASE 02 · L1 / L2 STRATEGY</div><h2 class="deck-title">L1 和 L2，同一套引擎，<br>完全不同的策略</h2></div>
         <p class="deck-lead">同一套编排引擎，会随风险等级切换温度、调用链路和产出内容。</p>
       </div>
       <div class="deck-content">
@@ -2564,7 +2638,7 @@
         <div class="deck-head-title"><div class="t-cat accent">FAILSAFE · 不确定时怎么办</div><h2 class="deck-title">当系统<br>判不准的时候</h2></div>
         <p class="deck-lead">系统要说明自己什么时候不确定，并把这类告警交回人工。受控编排的重点，是每个控制点都有兜底动作。</p>
       </div>
-      <div class="deck-content" style="gap:2.2vh">
+      <div class="deck-content is-spaced">
         <div class="stacked-ledger rows-5" data-anim="ledger">
           <div class="ledger-row"><div class="ledger-num">01</div><div class="ledger-label"><div class="k">事件输入</div><h3>CV 置信度过低 / 图像太糊</h3><p>标「待复拍确认」，不进入编排。</p></div><i data-lucide="image-off" class="ledger-icon"></i></div>
           <div class="ledger-row"><div class="ledger-num">02</div><div class="ledger-label"><div class="k">多模态理解</div><h3>现场判断落在灰区</h3><p>标 L3 低置信进复核池，不自动推送。</p></div><i data-lucide="git-branch" class="ledger-icon"></i></div>
@@ -2616,7 +2690,7 @@
         <div class="deck-head-title"><div class="t-cat accent">EVAL DESIGN · 评测体系</div><h2 class="deck-title">L1 和 L2，<br>不能用同一把尺</h2></div>
         <p class="deck-lead">L1 和 L2 的允许误差方向相反：L1 宁可误报不能漏报，L2 宁可漏判不能扰民。所以评测目标、评测集和红线要分开。</p>
       </div>
-      <div class="deck-content" style="gap:2.2vh">
+      <div class="deck-content is-spaced">
         <div class="four-cards" data-anim="up">
           <div class="fc-col"><div class="t-meta">01 · L1 评测</div><h3>火情专项 · 只看召回</h3><p><b>47 条火情/烟雾事件，漏一个即停推。</b><br>手工建集，覆盖炊烟、扬尘、雾气、已知焚烧点、低光照、小目标 6 类边界。端到端全链路跑，只看这一个数。</p></div>
                               <div class="fc-col"><div class="t-meta">02 · L2 评测</div><h3>按能力点测 · 精度优先</h3><p><b>多模态测复判准确率，RAG 测引用相关率，Schema 自动校验。</b><br>8 类场景各抽 12–15 条构成图像评测集；query-答案对在建知识库时同步标注。</p></div>
@@ -2633,7 +2707,7 @@
         <p><b>L3：</b>不进评测。多模态灰区、查询信息不全、汇总校验失败都落 L3 复核池。系统把不确定告警交给人工复核，不考核准确性。</p>
         <p><b>追问"评测数据从哪来"：</b>L1 火情集是人工筛选历史飞行影像建的。L2 多模态评测集从 8 类场景各抽 12-15 条构成。RAG query→答案对是在建知识库时同步标注的；每条法规入库时标注它适用的场景和条件。</p>
         <p><b>评测集会老化：</b>评测集需要持续更新。季节一变，秋季落叶误报场景消失，冬季低光照翻倍；场景分布不跟着校准，指标就会漂。每季度刷新一次场景分布抽样，法规废止/新增 5 条以上触发专项重测。</p>
-    <p style="color:#888;font-size:13px">按 N 关闭备注。</p>
+    <p class="snotes-close">按 N 关闭备注。</p>
   </div>
 </section>
 
@@ -2651,28 +2725,28 @@
         <p class="deck-lead">一条原则：上线后还要靠人工主观判断的指标，不放进验收。</p>
       </div>
       <div class="deck-content">
-        <div class="duo-compare" data-anim="up" style="margin-top:2vh">
+        <div class="duo-compare" data-anim="up">
           <article class="col accent">
             <div class="col-tag"><span class="num">IN</span>进验收 · 系统自己能算</div>
             <div class="col-ttl">验收指标</div>
-            <p class="col-desc" style="max-width:34vw">只放自动计算、自动校验、可复验的指标。出了问题，能直接追到编排链路里的哪个能力点。</p>
-            <ul class="col-list" style="margin-top:3vh">
-              <li><b style="font-weight:600">North Star · 报告生成完整率</b><br>Schema 校验通过的结构化报告数 / 进入受控编排的告警数。</li>
-              <li><b style="font-weight:600">≥98% · JSON Schema 通过率</b><br>自动校验；不达标转人工。</li>
-              <li><b style="font-weight:600">≥95% · RAG 结果可核对率</b><br>法规引用带原文片段；台账快照带来源、版本和更新时间。</li>
-              <li><b style="font-weight:600">100% · 台账快照可追溯率</b><br>每次判断记录命中的台账版本、更新时间和来源系统。</li>
+            <p class="col-desc in">只放自动计算、自动校验、可复验的指标。出了问题，能直接追到编排链路里的哪个能力点。</p>
+            <ul class="col-list">
+              <li><b>North Star · 报告生成完整率</b><br>Schema 校验通过的结构化报告数 / 进入受控编排的告警数。</li>
+              <li><b>≥98% · JSON Schema 通过率</b><br>自动校验；不达标转人工。</li>
+              <li><b>≥95% · RAG 结果可核对率</b><br>法规引用带原文片段；台账快照带来源、版本和更新时间。</li>
+              <li><b>100% · 台账快照可追溯率</b><br>每次判断记录命中的台账版本、更新时间和来源系统。</li>
             </ul>
           </article>
           <div class="vrule"></div>
           <article class="col">
             <div class="col-tag"><span class="num">OUT</span>只观察 · 不进验收</div>
             <div class="col-ttl">业务反馈</div>
-            <p class="col-desc" style="max-width:32vw">采纳率、闭环率保留在运营看板里，用来看业务趋势，不用来卡系统验收。</p>
-            <ul class="col-list" style="margin-top:3vh">
-              <li><b style="font-weight:600">采纳率</b><br>观察业务是否认可判断框架，不当作验收结果。</li>
-              <li><b style="font-weight:600">闭环率</b><br>受下游响应、人力排班、处置口径影响，不能只归因给 AI。</li>
-              <li><b style="font-weight:600">为什么放弃</b><br>它们依赖人工标注。上线越久，人的判断口径越容易漂。</li>
-              <li><b style="font-weight:600">验收边界</b><br>进验收的指标，只取系统自己能算的。</li>
+            <p class="col-desc out">采纳率、闭环率保留在运营看板里，用来看业务趋势，不用来卡系统验收。</p>
+            <ul class="col-list">
+              <li><b>采纳率</b><br>观察业务是否认可判断框架，不当作验收结果。</li>
+              <li><b>闭环率</b><br>受下游响应、人力排班、处置口径影响，不能只归因给 AI。</li>
+              <li><b>为什么放弃</b><br>它们依赖人工标注。上线越久，人的判断口径越容易漂。</li>
+              <li><b>验收边界</b><br>进验收的指标，只取系统自己能算的。</li>
             </ul>
           </article>
         </div>
@@ -2692,7 +2766,7 @@
         <div class="deck-head-title"><div class="t-cat accent">RESULTS · 建设成果</div><h2 class="deck-title">CV 告警进来，<br>出的是可复核报告</h2></div>
         <p class="deck-lead">V1.2 试点的实际规模。本层只负责把告警编排成可复核报告；下游派单、结案的产能不计入。</p>
       </div>
-      <div class="deck-content" style="gap:2.2vh">
+      <div class="deck-content is-spaced">
         <div class="stacked-ledger" data-anim="ledger">
           <div class="ledger-row"><div class="ledger-num">110<small>/日</small></div><div class="ledger-label"><div class="k">Scale</div><h3>告警进编排</h3><p>8 类场景，日均约 110 条 CV 告警进入受控编排。</p></div><i data-lucide="activity" class="ledger-icon"></i></div>
           <div class="ledger-row"><div class="ledger-num">85<small>%</small></div><div class="ledger-label"><div class="k">Observation</div><h3>业务反馈观察</h3><p>抽样 1,200 条，85% 被业务采纳或认可；仅作运营观察，不作为验收指标。</p></div><i data-lucide="badge-check" class="ledger-icon"></i></div>
